@@ -6,6 +6,26 @@
         <title>Random Quote Machine</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <style>
+            body {
+                background-color: linear-gradient();
+            }
+            #text,
+            #author {
+                opacity: 1;
+            }
+            #text {
+                font-size: 1.6rem;
+            }
+            #author {
+                text-align: right;
+                font-size: 1.3rem;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
             #tweet-quote img,
             #tumblr-quote img {
                 width: 50px;
@@ -17,12 +37,16 @@
                 background: none;
                 margin-left: 5px;
             }
+            #quote-box {
+                margin: 0 auto;
+                max-width: 100%;
+            }
         </style>
     </head>
     <body>
         <div class="container d-flex vh-100">
-            <div class="row justify-content-center align-self-center w-100">
-                <div class="col-12 col-md-8 col-lg-6">
+            <div class="row align-self-center justify-content-center w-100">
+                <div class="col-12 col-md-8 col-lg-6 mx-auto">
                     <div id="quote-box" class="card text-center p-4">
                         <blockquote class="blockquote mb-4">
                             <p id="text" class="mb-0"></p>
