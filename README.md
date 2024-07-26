@@ -27,7 +27,11 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **ETC:** 60 hours
 - **Language:** English (EN)
 - **Platform:** freeCodeCamp
-- **Description:** Working it.
+- **Description:** Currently working on project 3/5. This time around, I've decided to combine every project into one single preview webpage that is able to redirect you to each individual project. Since this is a little more complex than usual and also involves libraries and frameworks I've never worked with before, it will take some time.
+- **Status:**
+1. Build a Random Quote Machine (I used jQuery and Bootstrap) ✅
+2. Build a Markdown Previewer (I used React, still gotta finish styling it) ⌛
+3. Build a Drum Machine (Still deciding how I'm going to work on this one) ⌛
 
 ## Future Plans
 
