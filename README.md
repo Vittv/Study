@@ -31,7 +31,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Status:**
 1. Build a Random Quote Machine (I used jQuery and Bootstrap) ✅
 2. Build a Markdown Previewer (I used React) ✅
-3. Build a Drum Machine (Still deciding how I'm going to work on this one) ⌛
+3. Build a Drum Machine (The main code is built, now I have to style it) ⌛
 
 ## Future Plans
 
