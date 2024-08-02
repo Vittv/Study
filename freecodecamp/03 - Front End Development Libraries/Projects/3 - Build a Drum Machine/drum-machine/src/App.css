@@ -1,19 +1,50 @@
+body {
+  background-color: #1c1b1b;
+}
+
 .App {
   display: flex;
   justify-content: center;
   margin-top: 33vh;
 }
 
+#title {
+  margin-left: 4px;
+  color: #a10b00;
+  font-size: 20px;
+}
+
+#drum-machine {
+  border: 2px solid black;
+  border-radius: 3%;
+  padding: 10px;
+  background-color: lightgray;
+}
+
 .drum-pads {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
 }
 
 .drum-pad {
-  border: 1px solid black;
+  border: 5px solid black;
+  border-radius: 10px;
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  font-size: 40px;
+}
+
+#display {
+  border: 5px solid black;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: #4a4a4a;
+  color: white;
+  margin-bottom: 10px;
 }
