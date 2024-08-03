@@ -1,50 +1,66 @@
 body {
   background-color: #1c1b1b;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
   display: flex;
   justify-content: center;
-  margin-top: 33vh;
+  align-items: center;
+  min-height: 100vh;
 }
 
 #title {
-  margin-left: 4px;
   color: #a10b00;
-  font-size: 20px;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 #drum-machine {
-  border: 2px solid black;
-  border-radius: 3%;
-  padding: 10px;
-  background-color: lightgray;
+  border: 3px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #2e2e2e;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 .drum-pads {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .drum-pad {
-  border: 5px solid black;
-  border-radius: 10px;
+  border: 3px solid #333;
+  border-radius: 12px;
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background: linear-gradient(145deg, #ffffff, #e0e0e0);
   font-size: 40px;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.drum-pad:active {
+  transform: scale(0.95);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 #display {
-  border: 5px solid black;
+  border: 3px solid #333;
   text-align: center;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
   background-color: #4a4a4a;
   color: white;
-  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }

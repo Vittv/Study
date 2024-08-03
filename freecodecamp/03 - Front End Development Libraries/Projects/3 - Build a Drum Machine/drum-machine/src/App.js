@@ -3,11 +3,21 @@ import './App.css';
 
 function App() {
   const [activeKey, setActiveKey] = useState("");
+
   useEffect(() => {
-    document.addEventListener("keydown", (event) => {
-      console.log(event.key);
-      playSound(event.key.toUpperCase());
-    });
+    const handleKeydown = (event) => {
+      const key = event.key.toUpperCase();
+      const drumPad = drumPads.find(pad => pad.text === key);
+      if (drumPad) {
+        playSound(key);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeydown);
+    
+    return () => {
+      document.removeEventListener("keydown", handleKeydown);
+    };
   }, []);
 
   const drumPads = [
@@ -60,9 +70,14 @@ function App() {
 
   function playSound(selector) {
     const audio = document.getElementById(selector);
-    console.log(audio);
-    audio.play();
-    setActiveKey(selector)
+    if (audio) { // Check if audio element exists
+      if (!audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+      audio.play();
+      setActiveKey(selector);
+    }
   }
 
   return (
@@ -75,7 +90,7 @@ function App() {
             <div
               key={drumPad.src}
               onClick={() => {
-                playSound(drumPad.text)
+                playSound(drumPad.text);
               }} 
               className="drum-pad"
               id={drumPad.src}
