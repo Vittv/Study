@@ -1,0 +1,55 @@
+$background-color: #f3f3f3;
+$button-color: #fff;
+$operator-color: #ffa500;
+
+.calculator {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: $background-color;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    .display {
+        margin-bottom: 10px;
+
+        input {
+            width: 100%;
+            height: 50px;
+            text-align: right;
+            font-size: 2em;
+            padding: 0 10px;
+            border: none;
+            background: $button-color;
+        }
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+        .btn {
+            padding: 20px;
+            font-size: 1.5em;
+            border: none;
+            background: $button-color;
+            cursor: pointer;
+
+            &:hover {
+                background: darken($button-color, 10%);
+            }
+
+            &.operator {
+                background: $operator-color;
+
+                &:hover {
+                    background: darken($operator-color, 10%);
+                }
+            }
+
+            &#equals {
+                grid-column: span 4;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.calculator {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  background: #f3f3f3;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.calculator .display {
+  margin-bottom: 10px;
+}
+.calculator .display input {
+  width: 100%;
+  height: 50px;
+  text-align: right;
+  font-size: 2em;
+  padding: 0 10px;
+  border: none;
+  background: #fff;
+}
+.calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.calculator .buttons .btn {
+  padding: 20px;
+  font-size: 1.5em;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+.calculator .buttons .btn:hover {
+  background: #e6e6e6;
+}
+.calculator .buttons .btn.operator {
+  background: #ffa500;
+}
+.calculator .buttons .btn.operator:hover {
+  background: #cc8400;
+}
+.calculator .buttons .btn#equals {
+  grid-column: span 4;
+}
+
+/*# sourceMappingURL=styles.css.map */
