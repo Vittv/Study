@@ -1,0 +1,107 @@
+body {
+    background: url('./assets/pexels-minan1398-713664.jpg') no-repeat center center fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#quote-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px;
+    width: 900px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    padding: 20px;
+    margin-top: 8%;
+    color: white;
+}
+
+i {
+    font-weight: 700;
+    font-size: 2.2rem;
+    font-style: "Roboto";
+}
+
+#text {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+#text span {
+    display: inline;
+}
+
+#author {
+    text-align: right;
+    font-size: 1.0rem;
+    color: #d9d9d9;
+    font-weight: 700;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#new-quote {
+    background-color: #edbe3b;
+    width: 150px;
+    color: black;
+    font-weight: 700;
+    border: 2px solid black;
+    font-size: 1.1rem;
+}
+
+#tweet-quote,
+#tumblr-quote {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1DA1F2;
+    border: none;
+    border-radius: 12px;
+    margin-left: 5px;
+}
+
+#tumblr-quote {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid
+}
+
+#tweet-quote img {
+    width: 50px;
+    height: 50px;
+    filter: brightness(0) invert(1);
+}
+
+#tweet-quote:hover,
+#tumblr-quote:hover,
+#new-quote:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #quote-box {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    #text {
+        font-size: 1.5rem;
+    }
+    
+    #new-quote {
+        width: 30%;
+    }
+}
