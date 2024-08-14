@@ -4,8 +4,8 @@ Welcome to my study repository! Here, I document my learning journey through var
 >All courses below offer certification (aside from TOP)
 
 ## Finished Courses
-https://github.com/Vittv/Study/tree/main/cursoemvideo/Python
-### 1. [Python3](https://www.cursoemvideo.com/curso/python-3-mundo-1/)
+
+### 1. [Python3](https://github.com/Vittv/Study/tree/main/cursoemvideo/Python)
 - **ETC:** 120 hours
 - **Language:** Portuguese (PT)
 - **Platform:** cursoemvideo
