@@ -82,14 +82,12 @@
 .btn-number:hover,
 .btn-decimal:hover {
   background-color: #333;
-  color: lightgray;
 }
 
 .btn-operator:hover,
 .btn-clear:hover,
 .btn-equals:hover {
   background-color: #444;
-  color: lightgray;
 }
 
 .btn-number:active,
