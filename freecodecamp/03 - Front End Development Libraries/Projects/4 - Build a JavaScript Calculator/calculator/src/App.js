@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import './Calculator.css';
 
 const Calculator = () => {
-  const MAX_DIGITS = 12;
+  const MAX_DIGITS = 15;
   const [displayValue, setDisplayValue] = useState('0');
   const [expression, setExpression] = useState([]);
   const [isResult, setIsResult] = useState(false);
-  const [usePreviousResult, setUsePreviousResult] = useState(false); // New flag
+  const [usePreviousResult, setUsePreviousResult] = useState(false);
 
   const handleClear = () => {
     setDisplayValue('0');
     setExpression([]);
     setIsResult(false);
-    setUsePreviousResult(false); // Reset flag on clear
+    setUsePreviousResult(false);
   };
 
   const handleNumberClick = (e) => {
@@ -20,19 +20,19 @@ const Calculator = () => {
 
     if (isResult) {
       if (usePreviousResult) {
-        // Start a new operation with the result
+
         setDisplayValue(value);
         setExpression([displayValue, value]);
         setIsResult(false);
-        setUsePreviousResult(false); // Reset flag
+        setUsePreviousResult(false);
       } else {
-        // Just set the new number
+
         setDisplayValue(value);
         setExpression([value]);
         setIsResult(false);
       }
     } else {
-      // Regular number input
+
       if (displayValue.length < MAX_DIGITS) {
         const newDisplayValue =
           displayValue === '0' || ['+', '-', '*', '/'].includes(displayValue)
@@ -73,7 +73,7 @@ const Calculator = () => {
       setExpression([displayValue, operator]);
       setDisplayValue(operator);
       setIsResult(false);
-      setUsePreviousResult(true); // Set flag to use previous result
+      setUsePreviousResult(true);
     } else {
       if (['+', '*', '/'].includes(lastItem) && operator !== '-') {
         setExpression([...expression.slice(0, -1), operator]);
@@ -101,7 +101,7 @@ const Calculator = () => {
       setDisplayValue(result);
       setExpression([]);
       setIsResult(true);
-      setUsePreviousResult(false); // Reset flag after calculation
+      setUsePreviousResult(false);
     } catch (error) {
       setDisplayValue('Error');
     }
