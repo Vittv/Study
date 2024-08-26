@@ -1,0 +1,101 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #1c1c1c;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+#clock {
+  background: #2c2c2c;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+#break-label, #session-label, #timer-label {
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+#break-length, #session-length {
+  font-size: 48px;
+  font-weight: bold;
+  color: #e0e0e0;
+  margin: 10px 0;
+  width: 80px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#time-left {
+  font-size: 48px;
+  font-weight: bold;
+  color :#e0e0e0;
+  margin: 10px 0;
+  width: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: 130px;
+}
+
+#break-increment,
+#break-decrement,
+#session-increment,
+#session-decrement {
+  width: 40px;
+}
+
+button {
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  color: #e0e0e0;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 20px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#reset {
+  background-color: #666;
+  margin: 0;
+}
+
+#reset:hover {
+  background-color: #777;
+}
+
+#start_stop {
+  background-color: #444;
+  margin: 0;
+}
+
+#start_stop, #reset {
+  width: 100px;
+}
+
+#start_stop:hover {
+  background-color: #222;
+}
+
+audio {
+  display: none;
+}
