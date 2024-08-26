@@ -30,14 +30,8 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **ETC:** 60 hours
 - **Language:** English (EN)
 - **Platform:** freeCodeCamp
-- **Description:** Currently working on project 3/5. This time around, I've decided to combine every project into one single preview webpage that is able to redirect you to each individual project. Since this is a little more complex than usual and also involves libraries and frameworks I've never worked with before, it will take some time.
+- **Description:** I had a rough time with this one. I'd say it got me closer to how software is actually built and organized. The styling and code logic was mostly the same throughout the course. Organizing and changing a few key things would make or break the project. This was an eye opener mostly to how I should have been doing things from the start. Learning how React works was a bit rough sometimes, but I enjoyed the process of working with frameworks and libraries. It required me to look up things a lot more and understand the steps to properly develop and publish each project. 
 - **Course Link: https://www.freecodecamp.org/learn/front-end-development-libraries/**
-- **Status:**
-1. Build a Random Quote Machine (jQuery, Bootstrap) ✅
-2. Build a Markdown Previewer (React) ✅
-3. Build a Drum Machine (React) ✅
-4. Build a JavaScript Calculator (React) ✅
-5. Build a 25 + 5 Clock (React) ✅
 
 ## Future Plans
 
