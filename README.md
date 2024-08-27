@@ -34,7 +34,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Course Link: https://www.freecodecamp.org/learn/front-end-development-libraries/**
 
 ### 5. The Odin Project
-- **ETC:** 1420 - 2080 hours
+- **ETC:** 600 - 1420 hours
 - **Language:** English (EN)
 - **Platform:** TheOdinProject
 - **Description:** I am going on a long journey with the odin project, it is a big course. Said to teach you everything you need for a job. There's a lot of reading involved. What I like about it is, it doesn't only teach you the usual, it also teaches you how to learn. It claims that after this course, you'll be able to learn anything by yourself. I will update this more as I progress through it. I might also have to make a separate repository only for this course, given its length. We'll see.
