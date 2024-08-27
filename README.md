@@ -33,9 +33,12 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Description:** I had an interesting time with this one. I'd say it got me closer to how software is actually built and organized. The styling and code logic was mostly the same throughout the course. Organizing and changing a few key things would make or break the project. This was an eye opener mostly to how I should have been doing things from the start. Learning how React works was a bit rough sometimes, but I enjoyed the process of working with frameworks and libraries. It required me to look up things a lot more and understand the steps to properly develop and publish each project. 
 - **Course Link: https://www.freecodecamp.org/learn/front-end-development-libraries/**
 
-## Future Plans
-
-Once I have completed the above courses, I plan to either:
+### 5. The Odin Project
+- **ETC:** 1420 - 2080 hours
+- **Language:** English (EN)
+- **Platform:** TheOdinProject
+- **Description:** I am going on a long journey with the odin project, it is a big course. Said to teach you everything you need for a job. There's a lot of reading involved. What I like about it is, it doesn't only teach you the usual, it also teaches you how to learn. It claims that after this course, you'll be able to learn anything by yourself. I will update this more as I progress through it. I might also have to make a separate repository only for this course, given its length. We'll see.
+- **Course Link: https://www.theodinproject.com/**
 
 - Enroll in [The Odin Project's Web Development Course](https://www.theodinproject.com/paths), which offers a comprehensive path to becoming a Full Stack Developer.
 - Continue with additional courses on freecodecamp to further expand my skills before pursuing The Odin Project.
