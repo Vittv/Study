@@ -27,14 +27,14 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Course Link: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/**
 
 ### 4. [Front End Development Libraries](https://github.com/Vittv/Study/tree/main/freecodecamp/03%20-%20Front%20End%20Development%20Libraries)
-- **ETC:** 60 hours
+- **ETC:** 100 hours
 - **Language:** English (EN)
 - **Platform:** freeCodeCamp
 - **Description:** I had an interesting time with this one. I'd say it got me closer to how software is actually built and organized. The styling and code logic was mostly the same throughout the course. Organizing and changing a few key things would make or break the project. This was an eye opener mostly to how I should have been doing things from the start. Learning how React works was a bit rough sometimes, but I enjoyed the process of working with frameworks and libraries. It required me to look up things a lot more and understand the steps to properly develop and publish each project. 
 - **Course Link: https://www.freecodecamp.org/learn/front-end-development-libraries/**
 
-### 5. Foundations and Full Stack Development
-- **ETC:** 600 - 1420 hours
+### 5. Foundations
+- **ETC:** 200 hours
 - **Language:** English (EN)
 - **Platform:** The Odin Project
 - **Description:** I am going on a long journey with The Odin Project, it is a big course. Said to teach you everything you need for a job. There's a lot of reading involved. What I like about it is, it doesn't only teach you the usual, it also teaches you how to learn. It claims that after this course, you'll be able to learn anything by yourself. I will update this more as I progress through it. I might also have to make a separate repository only for this course, given its length. We'll see.
