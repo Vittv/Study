@@ -37,5 +37,5 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **ETC:** 600 - 1420 hours
 - **Language:** English (EN)
 - **Platform:** theodinproject
-- **Description:** I am going on a long journey with the odin project, it is a big course. Said to teach you everything you need for a job. There's a lot of reading involved. What I like about it is, it doesn't only teach you the usual, it also teaches you how to learn. It claims that after this course, you'll be able to learn anything by yourself. I will update this more as I progress through it. I might also have to make a separate repository only for this course, given its length. We'll see.
+- **Description:** I am going on a long journey with The Odin Project, it is a big course. Said to teach you everything you need for a job. There's a lot of reading involved. What I like about it is, it doesn't only teach you the usual, it also teaches you how to learn. It claims that after this course, you'll be able to learn anything by yourself. I will update this more as I progress through it. I might also have to make a separate repository only for this course, given its length. We'll see.
 - **Course Link: https://www.theodinproject.com/**
