@@ -1,0 +1,64 @@
+Top Unix Commands
+
+In Unix most operations are carried out by typing commands at a command prompt, usually called a terminal or shell. Many of these commands have optional features, and these are usually activated by switches. A switch is specified by a hyphen "-" (or occasionally two hyphens "--") followed by a letter or word. Every command has its own set of switches, but we've included the most common in this list.
+
+Listing files
+
+ls	list files in current directory
+ls -l	list files in a long format
+ls -a	list all files (including hidden files) in current directory
+ls -F	adds indicators to the list output to identify directories and different types of files.
+
+These switches can be combined, for example ls -al would list all files in the current directory, including hidden files, in a long format. You can also give a directory or file name, e.g. ls /home/pjh503 lists files in the directory "/home/pjh503".
+
+Special characters
+
+In Unix some characters have special meanings that you can use. For example the asterisk "*" means "any string", so the command ls a*isk will list all the files in the current directory that start with "a" and end "isk". These special characters are not allowed to be used in the actual names of files or directories.
+
+.	the current working directory
+..	the parent directory to working directory
+~	your home directory
+/	the root (top-level) directory. This is also the separator for directories
+*	a wildcard meaning any string of characters
+?	a wildcard meaning any single character
+
+Files
+
+cp file1 file2	makes a copy of file1 and calls it file2
+mv file1 file2	moves (renames) file1 to file2
+rm file1	removes (deletes) file1
+rm -i file1	asks for confirmation that you want to delete file1
+
+Directories
+
+pwd	print the working directory
+cd dirname	change directory to the one called "dirname"
+cd ..	change to the parent directory of the current directory
+cd ~	change to your home directory
+mkdir dirname	makes a new directory with name "dirname"
+rmdir dirname	removes the directory with name "dirname". The directory must be empty
+rmdir -r dirname	recursively removes directories and subdirectories
+
+Text files
+
+cat file1	writes the whole of file "file1" to the terminal, also useful for concatenating files
+more file1	displays the file "file1" a page at a time
+less file1	a more versatile version of "more", but less common
+head -30 file1	show the first 30 lines
+tail -25 file1	show the last 25 lines
+tail -f file1	show the last few lines and keep updating as the file grows
+wc file1	counts lines, words and characters in a file
+
+Help
+
+man utilityname	manual pages for the command "utilityname"
+
+Useful keypresses
+
+ctrl C	interrupts whatever is currently running.
+(It can get you out of trouble at embarrassing moments)
+ctrl Z	puts a foreground process into the background.
+ctrl S	suspends current terminal
+ctrl Q	resumes current terminal
+
+source: https://www-users.york.ac.uk/~pjh503/linux/commands.html
