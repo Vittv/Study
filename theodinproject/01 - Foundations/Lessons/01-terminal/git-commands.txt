@@ -1,0 +1,111 @@
+Git config
+
+Git needs to be configured before you can use it. The Git config command is used enter the login and email addresses you want to be associated with your commits.
+
+# sets up Git with your name
+
+git config --global user.name "<Your-Full-Name>“
+
+# sets up Git with your email
+
+git config --global user.email "<your-email-address>"
+
+Git Init
+The Git init command is used to start a new repository. A .git folder is created in the current working directory as an outcome.
+
+$ git init
+
+An empty .git repository gets created by the above command. Think about creating a Git repository on your desktop. To do so, you must run the above command by opening Git Bash on your desktop.
+
+A new subdirectory with the name “.git” will be created by the above command that contain all required repository files. An outline of a Git repository can be found in the .git subdirectory.
+
+Git clone
+
+The command “git clone” is used to download current source code from a remote repository (like GitHub, for example). Git clone, then, essentially creates an exact copy of the most recent version of a project in a repository and stores it on your computer.
+
+There are a few ways to download the source code, but I tend to like the https clone method:
+
+$ git clone https://github.com/<repo-url> 
+
+For instance, all we have to do to get a project from GitHub is click on the download or clone button, copy the URL from the box, and then paste it after the Git clone command. By doing this, a duplicate of the project will be created in your local workspace, allowing you to begin working with it.
+
+Git status
+
+The Git status command is the key to understanding Git. It will let us know what Git is processing and how Git perceives the condition of our repository. 
+
+$ git status
+
+You should always use the Git status command when you’re first starting! Starting it after any other command is a smart idea. It will help you learn Git and prevent you from assuming about the current state of your files or repository.
+
+Git add
+
+Using the Git add command, files can be transferred from the Working Directory to the Staging Index. To compare your local version to the version in the remote repository, you can use the Git add command to save your modifications in a file to the staging area. Use the Git add command to include your new or modified file in the staging area before committing it. 
+
+To add particular files, use the command:
+
+$ git add <file1> <file2> … <fileN>
+
+To add all the files:
+
+$ git add -A
+
+Git commit
+
+It may be the Git command that is frequently used. With this command – a log message and the commit id of the changes made to the Git repository are saved. A Git commit can store the modifications in your local repository. 
+
+Every time you modify your code, you must provide a commit message of the changes done. This commit message makes it easier for others to understand the changes made.
+
+$ git commit –m "<Type your commit message here>"
+
+Git branch
+
+In the realm of Git, branches are fundamental. Multiple developers can collaborate on the same project simultaneously by using branches. The git branch command can create, list, and even delete branches.
+
+$ git branch <branch-name>
+
+You can create a branch locally using this command. If you want to push the new branch into the remote repository – use the following command. 
+
+$ git push-u <hybrid> <section-list>
+
+Git checkout
+
+We can create and switch to a new branch or an existing branch using the Git checkout command. To accomplish this, you must have access to the branch you wish to switch to on your local system, and you must commit or stash any modifications to your current branch before switching. 
+
+The following command can also be used to check out files.
+
+$ git checkout <branch-name>
+
+If you want to create and switch to a new branch, use the command:
+
+$ git checkout -b <new-branch-name>
+
+Git merge
+
+The very last step is merging the branch with the parent branch once you have finished developing your branch and everything is working as it should. The Git merge command is used to achieve this.
+
+To combine various branches into one, the Git merge command is used. Take into account that you must first be on the specific branch you want to merge with your feature branch. To merge your feature branch into the development branch, you need to switch to the dev branch using the command:
+
+$ git checkout dev
+
+And then update the local dev branch using the command:
+
+$ git fetch
+
+Then, finally, merge it using the command:
+
+$ git merge <branch-name>
+
+Git Push and Pull
+
+After committing your changes, the following step is to send them to the remote server. Your commits are updated to the remote repository by Git push.
+
+$ git push
+
+To create a new brand and upload it, use the command:
+
+$ git push --set-upstream
+
+On the other hand, you can obtain updates from a remote repository using the Git pull command. When you use this command, both Git fetch and Git merge operations are carried out, updating local changes and uploading updates to remote repositories.
+
+$ git pull
+
