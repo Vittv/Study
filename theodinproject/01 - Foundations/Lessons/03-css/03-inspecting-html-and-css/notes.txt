@@ -3,8 +3,3 @@ html represents INITIAL page content
 DOM represents CURRENT page content
 
 you can chance elements through devtools
-
-box-sizing: border-box; makes the height and width css elements
-account for padding, border, and margin
-
-this is useful because it makes the styling process more intuitive

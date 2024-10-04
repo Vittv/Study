@@ -1,0 +1,4 @@
+box-sizing: border-box; makes the height and width css elements
+account for padding, border, and margin
+
+this is useful because it makes the styling process more intuitive
