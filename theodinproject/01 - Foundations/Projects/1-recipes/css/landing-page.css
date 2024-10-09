@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    background-color: rgb(248, 241, 230);
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 3%;
+    color:rgb(51, 51, 51);
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 2rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    border-radius: 2%;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.recipe-grid a {
+    text-decoration: none;
+}
+
+.recipe-title {
+    text-align: center;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+    padding: 3%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.4rem;
+}
+
+footer {
+    font-size: 0.8rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(100, 99, 99);
+    padding: 5%;
+    padding-top: 10%;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.github-icon {
+    margin-left: 10px;
+    color: rgb(100, 99, 99);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.github-icon:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 980px) {
+    
+    h1 {
+        font-size: 3.3rem;
+    }
+
+    .recipe-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+    }
+
+    img {
+        width: 350px;
+        height: auto;
+        margin-top: 10%;
+    }
+
+}
