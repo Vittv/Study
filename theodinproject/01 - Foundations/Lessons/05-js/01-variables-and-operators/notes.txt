@@ -1,0 +1,5 @@
+let - variables that can be assigned new values
+const - variables that can't change at all
+
+programming math works the same way as real math
+its priorities will be the same

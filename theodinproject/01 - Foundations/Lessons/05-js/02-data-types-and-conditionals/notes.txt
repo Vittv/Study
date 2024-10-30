@@ -1,0 +1,92 @@
+Js is dynamically typed, so basically things are automatically categorized, based on their value, without the need to tell the computer what they are
+
+if you do
+
+    let something = 2
+the computer knows that is a number variable
+
+Infinity represents infinity and it is bigger than any other number
+
+NaN is a computational error, it usually means something is undefined or incorrect in a mathematical operation
+NaN is sticky, anything that caused a NaN or involves a NaN will result in a NaN
+
+the only exception is when you do
+
+NaN ** 0, which is 1
+
+
+Strings can be assigned with ' or ", they're the same
+if you use ` instead, you can embed variables inside strings
+
+    let name = "John";
+
+    alert(`Hello ${name}!`) // Hello, John!
+
+you can also use it for operations
+
+    alert(`The result is ${1 + 2}`) // The result is 3
+
+
+The boolean type has two values: true and false
+
+true means yes, correct
+false means no, incorrect
+
+you can either store those values in variables for future use
+or generate them dynamically by applying logic
+
+storing:
+
+    let nameFieldChecked = true; // yes, name field is checked
+    let ageFieldChecked = false; // no, age field is not checked
+
+logic:
+
+    let isGreater = 4 > 1;
+    alert( isGreater ); // true (the comparison result is "yes")
+
+
+Null means nothing, empty or value unknown
+
+
+
+Undefined means value not assigned
+
+    let age;
+    alert(age); // shows "undefined"
+
+
+The object type is special
+
+All other types are called “primitive” because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities
+
+
+The typeof operator returns the type of the operand. It’s useful when we want to process values of different types differently or just want to do a quick check.
+
+A call to typeof x returns a string with the type name:
+
+typeof undefined // "undefined"
+
+    typeof 0 // "number"
+
+    typeof 10n // "bigint"
+
+    typeof true // "boolean"
+
+    typeof "foo" // "string"
+
+    typeof Symbol("id") // "symbol"
+
+    typeof Math // "object"  (1)
+
+    typeof null // "object"  (2)
+
+    typeof alert // "function"  (3)
+
+The last three lines may need additional explanation:
+
+    Math is a built-in object that provides mathematical operations. We will learn it in the chapter Numbers. Here, it serves just as an example of an object.
+
+    The result of typeof null is "object". That’s an officially recognized error in typeof, coming from very early days of JavaScript and kept for compatibility. Definitely, null is not an object. It is a special value with a separate type of its own. The behavior of typeof is wrong here.
+
+    The result of typeof alert is "function", because alert is a function. We’ll study functions in the next chapters where we’ll also see that there’s no special “function” type in JavaScript. Functions belong to the object type. But typeof treats them differently, returning "function". That also comes from the early days of JavaScript. Technically, such behavior isn’t correct, but can be convenient in practice.
