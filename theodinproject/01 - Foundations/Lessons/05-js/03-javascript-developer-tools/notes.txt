@@ -7,3 +7,5 @@ A few of the points were:
     - Simulate mobile devices with Device mode
     - Debugging JavaScript
     - Pausing code with breakpoints
+
+It taught how to debug code through the Devtools console, without having to console.log() everything
