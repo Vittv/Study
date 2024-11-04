@@ -163,4 +163,64 @@ Scope
     }
 
 
-    it would work because they're using data that's accessible in the global scope (output(x));
+    It would work because they're using data that's accessible in the global scope (output(x));
+
+    If a same outer variable is used inside a function, it shadows the previous variable:
+
+    let userName = "John";
+
+    function showMessage() {
+       let userName = "Bob"; // declare a local variable
+
+       let message = "Hello, " + userName; // Bob
+       alert(message);
+    }
+
+    // the function will create and use its own userName
+    showMessage();
+
+    alert( userName ); // John, unchanged, the function did not access the outer variable
+
+    note !
+
+    Variables declared outside of any function, such as the outer userName in the code above, are called global.
+
+    Global variables are visible from any function (unless shadowed by locals).
+
+    It’s a good practice to minimize the use of global variables. Modern code has few or no globals. Most variables reside in their functions. Sometimes though, they can be useful to store project-level data.
+
+
+    Function Declaration and Function Expression
+
+        A function Expression is created when the execution reaches it and is usable only from that moment.
+
+        // Function Expression
+        let sum = function(a, b) {
+        return a + b;
+        };
+
+        A Function Declaration can be called earlier than it is defined.
+        For example, this works:
+
+        sayHi("John"); // Hello, John
+
+        function sayHi(name) {
+        alert( `Hello, ${name}` );
+        }
+
+        While this doesn't: 
+
+        sayHi("John"); // error!
+
+        let sayHi = function(name) {  // (*) no magic any more
+        alert( `Hello, ${name}` );
+        };
+
+
+        When to choose Function Declaration versus Function Expression?
+
+        As a rule of thumb, when we need to declare a function, the first thing to consider is Function Declaration syntax. It gives more freedom in how to organize our code, because we can call such functions before they are declared.
+
+        That’s also better for readability, as it’s easier to look up function f(…) {…} in the code than let f = function(…) {…};. Function Declarations are more “eye-catching”.
+
+        …But if a Function Declaration does not suit us for some reason, or we need a conditional declaration (we’ve just seen an example), then Function Expression should be used. 
