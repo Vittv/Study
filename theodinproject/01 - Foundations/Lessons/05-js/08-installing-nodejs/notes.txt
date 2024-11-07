@@ -1,0 +1,1 @@
+Taught us how to install curl and Node.js through the terminal
