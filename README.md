@@ -3,8 +3,8 @@
 Welcome to my study repository! Here, I document my learning journey through various courses, lessons, and projects in the field of programming and web development.
 >All courses below offer certification (aside from The Odin Project)
 
-## Courses
-
+### Courses
+## cursoemvideo
 ### 1. [Python3](https://github.com/Vittv/Study/tree/main/cursoemvideo/Python)
 - **ETC:** 120 hours
 - **Language:** Portuguese (PT)
@@ -12,6 +12,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Description:** This course taught me all the way from print('Hello World') to functions, modules, packages. But it did not cover classes or anything more. It was a total of 23 lessons and 115 exercises. You'd watch the lesson and be given around 5-10 exercises to finish before the next lesson. To finish the whole course, you had to not only do every exercise but watch their explanation after each lesson. So you always knew how to build what was asked for in the end, even if you had no idea at first.
 - **Course Link: https://www.cursoemvideo.com/curso/python-3-mundo-1/** 
 
+## freeCodeCamp
 ### 2. [Responsive Web Design](https://github.com/Vittv/Study/tree/main/freecodecamp/01%20-%20Responsive%20Web%20Design)
 - **ETC:** 50 hours
 - **Language:** English (EN)
@@ -33,6 +34,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Description:** I had an interesting time with this one. I'd say it got me closer to how software is actually built and organized. The styling and code logic was mostly the same throughout the course. Organizing and changing a few key things would make or break the project. This was an eye opener mostly to how I should have been doing things from the start. Learning how React works was a bit rough sometimes, but I enjoyed the process of working with frameworks and libraries. It required me to look up things a lot more and understand the steps to properly develop and publish each project. 
 - **Course Link: https://www.freecodecamp.org/learn/front-end-development-libraries/**
 
+## The Odin Project
 ### 5. [Foundations](https://github.com/Vittv/Study/tree/main/theodinproject/01%20-%20Foundations)
 - **ETC:** 200 hours
 - **Language:** English (EN)
