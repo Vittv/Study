@@ -66,9 +66,9 @@ async def check_birthdays():
     for user, birthday in birthdays:
 
         if birthday.month == today.month and birthday.day == today.day:
-            
+
             channel = bot.get_channel(YOUR_CHANNEL_ID)  
-            await channel.send(f"Happy Birthday, {user.mention}! >w<\nHope you have a great day!")
+            await channel.send(f'Happy Birthday, {user.mention}! >w<\nHope you have a great day!')
 
 @bot.event
 async def on_ready():
