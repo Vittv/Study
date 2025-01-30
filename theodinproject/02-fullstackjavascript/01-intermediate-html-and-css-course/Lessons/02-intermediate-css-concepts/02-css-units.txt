@@ -33,3 +33,23 @@ Additional resources:
 
 (are you using the right CSS unit?)
 https://www.youtube.com/watch?v=N5wpD9Ov_To
+
+Interesting snippet for page responsiveness
+
+body {
+  // font grows 1px for every 100px of viewport width
+  font-size: calc(16px + 1vw);
+  // leading grows along with font,
+  // with an additional 0.1em + 0.5px per 100px of the viewport
+  line-height: calc(1.1em + 0.5vw);
+}
+
+h1 {
+  font-size: calc(1.2em + 3vw);
+}
+
+@media (min-width: 50em) {
+  h1 {
+    font-size: 50px;
+  }
+}
