@@ -1,48 +1,30 @@
-# Welcome to my Study!
-Here, I document my learning journey.
+# Study Journey Documentation
 
-Courses, Lessons, Projects
+Welcome to my study repository! Here, I chronicle my learning journey through various courses, lessons, and projects in the field of programming and web development.
 
-Predominantly in EN, sometimes PT
+## Courses Completed
 
->All of these courses offer certification
+### 1. [cursoemvideo - Python3 (PT)]([https://www.cursoemvideo.com/curso/python-3-mundo-1/])
+- **Language:** Portuguese (PT)
+- **Description:** This course provided a comprehensive introduction to Python programming, covering topics from basic syntax to functions, modules, and packages. It consisted of 23 lessons and 115 exercises, each accompanied by detailed explanations. Completion required both completing exercises and watching explanatory videos after each lesson.
 
+### 2. [freecodecamp - Responsive Web Design (EN)]([link_to_course_page]([https://www.freecodecamp.org/learn/2022/responsive-web-design/])
+- **Language:** English (EN)
+- **Description:** In progress. This course focuses on teaching HTML and CSS basics through project-based learning. Each lesson is a project with step-by-step instructions. Completion involves building five final projects to earn certification.
 
-# First Course:
+## Courses Planned
 
-**cursoemvideo - Python3 (PT)**
+### 3. [freecodecamp - JavaScript Algorithms and Data Structures (EN)]([https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/])
+- **Language:** English (EN)
+- **Description:** Will start upon completion of Responsive Web Design course.
 
+### 4. [freecodecamp - Front End Development Libraries (EN)]([https://www.freecodecamp.org/learn/front-end-development-libraries/])
+- **Language:** English (EN)
+- **Description:** Will start upon completion of JavaScript Algorithms and Data Structures course.
 
-This course taught me all the way from print('Hello World') to functions, modules, packages. But it did not cover classes or anything more. It was a total of 23 lessons and 115 exercises. You'd watch the lesson and be given around 5-10 exercises to finish before the next lesson. To finish the whole course, you had to not only do every exercise but watch their explanation after each lesson. So you always knew how to build what was asked for in the end, even if you had no idea at first.
+## Future Plans
 
+Once I have completed the above courses, I plan to either:
 
-# Second Course:
-
-**freecodecamp - Responsive Web Design (EN)**
-
-
-I am still working on this one. It's taught me HTML and CSS basics so far. It has quite a different approach compared to my Python course. Because this time, it is entirely project based. Every lesson is a project you build along instructions. You do around 5 project lessons, building small projects as you go, and then a final project for that module. Finish 5 final projects and you get your certification.
-
-
-# Third Course:
-
-**freecodecamp - JavaScript Algorithms and Data Structures (EN)**
-
-
-Will start on this one once I finish Responsive Web Design.
-
-
-
-# Fourth Course:
-
-**freecodecamp - Front End Development Libraries (EN)**
-
-
-Will start this one once I finish JavaScript Algorithms and Data Structures.
-
-
-# Fifth Course:
-
-
-At this point I will probably have enough information to build my own projects.
-Either way I'd like to always keep studying. I plan to either do the entire 'The Odin Project's Web Developent Course', which turns you in to a Full Stack Developer, or I'll do more freecodecamp courses before I do that one.
+- Enroll in [The Odin Project's Web Development Course]([(https://www.theodinproject.com/paths]), which offers a comprehensive path to becoming a Full Stack Developer.
+- Continue with additional courses on freecodecamp to further expand my skills before pursuing The Odin Project.
