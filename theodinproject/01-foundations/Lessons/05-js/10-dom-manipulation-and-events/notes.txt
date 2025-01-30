@@ -1,0 +1,175 @@
+Document Object Model
+
+    The DOM (or Document Object Model) is a tree-like representation of the contents of a webpage - a tree of “nodes” with different relationships depending on how they’re arranged in the HTML document. There are many types of nodes, most of which are not commonly used. In this lesson we will be focusing on “element” nodes which are primarily used for manipulating the DOM.
+
+        <div id="container">
+        <div class="display"></div>
+        <div class="controls"></div>
+        </div>
+
+    In the above example, the <div class="display"></div> is a “child” of <div id="container"></div> and a “sibling” to <div class="controls"></div>. Think of it like a family tree. <div id="container"></div> is a parent, with its children on the next level, each on their own “branch”.
+
+Targeting nodes with selectors
+
+    When working with the DOM, you use “selectors” to target the nodes you want to work with. You can use a combination of CSS-style selectors and relationship properties to target the nodes you want. Let’s start with CSS-style selectors. In the above example, you could use the following selectors to refer to <div class="display"></div>:
+
+    - div.display
+    - .display
+    - #container > .display
+    - div#container > div.display
+
+    You can also use relational selectors (i.e., firstElementChild or lastElementChild, etc.) with special properties owned by the nodes.
+
+    // selects the #container div (don't worry about the syntax, we'll get there)
+    const container = document.querySelector("#container");
+
+    // selects the first child of #container => .display
+    const display = container.firstElementChild;
+    console.log(display);  // <div class="display"></div>
+    
+    // selects the .controls div
+    const controls = document.querySelector(".controls");
+
+    // selects the prior sibling => .display
+    const display = controls.previousElementSibling;
+    console.log(display); // <div class="display"></div>
+    
+    So you’re identifying a certain node based on its relationships to the nodes around it.
+
+DOM methods
+
+    When your HTML code is parsed by a web browser, it is converted to the DOM, as was mentioned above. One of the primary differences is that these nodes are JavaScript objects that have many properties and methods attached to them. These properties and methods are the primary tools we are going to use to manipulate our webpage with JavaScript.
+
+    Query selectors
+
+       - element.querySelector(selector) - returns a reference to the first match of selector.
+       - element.querySelectorAll(selectors) - returns a “NodeList” containing references to all of the matches of the selectors.
+        
+        There are several other, more specific queries, that offer potential (marginal) performance benefits, but we won't be going over them now.
+
+        It’s important to remember that when using querySelectorAll, the return value is not an array. It looks like an array, and it somewhat acts like an array, but it’s really a “NodeList”. The big distinction is that several array methods are missing from NodeLists. One solution, if problems arise, is to convert the NodeList into an array. You can do this with Array.from() or the spread operator.
+
+    Element creation
+
+        document.createElement(tagName, [options]) - creates a new element of tag type tagName. [options] in this case means you can add some optional parameters to the function. Don’t worry about these at this point.
+
+        const div = document.createElement("div");
+
+        This function does NOT put your new element into the DOM - it creates it in memory. This is so that you can manipulate the element (by adding styles, classes, ids, text, etc.) before placing it on the page. You can place the element into the DOM with one of the following methods.
+
+    Append elements
+
+       - parentNode.appendChild(childNode) - appends childNode as the last child of parentNode.
+       - parentNode.insertBefore(newNode, referenceNode) - inserts newNode into parentNode before referenceNode.
+       
+    Remove elements
+
+       - parentNode.removeChild(child) - removes child from parentNode on the DOM and returns a reference to child.
+
+    Altering elements
+
+        When you have a reference to an element, you can use that reference to alter the element’s own properties. This allows you to do many useful alterations, like adding, removing, or altering attributes, changing classes, adding inline style information, and more.
+
+        // creates a new div referenced in the variable 'div'
+        const div = document.createElement("div");
+
+        Adding inline style
+
+        // adds the indicated style rule to the element in the div variable
+        div.style.color = "blue";
+
+        // adds several style rules
+        div.style.cssText = "color: blue; background: white;";
+
+        // adds several style rules
+        div.setAttribute("style", "color: blue; background: white;");
+        
+        When accessing a kebab-cased CSS property like background-color with JS, you will need to either use camelCase with dot notation or bracket notation. When using bracket notation, you can use either camelCase or kebab-case, but the property name must be a string.
+
+        // dot notation with kebab case: doesn't work as it attempts to subtract color from div.style.background
+        // equivalent to: div.style.background - color
+        div.style.background-color;
+
+        // dot notation with camelCase: works, accesses the div's background-color style
+        div.style.backgroundColor;
+
+        // bracket notation with kebab-case: also works
+        div.style["background-color"];
+
+        // bracket notation with camelCase: also works
+        div.style["backgroundColor"];
+
+    Editing attributes
+
+        // if id exists, update it to 'theDiv', else create an id with value "theDiv"
+        div.setAttribute("id", "theDiv");
+
+        // returns value of specified attribute, in this case "theDiv"
+        div.getAttribute("id");
+
+        // removes specified attribute
+        div.removeAttribute("id");
+
+        See MDN’s section on HTML Attributes for more information on available attributes.
+
+    Working with classes
+
+        // adds class "new" to your new div
+        div.classList.add("new");
+
+        // removes "new" class from div
+        div.classList.remove("new");
+
+        // if div doesn't have class "active" then add it, or if it does, then remove it
+        div.classList.toggle("active");
+
+        It is often standard (and cleaner) to toggle a CSS style rather than adding and removing inline CSS.
+
+    Adding text content
+
+        // creates a text node containing "Hello World!" and inserts it in div
+        div.textContent = "Hello World!";
+
+    Adding HTML content
+
+        // renders the HTML inside div
+        div.innerHTML = "<span>Hello World!</span>";
+
+        Note that using textContent is preferred over innerHTML for adding text, as innerHTML should be used sparingly to avoid potential security risks. To understand the dangers of using innerHTML, watch this video about preventing the most common cross-site scripting attack.
+
+        Let’s take a minute to review what we’ve covered and give you a chance to practice this stuff before moving on. Check out this example of creating and appending a DOM element to a webpage.
+
+        <!-- your HTML file: -->
+        <body>
+        <h1>THE TITLE OF YOUR WEBPAGE</h1>
+        <div id="container"></div>
+        </body>
+
+        // your JavaScript file
+        const container = document.querySelector("#container");
+
+        const content = document.createElement("div");
+        content.classList.add("content");
+        content.textContent = "This is the glorious text-content!";
+
+        container.appendChild(content);
+
+        In the JavaScript file, first we get a reference to the container div that already exists in our HTML. Then we create a new div and store it in the variable content. We add a class and some text to the content div and finally append that div to container. After the JavaScript code is run, our DOM tree will look like this:
+
+        <!-- The DOM -->
+        <body>
+        <h1>THE TITLE OF YOUR WEBPAGE</h1>
+        <div id="container">
+            <div class="content">This is the glorious text-content!</div>
+        </div>
+        </body>
+        
+        Keep in mind that the JavaScript does not alter your HTML, but the DOM - your HTML file will look the same, but the JavaScript changes what the browser renders.
+
+        Your JavaScript, for the most part, is run whenever the JS file is run or when the script tag is encountered in the HTML. If you are including your JavaScript at the top of your file, many of these DOM manipulation methods will not work because the JS code is being run before the nodes are created in the DOM. The simplest way to fix this is to include your JavaScript at the bottom of your HTML file so that it gets run after the DOM nodes are parsed and created.
+
+        Alternatively, you can link the JavaScript file in the <head> of your HTML document. Use the <script> tag with the src attribute containing the path to the JS file, and include the defer keyword to load the file after the HTML is parsed, as such:
+
+        <head>
+        <script src="js-file.js" defer></script>
+        </head>
