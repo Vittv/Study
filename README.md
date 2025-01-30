@@ -37,7 +37,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 2. Build a Markdown Previewer (React) ✅
 3. Build a Drum Machine (React) ✅
 4. Build a JavaScript Calculator (jQuery) - finishing styling ⌛
-5. Build a 25 + 5 Clock (React) ⌛
+5. Build a 25 + 5 Clock (React, Sass) ⌛
 
 ## Future Plans
 
