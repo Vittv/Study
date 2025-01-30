@@ -27,7 +27,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **ETC:** 60 hours
 - **Language:** English (EN)
 - **Platform:** freeCodeCamp
-- **Description:** Working it.
+- **Description:** Working on it.
 
 ## Future Plans
 
