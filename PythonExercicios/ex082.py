@@ -1,3 +1,6 @@
+#  Faça um programa que leia numeros do usuario e coloque-os em uma lista
+# Entao faça uma lista com os numeros pares e impares dessa mesma lista:
+
 lista = []
 listapar = []
 listaimpar = []
