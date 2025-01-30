@@ -26,3 +26,7 @@ Resources:
 Practice:
 
     https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Structuring_planet_data
+
+Table Design UX:
+
+    https://www.pencilandpaper.io/articles/ux-pattern-analysis-enterprise-data-tables
