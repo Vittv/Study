@@ -348,26 +348,26 @@ body {
 
 @media only screen and (max-width: 768px) {
     .logo img {
-        margin-left: 5%; /* Adjust as needed */
+        margin-left: 5%; 
     }
 
     #nav-bar ul {
-        margin-right: 10%; /* Adjust as needed */
+        margin-right: 10%; 
     }
 
     #hero h2 {
-        margin-left: 5%; /* Adjust as needed */
+        margin-left: 5%; 
     }
 }
 
 @media only screen and (max-width: 600px) {
     .featuredcymbals {
-        font-size: 10vw; /* Adjust as needed */
+        font-size: 10vw; 
     }
 
     #hero h2 {
-        font-size: 4vw; /* Adjust as needed */
-        margin-bottom: -10vw; /* Adjust as needed */
-        padding-top: 5vw; /* Adjust as needed */
+        font-size: 4vw;
+        margin-bottom: -10vw;
+        padding-top: 5vw;
     }
 }
