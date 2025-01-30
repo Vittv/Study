@@ -13,13 +13,10 @@
                 <li><a class="nav-link" href="#Prerequisites">Prerequisites</a></li>
                 <li><a class="nav-link" href="#GettingStarted">Getting Started</a></li>
                 <li><a class="nav-link" href="#Variables">Variables</a></li>
-                <li><a class="nav-link" href="#Declaring-Variables">Declaring Variables</a></li>
                 <li><a class="nav-link" href="#Variable-Scope">Variable Scope</a></li>
-                <li><a class="nav-link" href="#Global-variables">Global variables</a></li>
                 <li><a class="nav-link" href="#Data-types">Data types</a></li>
-                <li><a class="nav-link" href="#if-else-statement">if else statement</a></li>
-                <li><a class="nav-link" href="#for-statement">for statement</a></li>
-                <li><a class="nav-link" href="#while-statement">while statement</a></li>
+                <li><a class="nav-link" href="#conditionalstatements">Conditional Statements</a></li>
+                <li><a class="nav-link" href="#forwhileloop">Loops: 'for' and 'while'</a></li>
                 <li><a class="nav-link" href="#Functions">Functions</a></li>
                 <li><a class="nav-link" href="#Reference">Reference</a></li>
             </ul>
@@ -67,24 +64,173 @@
                 <header>Variables</header>
                 <article>
                     <p>Variables in Python are used to store and manage data. They act as containers that hold information, such as numbers, text, or other types of data.</p>
-                    <p>In this example, we declare a variable named age and assign it the value 25. We then print the value of the age variable using the print() function.</p>
+                    <p>In this example, we declare a variable named age and assign it the value 24. We then print the value of the age variable using the print() function.</p>
                     <code>
-                        # Define an integer variable named 'age' and assign it the value 25
-                        age = 25
-                        
-                        # Print the value of the 'age' variable
-                        print(age)  # Output: 25
+# Define an integer variable named 'age' and assign it the value 24
+age = 24
+
+# Print the value of the 'age' variable
+print(age)  # Output: 24
                     </code>
                     <p>Variables in Python can hold different types of data, including integers, floats, strings, and more. They provide flexibility and allow us to work with data in our programs.</p>
-                    <p>In this example, we declare a variable named name and assign it the value 'Alice', which is a string. We then print the value of the name variable.</p>
+                    <p>In this example, we declare a variable named name and assign it the value 'Charlotte', which is a string. We then print the value of the name variable.</p>
                     <code>
-                        # Define a string variable named 'name' and assign it the value 'Charlotte'
-                        name = 'Charlotte'
-                        
-                        # Print the value of the 'name' variable
-                        print(name)  # Output: Charlotte
+# Define a string variable named 'name' and assign it the value 'Charlotte'
+name = 'Charlotte'
+
+# Print the value of the 'name' variable
+print(name)  # Output: Charlotte
                     </code>
                 </article>
+            </section>
+            <section class="main-section" id="Variable-Scope">
+                <header>Variable Scope</header>
+                <article>
+                    <p>Variable scope refers to the area of a program where a variable is accessible. In Python, variables can have either local scope or global scope.</p>
+                    <p id="localscope">Local Scope:</p>
+                    <p>Variables that are defined inside a function have local scope. This means they can only be accessed within that function. Once the function finishes executing, the variables cease to exist.</p>
+                    <p>In this example, x has local scope and is accessible only within the my_function() function. Trying to access x outside of the function will result in an error.</p>
+                    <code>
+def my_function():
+    x = 10
+    print("Inside the function:", x)
+
+my_function()
+    # Uncommenting the line below will result in an error
+    # print("Outside the function:", x)
+                    </code>
+                    <p id="globalscope">Global Scope:</p>
+                    <p>Variables that are defined outside of any function have global scope. They can be accessed from anywhere in the program, including inside functions.</p>
+                    <p>In this example, y has global scope and can be accessed both inside and outside of the another_function() function.</p>
+                    <code>
+y = 20
+
+def another_function():
+    print("Inside the function:", y)
+
+another_function()
+print("Outside the function:", y)
+                    </code>                    
+                    <p id="usingglobal">Using Global Variables Inside Functions:</p>
+                    <p>Although global variables can be accessed inside functions, if you want to modify a global variable from within a function, you need to use the global keyword.</p>
+                    <p>In this example, we use the global keyword to modify the value of the global variable z from within the modify_global() function.</p>
+                    <code>
+z = 30
+
+def modify_global():
+    global z
+    z = 40
+    print("Inside the function:", z)
+
+modify_global()
+print("Outside the function:", z)
+                    </code>
+                    <p>While global variables can be convenient, it's generally recommended to minimize their use, as they can make code harder to understand and maintain. Instead, prefer passing variables as arguments to functions when possible.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Data-types">
+                <header>Data Types</header>
+                <article>
+                    <p>In Python, data types represent the type or nature of data that variables can hold. Common data types include integers, floats, strings, booleans, lists, tuples, dictionaries, sets, and NoneType. The type() function is used to determine the data type of a variable.</p>
+                    <ol>
+                        <li>Integer (int): Represents whole numbers without any decimal point, such as 10, -5, or 0.</li>
+                        <li>Float (float): Represents numbers with decimal points, such as 3.14, -0.5, or 2.0.</li>
+                        <li>String (str): Represents a sequence of characters enclosed within single ('') or double ("") quotes, such as "Hello", 'Python', or "123".</li>
+                        <li>Boolean (bool): Represents a binary value indicating either True or False.</li>
+                        <li>List (list): Represents an ordered collection of items enclosed within square brackets ([]), where each item can be of any data type.</li>
+                        <li>Tuple (tuple): Represents an ordered and immutable collection of items enclosed within parentheses (()), similar to lists but cannot be modified after creation.</li>
+                        <li>Dictionary (dict): Represents a collection of key-value pairs enclosed within curly braces ({}) where each key is associated with a value.</li>
+                        <li>Set (set): Represents an unordered collection of unique items enclosed within curly braces ({}) where each item must be unique.</li>
+                        <li>NoneType (None): Represents the absence of a value or a null value. It is often used to indicate that a variable has no value assigned to it.</li>
+                    </ol>
+                    <code>
+# Integer
+x = 10
+print(type(x))  # Output: &lt;class 'int'&gt;
+
+# Float
+y = 3.14
+print(type(y))  # Output: &lt;class 'float'&gt;
+
+# String
+name = "Alice"
+print(type(name))  # Output: &lt;class 'str'&gt;
+
+# Boolean
+is_valid = True
+print(type(is_valid))  # Output: &lt;class 'bool'&gt;
+
+# List
+numbers = [1, 2, 3, 4, 5]
+print(type(numbers))  # Output: &lt;class 'list'&gt;
+
+# Tuple
+coordinates = (10, 20)
+print(type(coordinates))  # Output: &lt;class 'tuple'&gt;
+
+# Dictionary
+person = {"name": "Bob", "age": 30}
+print(type(person))  # Output: &lt;class 'dict'&gt;
+
+# Set
+unique_numbers = {1, 2, 3, 4, 5}
+print(type(unique_numbers))  # Output: &lt;class 'set'&gt;
+
+# NoneType
+value = None
+print(type(value))  # Output: &lt;class 'NoneType'&gt;   
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="conditionalstatements">
+                <header>Conditional Statements: 'if', 'else',and 'elif'</header>
+                <article>
+                    <p>Conditional statements are essential in programming to control the flow of execution based on certain conditions. In Python, if, else, and elif are used for this purpose.</p>
+                    <h3>1. 'if' Statement</h3>
+                    <p>The 'if' statement allows you to execute a block of code if a certain condition is true.</p>
+                    <p>In this example, the code inside the 'if' block will only execute if the condition x > 5 evaluates to 'True'.</p>
+                    <code>
+x = 10
+
+if x > 5:
+    print("x is greater than 5")
+                        </code>
+                    <h3>2. 'else' Statement</h3>
+                    <p>The 'else' statement is used in conjunction with 'if' to execute a block of code when the if condition is false.</p>
+                    <p>If the condition in the 'if' statement is not met, the code inside the 'else' block will be executed.</p>
+                    <code>
+x = 3
+
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is not greater than 5")
+
+                    </code>
+                    <h3>3. 'elif' Statement</h3>
+                    <p>The 'elif' statement stands for "else if" and is used to check for additional conditions after the initial 'if' condition is false.</p>
+                    <p>In this example, if 'x' is not greater than 10, it checks if 'x' is greater than 5. If this condition is true, the corresponding block of code is executed. If none of the conditions are met, the 'else' block is executed.</p>
+                    <code>
+x = 7
+
+if x > 10:
+    print("x is greater than 10")
+elif x > 5:
+    print("x is greater than 5 but not greater than 10")
+else:
+    print("x is not greater than 5")
+
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="forwhileloop">
+                <header>Loops: 'for' and 'while'</header>
+                <h3>1. 'for' Loop</h3>
+                <p>The 'for' loop in Python is used to iterate over a sequence (such as a list, tuple, dictionary, or string) or any iterable object. It executes a block of code repeatedly for each item in the sequence.</p>
+                <code>
+for item in sequence:
+    # code block to be executed for each item
+                </code>                
             </section>
         </main>
     </body>
