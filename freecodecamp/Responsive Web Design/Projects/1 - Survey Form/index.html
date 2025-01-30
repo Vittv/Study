@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Coding Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Coding Survey Form</h1>
+    <p id="description">Please briefly describe your coding journey!</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id ="name-label" for="name">Name <input id="name" name="name" type="text" placeholder="Enter your name" required /></label>
+        <label id="email-label" for="email">Email <input id="email" name="email" type="email" placeholder="Enter your email" required /></label>
+        <label id="number-label" for="number">Age (optional)<input id="number" name="age" min="13" max="120" type="number" placeholder="Age" /></label>
+        <label for="dropdown">What was your first programming language?
+          <select id="dropdown" name="role">
+            <option value="">(Select language)</option>
+            <option value="1">C</option>
+            <option value="2">C#</option>
+            <option value="3">C++</option>
+            <option value="4">Java</option>
+            <option value="5">JavaScript</option>
+            <option value="6">Python</option>
+            <option value="7">Swift</option>
+            <option value="8">Prefer not to say</option>
+            <option value="9">Other</option>
+          </select>
+        <legend>Why did you learn to code? </legend>
+        <label for="radiobuttons">
+          <input id="radiobuttons" value="radio1" type="radio" name="options" class="inline"/>Necessity
+          <input id="radiobuttons" value="radio2" type="radio" name="options" class="inline"/>Curiosity
+          <input id="radiobuttons" value="radio3" type="radio" name="options" class="inline"/>Monetary
+          <input id="radiobuttons" value="radio4" type="radio" name="options" class="inline"/>Other
+        </label>
+        <legend>How did you learn to code? (check all that apply)
+        <label for="checkbox">
+          <input id="checkbox" value="check1" type="checkbox"/>Academia
+          <input id="checkbox" value="check2" type="checkbox"/>Bootcamps
+          <input id="checkbox" value="check3" type="checkbox"/>Courses
+          <input id="checkbox" value="check4" type="checkbox"/>Youtube
+        </label>
+        <legend>
+      </fieldset> 
+    </form>
+  </body>
+<html>  
