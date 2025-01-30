@@ -25,5 +25,5 @@ Welcome to my study repository! Here, I chronicle my learning journey through va
 
 Once I have completed the above courses, I plan to either:
 
-- Enroll in [The Odin Project's Web Development Course](https://www.theodinproject.com/paths]), which offers a comprehensive path to becoming a Full Stack Developer.
+- Enroll in [The Odin Project's Web Development Course](https://www.theodinproject.com/paths), which offers a comprehensive path to becoming a Full Stack Developer.
 - Continue with additional courses on freecodecamp to further expand my skills before pursuing The Odin Project.
