@@ -8,9 +8,9 @@ Predominantly in EN, sometimes PT
 >All of these courses offer certification
 
 
-# First course:
+**# First course:**
 
-**cursoemvideo - Python3 (PT)**
+# cursoemvideo - Python3 (PT)
 
 This course taught me all the way from print('Hello World') to functions, modules, packets. But it did not cover classes or anything deeper than that.
 
