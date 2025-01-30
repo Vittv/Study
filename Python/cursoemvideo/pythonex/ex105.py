@@ -1,3 +1,6 @@
+# Faça um programa que analisa notas e situações de vários alunos.
+# Tudo somente com uma função e 2 linhas de programa principal:
+
 def notas(*nota, sit=False):
 
     '''-> Função para analisar notas e situações de vários alunos.
