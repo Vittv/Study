@@ -10,6 +10,12 @@
     <body>
         <main>
             <div class="container">
+                <form role="search" id="search-form">
+                    <input type="text" name="pokemon" id="search-input" placeholder="Pokémon Name or ID" required>
+                    <button id="search-button">Search</button>
+                    <button id="previous-button"><</button>
+                    <button id="next-button">></button>
+                </form>
                 <div class="output">
                     <div class="top-container">
                         <div class="name-and-id">
@@ -25,7 +31,7 @@
                             <img id="sprite" src="" alt="">
                         </div>
                         <div id="types">
-                            <span class="">Electric</span>
+                            <span class="type">Electric</span>
                         </div>
                     </div>
                     <div class="bottom-container">
@@ -63,12 +69,6 @@
                         </table>
                     </div>
                 </div>
-                <form role="search" id="search-form">
-                    <input type="text" name="pokemon" id="search-input" placeholder="Pokémon Name or ID" required>
-                    <button id="search-button">Search</button>
-                    <button id="previous-button"><</button>
-                    <button id="next-button">></button>
-                </form>
             </div>
             <script src="./script.js"></script>
         </main>
