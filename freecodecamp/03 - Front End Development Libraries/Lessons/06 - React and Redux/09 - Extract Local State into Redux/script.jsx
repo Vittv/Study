@@ -4,7 +4,7 @@ const ADD = 'ADD';
 const addMessage = (message) => {
   return {
     type: ADD,
-    message
+    message: message
   }
 };
 
@@ -20,18 +20,18 @@ const messageReducer = (state = [], action) => {
   }
 };
 
-
-
 const store = Redux.createStore(messageReducer);
 
 // React:
+const Provider = ReactRedux.Provider;
+const connect = ReactRedux.connect;
 
-class DisplayMessages extends React.Component {
+// Change code below this line
+class Presentational extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       input: '',
-      messages: []
     }
     this.handleChange = this.handleChange.bind(this);
     this.submitMessage = this.submitMessage.bind(this);
@@ -41,13 +41,10 @@ class DisplayMessages extends React.Component {
       input: event.target.value
     });
   }
-  submitMessage() {  
-    this.setState((state) => {
-      const currentMessage = state.input;
-      return {
-        input: '',
-        messages: state.messages.concat(currentMessage)
-      };
+  submitMessage() {
+    this.props.submitNewMessage(this.state.input);
+    this.setState({
+      input: ''
     });
   }
   render() {
@@ -59,7 +56,7 @@ class DisplayMessages extends React.Component {
           onChange={this.handleChange}/><br/>
         <button onClick={this.submitMessage}>Submit</button>
         <ul>
-          {this.state.messages.map( (message, idx) => {
+          {this.props.messages.map( (message, idx) => {
               return (
                  <li key={idx}>{message}</li>
               )
@@ -70,17 +67,28 @@ class DisplayMessages extends React.Component {
     );
   }
 };
+// Change code above this line
 
-const Provider = ReactRedux.Provider;
+const mapStateToProps = (state) => {
+  return {messages: state}
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    submitNewMessage: (message) => {
+      dispatch(addMessage(message))
+    }
+  }
+};
+
+const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
 
 class AppWrapper extends React.Component {
-  // Render the Provider below this line
   render() {
     return (
       <Provider store={store}>
-        <DisplayMessages />
+        <Container/>
       </Provider>
-    )
+    );
   }
-  // Change code above this line
 };

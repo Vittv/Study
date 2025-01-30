@@ -4,7 +4,7 @@ const ADD = 'ADD';
 const addMessage = (message) => {
   return {
     type: ADD,
-    message
+    message: message
   }
 };
 
@@ -20,13 +20,10 @@ const messageReducer = (state = [], action) => {
   }
 };
 
-
-
 const store = Redux.createStore(messageReducer);
 
 // React:
-
-class DisplayMessages extends React.Component {
+class Presentational extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,7 +38,7 @@ class DisplayMessages extends React.Component {
       input: event.target.value
     });
   }
-  submitMessage() {  
+  submitMessage() {
     this.setState((state) => {
       const currentMessage = state.input;
       return {
@@ -71,16 +68,35 @@ class DisplayMessages extends React.Component {
   }
 };
 
+// React-Redux:
+const mapStateToProps = (state) => {
+  return { messages: state }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    submitNewMessage: (newMessage) => {
+       dispatch(addMessage(newMessage))
+    }
+  }
+};
+
 const Provider = ReactRedux.Provider;
+const connect = ReactRedux.connect;
+
+// Define the Container component here:
+const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
 
 class AppWrapper extends React.Component {
-  // Render the Provider below this line
+  constructor(props) {
+    super(props);
+  }
   render() {
+    // Complete the return statement:
     return (
       <Provider store={store}>
-        <DisplayMessages />
+        <Container />
       </Provider>
-    )
+    );
   }
-  // Change code above this line
 };
