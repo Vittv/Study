@@ -10,7 +10,6 @@ function App() {
   
   You can write \`<div>inline</div>\` code.
   \`\`\`
-  
   // or multi-line code:
   
   {
@@ -21,24 +20,35 @@ function App() {
 
   \`\`\`
   
-  You can also make text **bold** or _italic_.
-  Or **_both_**!
+  You can also make text
+
+  **bold**
+  _italic_
+  **_both_**
+  ~~crossed~~
+  **_~~Try it out!~~_**
 
   You can
 
   - Make
-  - Lists!
+  - Lists
+  - Like
+  - This
+    - And
+      - Also
+        - Indent like crazy
 
   and
 
   > Block Quotes!
 
-  And of course, embed images
+  And of course, embed images, links..
+  Here's a picture of the [Ada Lovelace Tribute Page](https://vittv.github.io/ada-tribute/) I made when I took Responsive Web Design!
 
-  ![alt text](image.jpg)
+  ![Ada Lovelace Tribute Page](https://raw.githubusercontent.com/Vittv/portfolio-study/main/images/adalovelacetribute.png)
 
-  Checkout my [GitHub](https://github.com/Vittv) for more projects!
 
+  ### Check out my [GitHub](https://github.com/Vittv) for more projects!
   `);
 
   marked.setOptions({
@@ -50,7 +60,7 @@ function App() {
       <div id="app-wrapper">
         <div id="editor-wrapper">
           <div class="toolbar">
-            <h3>Edit</h3>
+            <h3>EDIT</h3>
           </div>
             <textarea
             id="editor"
@@ -62,7 +72,7 @@ function App() {
         </div>
         <div id="preview-wrapper">
           <div class="toolbar">
-            <h3>Preview</h3>
+            <h3>PREVIEW</h3>
           </div>
             <div
               id="preview"
