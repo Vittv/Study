@@ -224,7 +224,3 @@ Comments
         In many situations, well-placed comments are priceless. They might explain why an unintuitive bit of code is necessary, or perhaps the bigger picture of why a certain function is particularly important to be called here and not there. The article linked in the assignment section goes into more depth on this.
 
         "Great code comes from experience. Experience comes from not-so-great code."
-
-
-
-
