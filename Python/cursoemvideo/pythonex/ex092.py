@@ -35,4 +35,18 @@ if cidadao['CTPS'] != 0:
     print(f'{cidadao["Nome"]} começando a trabalhar em {cidadao["Ano da contratação"]},')
     print(f'Se aposentará em {a} anos aos {aposentar} anos de idade.')
 
+# CÓDIGO DO PROFESSOR:
 
+dados = dict()
+dados['nome'] = str(input('Nome: '))
+nasc = int(input('Ano de Nascimento? '))
+dados['idade'] = datetime.now().year - nasc
+dados['ctps'] = int(input('Carteira de Trabalho [0 não tem].' ))
+
+if dados['ctps'] != 0:
+    dados['contratação'] = int(input('Ano de contratação: '))
+    dados['salário'] = float(input('Salário: R$'))
+    dados['aposentadoria'] = ((dados['contratação'] + 35) - datetime.now().year)
+
+for k, v in dados.items():
+    print(f' - {k} tem o valor {v}')

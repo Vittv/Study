@@ -28,6 +28,10 @@ while True:
 
     c += 1 
 
+    if escolha not in 'SN':
+        print('ERRO! Responda apenas S ou N')
+        escolha = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
+
     if escolha in 'N':
         break
 
@@ -54,3 +58,60 @@ print(f'Lista de todas as pessoas mais velhas que a média:')
 for i in range(0, len(maiores), 3):
     
     print(f'Nome = {maiores[i]}; Sexo = {maiores[i + 1]}; Idade = {maiores[i + 2]};')
+
+
+# CÓDIGO DO PROFESSOR:
+
+galera = list()
+pessoa = dict()
+soma = média = 0
+
+while True:
+    
+    pessoa.clear()
+    pessoa['nome'] = str(input('Nome: ')).strip().capitalize()
+
+    while True:
+        
+        pessoa['sexo'] = str(input('Sexo [M/F]: ')).strip().upper()[0]
+        
+        if pessoa['sexo'] in 'MF':
+            break
+        print('ERRO! Por favor, digite apenas M ou F.')
+    
+    pessoa['idade'] = int(input('Idade: '))
+    soma += pessoa['idade']
+    galera.append(pessoa.copy())
+    
+    while True:
+        
+        resp = str(input('Quer continuar? [S/N]')).upper()[0]
+        
+        if resp in 'SN':
+            break
+        print('ERRO! Responda apenas S ou N.')
+    
+    if resp == 'S':
+        break
+
+print('-=' * 30)
+print(f'A) Ao todo temos {len(galera)} pessoas cadastradas.')
+média = soma / len(galera)
+print(f'B) A média de idade é de {média:5.2f} anos.')
+print('C) As mulheres cadastradas foram ', end='')
+
+for p in galera:
+    if p('sexo') in 'Ff':
+        print(f'{p["nome"]}', end='')
+
+print()
+print('D) Lista das pessoas que estão acima da média: ')
+
+for p in galera:
+    if p['idade'] >= média:
+        print('    ')
+        for k, v in p.items():
+            print(f'{k} = {v}; ', end='')
+        print()
+
+print('<< ENCERRADO >>')

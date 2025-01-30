@@ -5,9 +5,13 @@ aluno = {}
 aluno['Nome'] = str(input('Digite o nome: ')).capitalize()
 aluno['Média'] = float(input('Digite a média: '))
 
-if aluno['Média'] >= 6:
+if aluno['Média'] >= 7:
     aluno['Situação'] = 'aprovado'
     print(f'Aluno(a) {aluno["Nome"]} {aluno["Situação"]} com média {aluno["Média"]}.')
+
+elif 5 <= aluno['Média'] <= 7:
+    aluno['Situação'] = 'recuperação'
+    print(f'Aluno(a) {aluno["Nome"]} {aluno["Situação"]} com média {aluno['Média']}.')
 
 else:
     aluno['Situação'] = 'reprovado'
