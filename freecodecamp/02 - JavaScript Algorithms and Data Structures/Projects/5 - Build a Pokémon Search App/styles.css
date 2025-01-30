@@ -99,12 +99,13 @@ img {
     height: 28px;
     font-size: 1.1em;
     text-transform: capitalize;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .size {
     height: 22px;
     font-size: 0.85rem;
+    margin-bottom: 5px;
 }
 
 .sprite-container {
@@ -124,7 +125,7 @@ img {
 
 #sprite {
     position: absolute;
-    margin-top: 5%;
+    margin-top: 2%;
     top: 10%;
     left: 22%;
     width: 200px;
