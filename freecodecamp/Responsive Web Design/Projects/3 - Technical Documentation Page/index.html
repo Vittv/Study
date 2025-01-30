@@ -56,7 +56,7 @@
                     </ul>
                     <p>Once Python is installed, using any IDE or online platform of your choice,</p>
                     <p>Let's start with writing your first "Hello World Python code:</p>
-                    <code>print('Hello world')</code>
+                    <pre><code>print('Hello world')</code></pre>
                     <p>Click the "Run" button to execute your code and see what happens!</p>
                 </article>
             </section>
@@ -65,22 +65,18 @@
                 <article>
                     <p>Variables in Python are used to store and manage data. They act as containers that hold information, such as numbers, text, or other types of data.</p>
                     <p>In this example, we declare a variable named age and assign it the value 24. We then print the value of the age variable using the print() function.</p>
-                    <code>
-# Define an integer variable named 'age' and assign it the value 24
+                    <pre><code># Define an integer variable named 'age' and assign it the value 24
 age = 24
 
 # Print the value of the 'age' variable
-print(age)  # Output: 24
-                    </code>
+print(age)  # Output: 24</code></pre>
                     <p>Variables in Python can hold different types of data, including integers, floats, strings, and more. They provide flexibility and allow us to work with data in our programs.</p>
                     <p>In this example, we declare a variable named name and assign it the value 'Charlotte', which is a string. We then print the value of the name variable.</p>
-                    <code>
-# Define a string variable named 'name' and assign it the value 'Charlotte'
+                    <pre><code># Define a string variable named 'name' and assign it the value 'Charlotte'
 name = 'Charlotte'
 
 # Print the value of the 'name' variable
-print(name)  # Output: Charlotte
-                    </code>
+print(name)  # Output: Charlotte</code></pre>
                 </article>
             </section>
             <section class="main-section" id="Variable-Scope">
@@ -90,32 +86,27 @@ print(name)  # Output: Charlotte
                     <p id="localscope">Local Scope:</p>
                     <p>Variables that are defined inside a function have local scope. This means they can only be accessed within that function. Once the function finishes executing, the variables cease to exist.</p>
                     <p>In this example, x has local scope and is accessible only within the my_function() function. Trying to access x outside of the function will result in an error.</p>
-                    <code>
-def my_function():
+                    <pre><code>def my_function():
     x = 10
     print("Inside the function:", x)
 
 my_function()
     # Uncommenting the line below will result in an error
-    # print("Outside the function:", x)
-                    </code>
+    # print("Outside the function:", x)</code></pre>
                     <p id="globalscope">Global Scope:</p>
                     <p>Variables that are defined outside of any function have global scope. They can be accessed from anywhere in the program, including inside functions.</p>
                     <p>In this example, y has global scope and can be accessed both inside and outside of the another_function() function.</p>
-                    <code>
-y = 20
+                    <pre><code>y = 20
 
 def another_function():
     print("Inside the function:", y)
 
 another_function()
-print("Outside the function:", y)
-                    </code>                    
+print("Outside the function:", y)</code></pre>                    
                     <p id="usingglobal">Using Global Variables Inside Functions:</p>
                     <p>Although global variables can be accessed inside functions, if you want to modify a global variable from within a function, you need to use the global keyword.</p>
                     <p>In this example, we use the global keyword to modify the value of the global variable z from within the modify_global() function.</p>
-                    <code>
-z = 30
+                    <pre><code>z = 30
 
 def modify_global():
     global z
@@ -123,8 +114,7 @@ def modify_global():
     print("Inside the function:", z)
 
 modify_global()
-print("Outside the function:", z)
-                    </code>
+print("Outside the function:", z)</code></pre>
                     <p>While global variables can be convenient, it's generally recommended to minimize their use, as they can make code harder to understand and maintain. Instead, prefer passing variables as arguments to functions when possible.</p>
                 </article>
             </section>
@@ -143,8 +133,7 @@ print("Outside the function:", z)
                         <li>Set (set): Represents an unordered collection of unique items enclosed within curly braces ({}) where each item must be unique.</li>
                         <li>NoneType (None): Represents the absence of a value or a null value. It is often used to indicate that a variable has no value assigned to it.</li>
                     </ol>
-                    <code>
-# Integer
+                    <pre><code># Integer
 x = 10
 print(type(x))  # Output: &lt;class 'int'&gt;
 
@@ -178,8 +167,7 @@ print(type(unique_numbers))  # Output: &lt;class 'set'&gt;
 
 # NoneType
 value = None
-print(type(value))  # Output: &lt;class 'NoneType'&gt;   
-                    </code>
+print(type(value))  # Output: &lt;class 'NoneType'&gt;</code></pre>
                 </article>
             </section>
             <section class="main-section" id="conditionalstatements">
@@ -189,70 +177,54 @@ print(type(value))  # Output: &lt;class 'NoneType'&gt;
                     <h3>1. 'if' Statement</h3>
                     <p>The 'if' statement allows you to execute a block of code if a certain condition is true.</p>
                     <p>In this example, the code inside the 'if' block will only execute if the condition x > 5 evaluates to 'True'.</p>
-                    <code>
-x = 10
+                    <pre><code>x = 10
 
 if x > 5:
-    print("x is greater than 5")
-                        </code>
+    print("x is greater than 5")</code></pre>
                     <h3>2. 'else' Statement</h3>
                     <p>The 'else' statement is used in conjunction with 'if' to execute a block of code when the if condition is false.</p>
                     <p>If the condition in the 'if' statement is not met, the code inside the 'else' block will be executed.</p>
-                    <code>
-x = 3
+                    <pre><code>x = 3
 
 if x > 5:
     print("x is greater than 5")
 else:
-    print("x is not greater than 5")
-
-                    </code>
+    print("x is not greater than 5")</code></pre>
                     <h3>3. 'elif' Statement</h3>
                     <p>The 'elif' statement stands for "else if" and is used to check for additional conditions after the initial 'if' condition is false.</p>
                     <p>In this example, if 'x' is not greater than 10, it checks if 'x' is greater than 5. If this condition is true, the corresponding block of code is executed. If none of the conditions are met, the 'else' block is executed.</p>
-                    <code>
-x = 7
+                    <pre><code>x = 7
 
 if x > 10:
     print("x is greater than 10")
 elif x > 5:
     print("x is greater than 5 but not greater than 10")
 else:
-    print("x is not greater than 5")
-
-                    </code>
+    print("x is not greater than 5")</code></pre>
                 </article>
             </section>
             <section class="main-section" id="forwhileloop">
                 <header>Loops: 'for' and 'while'</header>
                 <h3>1. 'for' Loop</h3>
                 <p>The 'for' loop in Python is used to iterate over a sequence (such as a list, tuple, dictionary, or string) or any iterable object. It executes a block of code repeatedly for each item in the sequence.</p>
-                <code>
-for item in sequence:
-    # code block to be executed for each item
-                </code>
+                <pre><code>for item in sequence:
+    # code block to be executed for each item</code></pre>
                 <p>Example:</p>
-                <code>
-# Iterating over a list
+                <pre><code># Iterating over a list
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
-    print(fruit)
-                </code>
+    print(fruit)</code></pre>
                 This loop will print each fruit in the 'fruits' list.
                 <h3>2. 'while' Loop</h3>
                 <p>The 'while' loop in Python is used to repeatedly execute a block of code as long as a condition is true. It continues looping as long as the specified condition evaluates to 'True'.</p>
-                <code>
-while condition:
-    # code block to be executed as long as the condition is true
-                </code>
+                <pre><code>while condition:
+    # code block to be executed as long as the condition is true</code></pre>
                 <p>Example:</p>
-                <code>
-# Using a while loop to count from 1 to 5
+                <pre><code># Using a while loop to count from 1 to 5
 count = 1
 while count <= 5:
     print(count)
-    count += 1
-                </code>
+    count += 1</code></pre>
                 <p>'for' and 'while' loops are fundamental constructs in Python for iterating over sequences and executing code repeatedly based on certain conditions. They provide powerful tools for automating repetitive tasks and controlling program flow.</p>                
             </section>
         </main>

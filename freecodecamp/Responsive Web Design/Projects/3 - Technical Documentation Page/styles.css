@@ -1,13 +1,14 @@
-code {
+pre code {
     display: block;
     white-space: pre;
     position: relative;
     word-break: normal;
     word-wrap: normal;
     line-height: 2;
-    background-color: #f7f7f7;
+    background-color: black;;
     padding: 15px;
     margin: 20px;
+    overflow-x: auto;
     border-radius: 5px;
-    text-align: left;
+    color: white;
 }
