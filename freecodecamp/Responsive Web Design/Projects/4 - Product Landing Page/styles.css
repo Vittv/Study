@@ -346,40 +346,28 @@ body {
     padding: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 768px) {
     .logo img {
-        margin-left: 20px; 
+        margin-left: 5%; /* Adjust as needed */
     }
 
     #nav-bar ul {
-        margin-right: 20px; 
-    }
-
-    .featuredcymbals {
-        margin-left: 20px; 
-        font-size: 40px;
+        margin-right: 10%; /* Adjust as needed */
     }
 
     #hero h2 {
-        margin-left: 20px; 
-        font-size: 16px; 
+        margin-left: 5%; /* Adjust as needed */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .featuredcymbals {
+        font-size: 10vw; /* Adjust as needed */
     }
 
-    .cymbal-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px; 
-    }
-
-    .cymbal-name h3 {
-        font-size: 12px; 
-    }
-
-    .btn {
-        font-size: 16px; 
-    }
-
-    #email {
-        width: 80%; 
+    #hero h2 {
+        font-size: 4vw; /* Adjust as needed */
+        margin-bottom: -10vw; /* Adjust as needed */
+        padding-top: 5vw; /* Adjust as needed */
     }
 }
