@@ -25,3 +25,32 @@ Additional resources:
 Available as an npm package, modern-normalize seems to be the best option for a clean css reset.
 
 @import "modern-normalize";
+
+Or you can use the raw modern-normalize code, instead of downloading the npm pack:
+
+    @import "modern-normalize";
+
+    :root {
+    line-height: 1.5;
+    }
+
+    h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+    }
+
+    ol[role="list"], ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+    }
+
+    h1, h2, h3, h4, h5 {
+    font-size: inherit;
+    font-weight: inherit;
+    }
+
+    img {
+    display: block;
+    max-inline-size: 100%;
+    }
+
+This reset is very needed, for reasons explained here https://mattbrictson.com/blog/css-normalize-and-reset#modern-normalize
