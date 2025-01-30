@@ -53,3 +53,9 @@ h1 {
     font-size: 50px;
   }
 }
+
+Tips:
+
+    45ch is better for readability, when it comes to typography, anything above 75ch is a bit much and decreases readability.
+
+    Aiming for 45ch will most of the time get you better results and smoother reading experience.
