@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFECEC;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Poppins';
+    color: #6D4243;
+}
+
+.span-e {
+    color: #E46558;
+}
+
+.span-t {
+    color: #CC9379;
+}
+
+.span-c {
+    color: #96748C;
+   
+}
+
+.span-h {
+    color: #FFAA7E;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #6D4243;
+    border-radius: 10px;
+    background-color: #E46558;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 700px;
+    width: 300px;
+    border-right: 1px solid grey;
+}
+
+.mode-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 700px;
+    width: 300px;
+    border-left: 1px solid grey;
+}
+
+input {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+button,
+.current-input,
+.current-color-mode {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #FFF7F6;
+    color: rgb(35, 36, 39);
+    text-align: center;
+    text-transform: lowercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+button:hover {
+    transform: scale(1.05);
+    color: #96748C;
+    border: 1px solid #FFAA7E;
+}
+
+.current-input,
+.current-color-mode {
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid #6D4243;
+    background-color: #EC7972;
+    color: rgb(244, 242, 242);
+    font-weight: 700;
+}
+
+/* grid */
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 700px;
+    background-color: rgb(244, 242, 242);
+}
+
+.new-grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    height: 700px;
+}
+
+.new-grid {
+    background-color: white;
+    border: 1px solid #c8bfbb;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(35, 36, 39);
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.github-icon {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.github-icon:hover {
+    color: rgb(129, 129, 129);
+}
