@@ -1,0 +1,5 @@
+In most circumstances, flex-direction: row puts the main axis horizontal (left-to-right), and column puts the main axis vertical (top-to-bottom).
+
+Another detail to notice: when we change the flex-direction to column, flex-basis refers to height instead of width. Given the context this may be obvious, but it’s something to be aware of.
+
+The default behavior is flex-direction: row which arranges things horizontally. The reason this often works well without changing other details in the CSS is because block-level elements default to the full width of their parent. Changing things to vertical using flex-direction: column adds complexity because block-level elements default to the height of their content, and in this case there is no content.

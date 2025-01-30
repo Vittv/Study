@@ -1,0 +1,80 @@
+Justify-content aligns items across the main axis.
+
+Because justify-content and align-items are based on the main and cross axis of your container, their behavior changes when you change the flex-direction of a flex-container. For example, when you change flex-direction to column, justify-content aligns vertically and align-items aligns horizontally. The most common behavior, however, is the default, i.e. justify-content aligns items horizontally (because the main axis defaults to horizontal), and align-items aligns them vertically. One of the biggest sticking points that beginners have with flexbox is confusion when this behavior changes.
+
+One very useful feature of flex is the gap property. Setting gap on a flex container adds a specified space between flex items, similar to adding a margin to the items themselves. gap is a new property so it doesn’t show up in many resources yet, but it works reliably in all modern browsers, so it is safe to use and very handy!
+
+tldr final note:
+
+display: flex, changes the layout from flow to flexbox
+
+flex-direction: row - makes the primary axis go from left to right, while the cross axis goes from top to bottom
+
+flex-direction: column - makes the primary axis go from top to bottom, while the cross axis goes from left to right
+
+justify-content:
+
+    flex-start: aligns items to the start of the primary axis
+
+    center: aligns items to the center of the primary axis
+
+    flex-end: aligns items to the end of the primary axis
+
+    space-between: puts as much space as possible between all items in the primary axis
+
+    space-around: puts the same space value around each item in the primary axis
+
+    space-evenly: evenly spaces each item from each other in the primary axis
+
+align-items:
+
+    does a similar job to justify-content, but instead aligning to the cross axis of the flexbox
+
+
+both justify-content and align-items have:
+
+    flex-start, center and flex-end
+
+
+only justify-content has:
+
+    space-between
+    space-around
+    space-evenly
+
+while only align-items has:
+
+    stretch
+    baseline
+
+
+align-self:
+
+    has the same properties of align-items, but will instead only align the selected item in the css rule
+    it is applied to the child element, not the container
+
+
+the main difference between primary and cross axis is:
+
+    the primary axis aligns the whole group
+    while the cross axis has more freedom to align individual items
+
+
+width and height are always horizontal and vertical regardless of flex-direction being row or column 
+
+flex-basis is width or height, but pegged to the primary axis
+
+Not exactly the same
+
+    In general, we can use width and flex-basis interchangeably in a Flex row, but there are some exceptions. For example, the width property affects replaced elements like images differently than flex-basis. Also, width can reduce an item below its minimum size, while flex-basis can't.
+
+    It's well outside the scope of this blog post, but I wanted to mention it, because you may occasionally run into edge-cases where the two properties have different effects.
+
+    flex-basis will make things shrink or grow proportionally
+    flex-shrink allows items to be shrunk proportionally to fit into a container, choosing the ratio at which it is done
+
+    if we don't want any shrinking at all we can use flex-shrink: 0;
+
+    we can use min-width to make items not overflow
+
+    when you wrap, each item becomes its own flex container
