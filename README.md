@@ -39,6 +39,3 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Platform:** TheOdinProject
 - **Description:** I am going on a long journey with the odin project, it is a big course. Said to teach you everything you need for a job. There's a lot of reading involved. What I like about it is, it doesn't only teach you the usual, it also teaches you how to learn. It claims that after this course, you'll be able to learn anything by yourself. I will update this more as I progress through it. I might also have to make a separate repository only for this course, given its length. We'll see.
 - **Course Link: https://www.theodinproject.com/**
-
-- Enroll in [The Odin Project's Web Development Course](https://www.theodinproject.com/paths), which offers a comprehensive path to becoming a Full Stack Developer.
-- Continue with additional courses on freecodecamp to further expand my skills before pursuing The Odin Project.
