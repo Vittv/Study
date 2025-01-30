@@ -44,8 +44,8 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Course Link: https://www.theodinproject.com/paths/foundations/courses/foundations**
 
 ### 6. [Full Stack JavaScript](https://github.com/Vittv/Study/tree/main/theodinproject/02-fullstackjavascript)
--**ETC:** 600 ~ 1000 hours
--**Language:** English (EN)
--**Platform:** The Odin Project
--**Description:** When you finish the Foundations course, you get to choose between two paths: Ruby on Rails or JavaScript and Node. I chose the latter since it's what I was originally interested in. This will probably be the longest course I've ever done. But definitely not the last! I plan to forever study on this field. This course is not for beginners and assumes you have a decent knowledge of HTML, CSS and JavaScript, as well as a good understanding of programming concepts. It will get very advanced though, with a current total of 125 Lessons and 30 Projects. Addressing topics such as Intermediate and Advanced HTML and CSS, JavaScript, React, Databases, NodeJs and Getting Hired. Once I finish, I will probably have a lot to say. But that will take a long time.
--**Course Link: https://www.theodinproject.com/paths/full-stack-javascript**
+- **ETC:** 600 ~ 1000 hours
+- **Language:** English (EN)
+- **Platform:** The Odin Project
+- **Description:** When you finish the Foundations course, you get to choose between two paths: Ruby on Rails or JavaScript and Node. I chose the latter since it's what I was originally interested in. This will probably be the longest course I've ever done. But definitely not the last! I plan to forever study on this field. This course is not for beginners and assumes you have a decent knowledge of HTML, CSS and JavaScript, as well as a good understanding of programming concepts. It will get very advanced though, with a current total of 125 Lessons and 30 Projects. Addressing topics such as Intermediate and Advanced HTML and CSS, JavaScript, React, Databases, NodeJs and Getting Hired. Once I finish, I will probably have a lot to say. But that will take a long time.
+- **Course Link: https://www.theodinproject.com/paths/full-stack-javascript**
