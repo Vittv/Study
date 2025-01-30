@@ -18,7 +18,7 @@
   width: 400px;
   height: 500px;
   background-color: #1e1e1e;
-  padding: 10px;
+  padding: 5px;
   border-radius: 2px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -38,7 +38,7 @@
 .btn-number,
 .btn-decimal {
   background-color: #444;
-  color: #D3D3D3;
+  color: white;
   font-size: 1.2rem;
   padding: 5px;
   border: none;
@@ -52,7 +52,7 @@
 .btn-clear,
 .btn-equals {
   background-color: #333;
-  color: #D3D3D3;
+  color: white;
   font-size: 1.2rem;
   padding: 5px;
   border: none;
@@ -62,32 +62,27 @@
   box-shadow: 0px 3px 3px #222;
 }
 
-.btn:hover {
-  background-color: #5E5E5E;
+.btn-number:hover,
+.btn-decimal:hover {
+  background-color: #333;
 }
 
-.btn:active {
-  background-color: #6E6E6E;
+.btn-operator:hover,
+.btn-clear:hover,
+.btn-equals:hover {
+  background-color: #444;
+}
+
+.btn-number:active,
+.btn-decimal:active,
+.btn-operator:active,
+.btn-clear:active,
+.btn-equals:active {
+  background-color: #222;
 }
 
 .span-two {
   grid-column: span 2;
-}
-
-.btn-red {
-  background-color: #A52A2A;
-}
-
-.btn-red:hover {
-  background-color: #B22222;
-}
-
-.btn-blue {
-  background-color: #1E3A6A;
-}
-
-.btn-blue:hover {
-  background-color: #2B4C9B;
 }
 
 #clear {
