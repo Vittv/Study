@@ -30,7 +30,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **ETC:** 60 hours
 - **Language:** English (EN)
 - **Platform:** freeCodeCamp
-- **Description:** I had a rough time with this one. I'd say it got me closer to how software is actually built and organized. The styling and code logic was mostly the same throughout the course. Organizing and changing a few key things would make or break the project. This was an eye opener mostly to how I should have been doing things from the start. Learning how React works was a bit rough sometimes, but I enjoyed the process of working with frameworks and libraries. It required me to look up things a lot more and understand the steps to properly develop and publish each project. 
+- **Description:** I had an interesting time with this one. I'd say it got me closer to how software is actually built and organized. The styling and code logic was mostly the same throughout the course. Organizing and changing a few key things would make or break the project. This was an eye opener mostly to how I should have been doing things from the start. Learning how React works was a bit rough sometimes, but I enjoyed the process of working with frameworks and libraries. It required me to look up things a lot more and understand the steps to properly develop and publish each project. 
 - **Course Link: https://www.freecodecamp.org/learn/front-end-development-libraries/**
 
 ## Future Plans
