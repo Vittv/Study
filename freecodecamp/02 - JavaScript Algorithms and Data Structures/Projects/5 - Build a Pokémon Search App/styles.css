@@ -149,11 +149,28 @@ img {
 span.type {
     width: 86px;
     padding: 5px;
-    font-size: 0.7rem;
     text-align: center;
-    background-color: var(--yellow);
     font-size: 1.0em;
 }
+
+span.type.normal { background-color: var(--light-yellow); color: var(--black); }
+span.type.fire { background-color: #F08030; color: var(--black); }
+span.type.water { background-color: #6890F0; color: var(--black); }
+span.type.grass { background-color: #78C850; color: var(--black); }
+span.type.electric { background-color: #F8D030; color: var(--black); }
+span.type.ice { background-color: #98D8D8; color: var(--black); }
+span.type.fighting { background-color: #C03028; color: var(--black); }
+span.type.poison { background-color: #A040A0; color: var(--black); }
+span.type.ground { background-color: #E0C068; color: var(--black); }
+span.type.flying { background-color: #A890F0; color: var(--black); }
+span.type.psychic { background-color: #F85888; color: var(--black); }
+span.type.bug { background-color: #A8B820; color: var(--black); }
+span.type.rock { background-color: #B8A038; color: var(--black); }
+span.type.ghost { background-color: #705898; color: var(--black); }
+span.type.dragon { background-color: #7038F8; color: var(--black); }
+span.type.dark { background-color: #705848; color: var(--black); }
+span.type.steel { background-color: #B8B8D0; color: var(--black); }
+span.type.fairy { background-color: #EE99AC; color: var(--black); }
 
 .top-container, .bottom-container {
     display: flex;

@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
             updateUI(data);
             currentPokemonId = data.id;
+            searchInput.value = "";
         } catch (error) {
             console.error(error);
             alert(error.message);
@@ -32,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         typesContainer.innerHTML = '';
         data.types.forEach(typeInfo => {
             const typeSpan = document.createElement('span');
-            typeSpan.classList.add('type');
             typeSpan.textContent = typeInfo.type.name;
+            typeSpan.classList.add('type', typeInfo.type.name);
             typesContainer.appendChild(typeSpan);
         });
-
+    
         document.getElementById('hp').textContent = data.stats[0].base_stat;
         document.getElementById('attack').textContent = data.stats[1].base_stat;
         document.getElementById('defense').textContent = data.stats[2].base_stat;
