@@ -14,7 +14,7 @@
 body {
     height: 100vh;
     font-family: 'Roboto', sans-serif;
-    background-color: lightblue;
+    background: linear-gradient(to bottom, #060c36, #55565e);
     color: #0a0a23;
     line-height: 1.5;
 }
