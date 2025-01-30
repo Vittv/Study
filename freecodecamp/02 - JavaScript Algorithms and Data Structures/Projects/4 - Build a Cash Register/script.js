@@ -108,4 +108,12 @@ document.getElementById("purchase-btn").addEventListener("click", () => {
   displayCashDrawer();
 });
 
+document.getElementById("cash").addEventListener("keypress", (event) => {
+  let cash = parseFloat(document.getElementById("cash").value);
+  if (event.key === "Enter") {
+      checkChange(cash, price);
+      displayCashDrawer();
+  }
+});
+
 displayCashDrawer();
