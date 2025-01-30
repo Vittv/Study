@@ -1,0 +1,6 @@
+Learned about built-in emmet shortcuts on vs code
+A video and a cheat sheet were provided:
+
+https://www.youtube.com/watch?v=V8vizNQKtx0
+
+https://docs.emmet.io/cheat-sheet/

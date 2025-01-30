@@ -1,0 +1,6 @@
+We read a little further on HTML and CSS elements
+and were given two links to read further about:
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+https://htmlcheatsheet.com/css/
