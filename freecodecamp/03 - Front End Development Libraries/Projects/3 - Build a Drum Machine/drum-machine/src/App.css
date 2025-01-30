@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(180deg, #585a5f, #abadaf);
+  background: linear-gradient(180deg, #42474d, #a1a4a7);
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
@@ -13,53 +13,57 @@ body {
 }
 
 #title {
-  color: #f0faff;
-  font-size: 28px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #2e3134;
+  font-size: 42px;
   margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-right: 15px;
 }
 
 #drum-machine {
-  border-radius: 10px;
-  padding: 20px;
-  background-color: #c8d2e3;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 25px;
+  background-color: #e8e8e8;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
 .drum-pads {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 15px;
 }
 
 .drum-pad {
-  border: 5px solid #999999;
+  border: 4px solid #4e5257;
   border-radius: 12px;
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(145deg, #ffffff, #e0e0e0);
-  font-size: 25px;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  font-size: 22px;
   cursor: pointer;
-  color: #575d66;
+  color: #1a1a1a;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.drum-pad:active {
-  background: linear-gradient(145deg, #e0e0e0, #c0c0c0);
+.drum-pad:active, .drum-pad.active {
+  background: linear-gradient(145deg, #e0e0e0, #b0b0b0);
+  transform: scale(0.95);
 }
 
 #display {
-  border: 3px solid  #999999;;
-  text-align: center;
-  font-size: 36px;
-  height: 36px;
-  font-weight: 700;
-  background-color: white;
-  color: black;
-  padding: 10px;
+  border: 3px solid #4e5257;
+  background-color: black;
+  color: #b22222;
+  font-size: 1.3rem;
+  padding: 12px;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
 }
