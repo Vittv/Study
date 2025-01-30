@@ -416,4 +416,144 @@ Loops
 
             3. Some curly braces that contain a block of code — this code will be run each time the loop iterates.
  
-                        
+
+    Looping through collections with a for loop
+
+        You can use a for loop to iterate through a collection, instead of a for...of loop.
+
+        const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+        for (let i = 0; i < cats.length; i++) {
+        console.log(cats[i]);
+        }
+
+        In this loop we're starting i at 0, and stopping when i reaches the length of the array. Then inside the loop, we're using i to access each item in the array in turn.
+
+        This works just fine, and in early versions of JavaScript, for...of didn't exist, so this was the standard way to iterate through an array. However, it offers more chances to introduce bugs into your code. For example:
+
+           - you might start i at 1, forgetting that the first array index is zero, not 1.
+
+           - you might stop at i <= cats.length, forgetting that the last array index is at length - 1.
+
+        For reasons like this, it's usually best to use for...of if you can.
+
+
+    Exiting loops with a break
+
+        If you want to exit a loop before all the iterations have been completed, you can use the break statement.
+
+        A break statement will immediately exit the loop and make the browser move on to any code that follows it.
+
+        Say we wanted to search through an array of contacts and telephone numbers and return just the number we wanted to find? First, some simple HTML — a text <input> allowing us to enter a name to search for, a <button> element to submit a search, and a <p> element to display the results in:
+
+        const contacts = [
+        "Chris:2232322",
+        "Sarah:3453456",
+        "Bill:7654322",
+        "Mary:9998769",
+        "Dianne:9384975",
+        ];
+        const para = document.querySelector("p");
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+        const searchName = input.value.toLowerCase();
+        input.value = "";
+        input.focus();
+        para.textContent = "";
+        for (const contact of contacts) {
+            const splitContact = contact.split(":");
+            if (splitContact[0].toLowerCase() === searchName) {
+            para.textContent = `${splitContact[0]}'s number is ${splitContact[1]}.`;
+            break;
+            }
+        }
+        if (para.textContent === "") {
+            para.textContent = "Contact not found.";
+        }
+        });
+
+    Skipping iterations with continue
+
+        The continue statement works similarly to break, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop. Let's look at another example that takes a number as an input, and returns only the numbers that are squares of integers (whole numbers).
+
+        const para = document.querySelector("p");
+        const input = document.querySelector("input");
+        const btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+        para.textContent = "Output: ";
+        const num = input.value;
+        input.value = "";
+        input.focus();
+        for (let i = 1; i <= num; i++) {
+            let sqRoot = Math.sqrt(i);
+            if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+            }
+            para.textContent += `${i} `;
+        }
+        });
+
+
+    while and do...while
+
+        initializer
+        while (condition) {
+            // code to run
+
+            final-expression
+        }
+
+        This works in a very similar way to the for loop, except that the initializer variable is set before the loop, and the final-expression is included inside the loop after the code to run, rather than these two items being included inside the parentheses. The condition is included inside the parentheses, which are preceded by the while keyword rather than for.
+
+        The same three items are still present, and they are still defined in the same order as they are in the for loop. This is because you must have an initializer defined before you can check whether or not the condition is true. The final-expression is then run after the code inside the loop has run (an iteration has been completed), which will only happen if the condition is still true.
+
+        const cats = ["Pete", "Biggles", "Jasmine"];
+
+        let myFavoriteCats = "My cats are called ";
+
+        let i = 0;
+
+        while (i < cats.length) {
+        if (i === cats.length - 1) {
+            myFavoriteCats += `and ${cats[i]}.`;
+        } else {
+            myFavoriteCats += `${cats[i]}, `;
+        }
+
+        i++;
+        }
+
+        console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+
+
+        The do...while loop is very similar, but provides a variation on the while structure:
+
+        initializer
+        do {
+        // code to run
+
+        final-expression
+        } while (condition)
+
+        The main difference between a do...while loop and a while loop is that the code inside a do...while loop is always executed at least once. That's because the condition comes after the code inside the loop. So we always run that code, then check to see if we need to run it again. In while and for loops, the check comes first, so the code might never be executed.
+
+        const cats = ["Pete", "Biggles", "Jasmine"];
+
+        let myFavoriteCats = "My cats are called ";
+
+        let i = 0;
+
+        do {
+        if (i === cats.length - 1) {
+            myFavoriteCats += `and ${cats[i]}.`;
+        } else {
+            myFavoriteCats += `${cats[i]}, `;
+        }
+
+        i++;
+        } while (i < cats.length);
+
+        console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
