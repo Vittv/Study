@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Pokédex</title>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="output">
+                    <div class="top-container">
+                        <div class="name-and-id">
+                            <span id="pokemon-name">Test</span>
+                            <span id="pokemon-id">#1</span>
+                        </div>
+                        <div class="size">
+                            <span id="weight">Weight: </span>
+                            <span id="height">Height: </span>
+                        </div>
+                        <div id="sprite-container" class="sprite-container">
+                            <img id="background-img" src="https://raw.githubusercontent.com/Vittv/pokedex/main/images/forest-background-5th-style-pass-portfolio-edit.png">
+                            <img id="sprite" src="" alt="">
+                        </div>
+                        <div id="types">
+                            <span class="">Electric</span>
+                        </div>
+                    </div>
+                    <div class="bottom-container">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Base</th>
+                                    <th>Stats</th>
+                                </tr>
+                                <tr>
+                                    <td>HP:</td>
+                                    <td id="hp">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Attack:</td>
+                                    <td id="attack">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Defense:</td>
+                                    <td id="defense">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Sp. Attack:</td>
+                                    <td id="special-attack">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Sp. Defense:</td>
+                                    <td id="special-defense">0</td>
+                                </tr>
+                                <tr>
+                                    <td>Speed:</td>
+                                    <td id="speed" class="speed">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <form role="search" id="search-form">
+                    <input type="text" name="pokemon" id="search-input" placeholder="Pokémon Name or ID" required>
+                    <button id="search-button">Search</button>
+                    <button id="previous-button"><</button>
+                    <button id="next-button">></button>
+                </form>
+            </div>
+            <script src="./script.js"></script>
+        </main>
+    </body>
+</html>
