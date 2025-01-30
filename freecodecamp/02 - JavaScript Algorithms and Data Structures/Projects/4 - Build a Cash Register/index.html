@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles.css">
         <title>Cash Register</title>
     </head>
     <body>
         <main>
             <h1>CASH REGISTER</h1>
-            <div id="change-due"></div>
             <div class="input-div">
-                <label for="cash">Enter customer's cash:</label>
-                <input type="number" id="cash" class="user-input">
+                <label for="cash"></label>
+                <input type="number" id="cash" class="user-input" placeholder="Enter customer's cash">
                 <button class="check-btn-styles" id="purchase-btn">PURCHASE</button>
             </div>
             <div class="container">
@@ -21,28 +21,30 @@
                 <div class="connector"></div>
               </div>
               <div class="top-register">
+                <div id="change-due">
+                </div>
                 <div class="btns-container">
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
-                    <button class="btn"></button>
+                    <button class="btn">1</button>
+                    <button class="btn">2</button>
+                    <button class="btn">3</button>
+                    <button class="btn">4</button>
+                    <button class="btn">5</button>
+                    <button class="btn">6</button>
+                    <button class="btn">7</button>
+                    <button class="btn">8</button>
+                    <button class="btn">9</button>
                 </div>
                 <div id="cash-drawer-display" class="cash-drawer-display">
                     <p><strong>Change:</strong></p>
-                    <p>Pennies: $0.89</p>
-                    <p>Nickels: $2.05</p>
-                    <p>Dimes: $2.5</p>
-                    <p>Quarters: $3</p>
-                    <p>Ones: $81</p>
-                    <p>Fives: $45</p>
-                    <p>Tens: $10</p>
-                    <p>Twenties: $60</p>
-                    <p>Hundreds: $0</p>
+                    <p id="pennies">Pennies: </p>
+                    <p id="nickels">Nickels: </p>
+                    <p id="dimes">Dimes: </p>
+                    <p id="quarters">Quarters: </p>
+                    <p id="ones">Ones: </p>
+                    <p id="fives">Fives: </p>
+                    <p id="tens">Tens: </p>
+                    <p id="twenties">Twenties: </p>
+                    <p id="hundreds">Hundreds: </p>
                 </div>
               </div>
               <div class="bottom-register">

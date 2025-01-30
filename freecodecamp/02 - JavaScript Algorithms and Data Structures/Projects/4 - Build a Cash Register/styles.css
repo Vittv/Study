@@ -1,6 +1,9 @@
 :root {
    --black: #1a1a1a;
-   --white: #f5f8ff;
+   --white: #dfe1ed;
+   --bright-white: #f5f8ff;
+   --grey: #43454f;
+   --red: #820a01;
 }
 
 * {
@@ -9,7 +12,183 @@
     box-sizing: border-box;
 }
 
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://raw.githubusercontent.com/Vittv/cash-register/main/images/wp8508184-coffee-shop-anime-wallpapers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 body {
     background-color: black;
     color: #f5f8ff;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 10px;
+}
+
+h1 {
+    font-size: 3.3rem;
+    margin: 20px 0;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    background-color: var(--black);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#change-due {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    background-color: var(--bright-white);
+    color: var(--black);
+    padding: 10px;
+    border: 4px solid var(--grey);
+    border-radius: 15px 0 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    margin-left: -210px;
+    width: 50%;
+    height: 95%;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0 20px;
+}
+
+label {
+    font-size: 18px;
+}
+
+.user-input {
+    width: 300px;
+    height: 30px;
+    padding: 15px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.check-btn-styles {
+    cursor: pointer;
+    width: 300px;
+    height: 30px;
+    color: var(--black);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background-color: #fecc4c;
+    transition: background-color 0.3s ease;
+}
+
+.check-btn-styles:hover {
+    background-color: #fce29a;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-screen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid var(--white);
+    background-color: var(--bright-white);
+    height: 50px;
+    width: 300px;
+    margin-left: -40px;
+    color: var(--black);
+    font-size: 1.2rem;
+    border-radius: 0px 15px 0 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.connector {
+    margin-left: -20px;
+    background-color: var(--white);
+    height: 30px;
+    width: 40px;
+}
+
+.top-register {
+    display:flex;
+    justify-content: space-around;
+    border-radius: 0px 15px 0 0;
+    padding-top: 20px;
+    background-color: var(--white);
+    height: 400px;
+    width: 405px;
+}
+
+.btns-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: -10px;
+    width: 35%;
+    height: 35%;
+    margin-top: 5%;
+    margin-left: 3%;
+}
+
+.btn {
+    border-radius: 10%;
+    border: 4px solid var(--grey);
+    width: 35px;
+    height: 35px;
+    background-color: var(--bright-white);
+    font-family: 'Roboto', sans-serif;
+}
+
+.cash-drawer-display {
+    font-size: 1.3rem;
+    background-color: var(--bright-white);
+    width: 55%;
+    height: 95%;
+    color: var(--black);
+    padding: 10px;
+    border-radius: 0px 15px 0 0;
+    font-family: 'Roboto', sans-serif;
+    border: 4px solid var(--grey);
+}
+
+p {
+    line-height: 1.8rem;
+}
+
+.bottom-register {
+    background-color: var(--white);
+    height: 50px;
+    width: 405px;
+    margin-top: 10px;
+}
+
+.circle {
+    margin: 15px auto;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: var(--black);
 }
