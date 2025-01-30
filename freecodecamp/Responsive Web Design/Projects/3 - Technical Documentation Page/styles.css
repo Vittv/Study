@@ -22,8 +22,8 @@ p {
     width: 250px;
     height: 100%;
     padding: 10px 30px;
-    color: white;
-    background-color: #16171f;
+    color: #292929;
+    background-color: #f0f2f2;
     text-decoration: none;
     z-index: 999;
     border-right: 2px solid #ccc;
@@ -49,7 +49,7 @@ p {
 }
 
 #navbar li a {
-    color: white !important;
+    color: #292929 !important;
     text-decoration: none;
 }
 
@@ -65,8 +65,8 @@ p {
 }
 
 body {
-    background-color: #262630;
-    color: white;
+    background-color: #f0f2f2;
+    color: #292929;
     font-family: 'Arial', sans-serif;
     padding: 20px;
 }
@@ -88,12 +88,12 @@ pre code {
     word-break: normal;
     word-wrap: normal;
     line-height: 2;
-    background-color: #16171f;
+    background-color: #d7dce0;
     padding: 15px;
     margin: 20px;
     overflow-x: auto;
     border-radius: 5px;
-    color: white;
+    color: #292929;
     font-size: 14px;
 }
 
@@ -106,7 +106,7 @@ pre code {
 
 #Reference a {
     font-size: 20px;
-    color: white;
+    color: #292929;
 }
 
 @media only screen and (max-width: 768px) {
