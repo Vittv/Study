@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav id="navbar">
@@ -142,7 +143,7 @@ y = 3.14
 print(type(y))  # Output: &lt;class 'float'&gt;
 
 # String
-name = "Alice"
+name = "Katie"
 print(type(name))  # Output: &lt;class 'str'&gt;
 
 # Boolean
@@ -171,7 +172,7 @@ print(type(value))  # Output: &lt;class 'NoneType'&gt;</code></pre>
                 </article>
             </section>
             <section class="main-section" id="conditionalstatements">
-                <header>Conditional Statements: 'if', 'else',and 'elif'</header>
+                <header>Conditional Statements: 'if', 'else', and 'elif'</header>
                 <article>
                     <p>Conditional statements are essential in programming to control the flow of execution based on certain conditions. In Python, if, else, and elif are used for this purpose.</p>
                     <h3>1. 'if' Statement</h3>
@@ -226,6 +227,71 @@ while count <= 5:
     print(count)
     count += 1</code></pre>
                 <p>'for' and 'while' loops are fundamental constructs in Python for iterating over sequences and executing code repeatedly based on certain conditions. They provide powerful tools for automating repetitive tasks and controlling program flow.</p>                
+            </section>
+            <section class="main-section" id="Functions">
+                <header>Functions</header>
+                <article>
+                <h3>Introduction</h3>
+                <p>Functions are blocks of organized, reusable code that perform a specific task. They provide modularity and abstraction, making your code more readable, maintainable, and efficient.</p>
+                <h3>Syntax</h3>
+                <pre><code>def function_name(parameters):
+    """docstring"""
+    # Function body
+    return [expression]</code></pre>
+                <ul>
+                    <li>'def': Keyword indicating the start oof a function definition.</li>
+                    <li>'function_name': Name of the function, should be descriptive and follow naming conventions.</li>
+                    <li>'parameters':  Input values passed to the function.</li>
+                    <li>'doctstring': Optional documentation string that describes the function's purpose, parameters, and return value(s).</li>
+                    <li>'return': Keyword followed by an expression, specifies the value(s) returned by the function.</li>
+                </ul>
+                <pre><code>def greet(name):
+    """Greet a person by name."""
+    return f"Hello, {name}!"
+
+print(greet("Charlotte"))  # Output: Hello, Charlotte!</code></pre>
+            <h3>Parameters</h3>
+            <p>Functions can accept zero or more parameters.</p>
+            <pre><code>def add(a, b):
+    """Add two numbers."""
+    return a + b
+
+print(add(3, 5))  # Output: 8</code></pre>
+            <h3>Default Parameters</h3>
+            <p>You can assign default values to parameters.</p>
+            <pre><code>def power(base, exponent=2):
+    """Raise a number to the power of exponent."""
+    return base ** exponent
+
+print(power(3))       # Output: 9 (3^2)
+print(power(2, 3))    # Output: 8 (2^3)</code></pre>
+            <h3>Keyword Arguments</h3>
+            <p>You can pass arguments by explicitly naming the parameter.</p>
+            <pre><code>def divide(dividend, divisor):
+    """Divide the dividend by the divisor."""
+    return dividend / divisor
+
+print(divide(dividend=10, divisor=2))  # Output: 5.0</code></pre>
+            <h3>Variable-length Arguments</h3>
+            <p>Functions can accept a variable number of arguments using '*args' and '**kwargs'.</p>
+            <pre><code>def concatenate(*args):
+    """Concatenate all arguments into a single string."""
+    return ''.join(args)
+
+print(concatenate("Hello", ", ", "world!"))  # Output: Hello, world!</code></pre>
+            <h3>Lambda Functions</h3>
+            <p>Lambda functions are anonymous functions defined using the 'lambda' keyword.</p>
+            <pre><code>multiply = lambda x, y: x * y
+
+print(multiply(3, 4))  # Output: 12</code></pre>
+                </article>
+            </section>
+            <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <p>All the documentation was taken from:</p>
+                <ul>
+                    <li><a href="https://docs.python.org/3/">Python.org</a></li>
+                </ul>
             </section>
         </main>
     </body>

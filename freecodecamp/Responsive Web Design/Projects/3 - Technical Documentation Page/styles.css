@@ -1,3 +1,89 @@
+header {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+h3 {
+    padding: 10px;
+}
+
+p {
+    margin-left: 35px;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+#navbar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 10px 30px;
+    color: white;
+    background-color: #596069;
+    text-decoration: none;
+    z-index: 999;
+    border-right: 2px solid #ccc;
+}
+
+#navbar:after {
+    border-top: 2px solid #ccc;
+
+}
+
+#navbar header {
+    font-size: 30px;
+    white-space: nowrap;
+    margin-left: -20px;
+}
+
+#navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navbar li {
+    font-size: 20px;
+    position: relative;
+    padding: 20px;
+    color: white !important;
+    margin-left: -25px;
+}
+
+#navbar li a {
+    color: white !important;
+    text-decoration: none;
+}
+
+#navbar li:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 310px;
+    margin-left: -5px;
+    border-bottom: 1px solid #ccc;
+}
+
+body {
+    background-color: #2f3338;
+    color: white;
+    font-family: 'Arial';
+    padding: 20px;
+}
+
+#main-doc {
+    margin-left: 310px;
+}
+
+li {
+    margin-left: 40px;
+    padding: 10px;
+}
+
 pre code {
     display: block;
     white-space: pre;
@@ -5,10 +91,18 @@ pre code {
     word-break: normal;
     word-wrap: normal;
     line-height: 2;
-    background-color: black;;
+    background-color: #1f2226;
     padding: 15px;
     margin: 20px;
     overflow-x: auto;
     border-radius: 5px;
     color: white;
+    font-size: 14px;
+}
+
+#localscope,
+#globalscope,
+#usingglobal {
+    font-size: 25px;
+    font-weight: bold;
 }
