@@ -78,4 +78,36 @@ button {
     padding: 10px 16px;
     font-size: 23px;
     width: 100%;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffd979;
+    border-color: #ffd979;
+}
+
+.hidden {
+    display: none;
+}
+
+.alert {
+    font-size: 2rem !important;
+    background-color: #ffadad !important;
+    border: 2px solid #850000 !important;
+    color: #850000 !important;
+}
+
+.output {
+    color: white;
+    background-color: #292828;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-size: 2rem;
+    width: 90%;
+    max-width: 500px;
+    min-height: 55px;
+    margin-top: 25px;
+    padding: 15px;
+    overflow-wrap: break-word;
+    text-align: center;
 }

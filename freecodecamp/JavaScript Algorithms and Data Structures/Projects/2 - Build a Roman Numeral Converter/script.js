@@ -1,6 +1,6 @@
-const numberInput = document.getElementById("number-input");
+const numberInput = document.getElementById("number");
 const convertBtn = document.getElementById("convert-btn");
-const result = document.getElementById("result");
+const output = document.getElementById("output");
 
 
 const decimalToRoman = (input) => {
@@ -26,7 +26,7 @@ const decimalToRoman = (input) => {
         
         while (input >= value) {
             result += symbol;
-            num -= value;
+            input -= value;
         }
     }
 
@@ -35,23 +35,42 @@ const decimalToRoman = (input) => {
 };
 
 
-
 const checkUserInput = () => {
-    const inputInt = parseInt(numberInput.value);
-  
-    if (!numberInput.value || isNaN(inputInt) || inputInt < 0) {
-      alert("Please provide a decimal number greater than or equal to 0");
+    const inputStr = numberInput.value;
+    const inputInt = parseInt(inputStr);
+
+  if (inputStr === "" || isNaN(inputInt)) {
+    output.textContent = "Please enter a valid number.";
+    output.classList.remove("hidden");
+    output.classList.add("alert");
+    return;
+  }
+
+  if (inputInt < 1) {
+      output.textContent = "Please enter a number greater than or equal to 1";
+      output.classList.remove("hidden");
+      output.classList.add("alert");
       return;
-    }
-  
-    result.textContent = decimalToRoman(inputInt);
-    numberInput.value = "";
+  }
+
+  if (inputInt > 3999) {
+      output.textContent = "Please enter a number less than or equal to 3999";
+      output.classList.remove("hidden");
+      output.classList.add("alert");
+      return;
+  }
+
+  output.textContent = decimalToRoman(inputInt);
+  output.classList.remove("hidden");
+  output.classList.remove("alert")
+
 };
 
 convertBtn.addEventListener("click", checkUserInput);
 
 numberInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
+    e.preventDefault();
     checkUserInput();
   }
 });
