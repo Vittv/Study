@@ -1,0 +1,49 @@
+/* General setup */
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('quicksand-regular-webfont.woff2') format('woff2'),
+         url('quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('opensans-regular-webfont.woff2') format('woff2'),
+         url('opensans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html {
+    font-size: 10px;
+    margin: 0;
+    font-family: 'quicksandregular';
+  }
+  
+  body {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Typography */
+  
+  h1 {
+    font-size: 3.2rem;
+    font-family: 'opensansregular';
+  }
+  
+  h2 {
+    font-size: 2.4rem;
+    font-family: 'opensansregular';
+  }
+  
+  p {
+    font-size: 1.4rem;
+    font-family: 'opensansregular';
+    line-height: 1.6;
+    word-spacing: 0.6rem;
+  }
