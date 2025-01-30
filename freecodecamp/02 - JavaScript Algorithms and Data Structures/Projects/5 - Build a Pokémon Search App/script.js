@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
     const previousButton = document.getElementById('previous-button');
     const nextButton = document.getElementById('next-button');
 
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchPokemonData(pokemon) {
         try {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${String(pokemon.toLowerCase())}`);
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${String(pokemon).toLowerCase()}`);
             if (!response.ok) {
                 throw new Error('Pokémon not found');
             }
@@ -33,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         typesContainer.innerHTML = '';
         data.types.forEach(typeInfo => {
             const typeSpan = document.createElement('span');
+            typeSpan.classList.add('type');
             typeSpan.textContent = typeInfo.type.name;
             typesContainer.appendChild(typeSpan);
         });

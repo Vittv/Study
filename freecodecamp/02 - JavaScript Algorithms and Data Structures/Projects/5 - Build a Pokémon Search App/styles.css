@@ -134,24 +134,25 @@ img {
 
 #types {
     min-height: 30px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 8px;
     justify-content: flex-start;
-    gap: 5px;
-    padding: 5px;
+    padding: 2px;
     border-radius: 5px;
     text-transform: uppercase;
-    background-color: var(--yellow);
     width: 80px;
     margin-top: 65%;
 }
 
 span.type {
-    width: 66px;
+    width: 86px;
     padding: 5px;
     font-size: 0.7rem;
     text-align: center;
     background-color: var(--yellow);
+    font-size: 1.0em;
 }
 
 .top-container, .bottom-container {
@@ -187,3 +188,5 @@ td, th {
     text-align: center;
     padding: 8px;
 }
+
+/* still gotta fix the types and the search buttons and arrows layout */
