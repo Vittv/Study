@@ -25,7 +25,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 
 ### 4. [Front End Development Libraries](https://www.freecodecamp.org/learn/front-end-development-libraries/)
 - **Language:** English (EN)
-- **Description:** Working on it.
+- **Description:** Still working on it.
 
 ## Future Plans
 
