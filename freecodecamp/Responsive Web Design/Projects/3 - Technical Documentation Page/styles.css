@@ -23,15 +23,10 @@ p {
     height: 100%;
     padding: 10px 30px;
     color: white;
-    background-color: #596069;
+    background-color: #16171f;
     text-decoration: none;
     z-index: 999;
     border-right: 2px solid #ccc;
-}
-
-#navbar:after {
-    border-top: 2px solid #ccc;
-
 }
 
 #navbar header {
@@ -46,7 +41,7 @@ p {
 }
 
 #navbar li {
-    font-size: 20px;
+    font-size: 16px;
     position: relative;
     padding: 20px;
     color: white !important;
@@ -61,17 +56,18 @@ p {
 #navbar li:after {
     content: "";
     position: absolute;
-    bottom: 0;
+    top: -2px;
     left: 0;
     width: 310px;
+    height: 1px;
     margin-left: -5px;
     border-bottom: 1px solid #ccc;
 }
 
 body {
-    background-color: #2f3338;
+    background-color: #262630;
     color: white;
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;
     padding: 20px;
 }
 
@@ -82,6 +78,7 @@ body {
 li {
     margin-left: 40px;
     padding: 10px;
+    line-height: 1.5;
 }
 
 pre code {
@@ -91,7 +88,7 @@ pre code {
     word-break: normal;
     word-wrap: normal;
     line-height: 2;
-    background-color: #1f2226;
+    background-color: #16171f;
     padding: 15px;
     margin: 20px;
     overflow-x: auto;
@@ -105,4 +102,24 @@ pre code {
 #usingglobal {
     font-size: 25px;
     font-weight: bold;
+}
+
+#Reference a {
+    font-size: 20px;
+    color: white;
+}
+
+@media only screen and (max-width: 768px) {
+    #navbar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #main-doc {
+        margin-left: 0; 
+    }
+
+    #navbar li {
+        padding: 10px; 
+    }
 }
