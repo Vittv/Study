@@ -4,7 +4,7 @@ Welcome to my study repository! Here, I chronicle my learning journey through va
 
 ## Courses Completed
 
-### 1. [cursoemvideo - Python3 (PT)]([https://www.cursoemvideo.com/curso/python-3-mundo-1/])
+### 1. [cursoemvideo - Python3 (PT)](https://www.cursoemvideo.com/curso/python-3-mundo-1/)
 - **Language:** Portuguese (PT)
 - **Description:** This course provided a comprehensive introduction to Python programming, covering topics from basic syntax to functions, modules, and packages. It consisted of 23 lessons and 115 exercises, each accompanied by detailed explanations. Completion required both completing exercises and watching explanatory videos after each lesson.
 
