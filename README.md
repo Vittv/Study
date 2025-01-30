@@ -33,6 +33,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 2. Build a Markdown Previewer (I used React) ✅
 3. Build a Drum Machine (The main code is built, now I have to style it) ⌛
 4. Build a JavaScript Calculator (Working on it) ⌛
+5. Build a 25 + 5 Clock ⌛
 
 ## Future Plans
 
