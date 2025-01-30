@@ -131,4 +131,15 @@ Additional resources:
         https://fonts.google.com/
         https://fonts.bunny.net/
         https://fonts.adobe.com/
+
+A bit about <em>:
+
+    Only use em to emphasize text, as in, stressing its importance. If you need italic to quote someone, use <cite> ,and if you need italic to show that it's a foreign word or something set off from normal prose, use <i>. Another way to add emphasis to text is to use the <strong> element.
+
+    A few examples:
+
+    <p>Just <em>do</em> it already!</p>
+    <p>We <em>had</em> to do something about it.</p>     
             
+    <p>The word <i>the</i> is an article.</p>
+    <p>The <i>Queen Mary</i> sailed last night.</p>        
