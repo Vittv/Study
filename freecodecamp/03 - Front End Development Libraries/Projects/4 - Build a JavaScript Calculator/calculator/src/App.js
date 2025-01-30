@@ -2,41 +2,66 @@ import React, { useState } from 'react';
 import './Calculator.css';
 
 const Calculator = () => {
+  const MAX_DIGITS = 12;
   const [displayValue, setDisplayValue] = useState('0');
   const [expression, setExpression] = useState([]);
   const [isResult, setIsResult] = useState(false);
+  const [usePreviousResult, setUsePreviousResult] = useState(false); // New flag
 
   const handleClear = () => {
     setDisplayValue('0');
     setExpression([]);
     setIsResult(false);
+    setUsePreviousResult(false); // Reset flag on clear
   };
 
   const handleNumberClick = (e) => {
     const value = e.target.innerText;
+
     if (isResult) {
-      setDisplayValue(value);
-      setExpression([value]);
-      setIsResult(false);
+      if (usePreviousResult) {
+        // Start a new operation with the result
+        setDisplayValue(value);
+        setExpression([displayValue, value]);
+        setIsResult(false);
+        setUsePreviousResult(false); // Reset flag
+      } else {
+        // Just set the new number
+        setDisplayValue(value);
+        setExpression([value]);
+        setIsResult(false);
+      }
     } else {
-      const newDisplayValue =
-        displayValue === '0' || ['+', '-', '*', '/'].includes(displayValue)
-          ? value
-          : displayValue + value;
-      setDisplayValue(newDisplayValue);
-      setExpression([...expression, value]);
+      // Regular number input
+      if (displayValue.length < MAX_DIGITS) {
+        const newDisplayValue =
+          displayValue === '0' || ['+', '-', '*', '/'].includes(displayValue)
+            ? value
+            : displayValue + value;
+        setDisplayValue(newDisplayValue);
+        setExpression([...expression, value]);
+      }
     }
   };
 
   const handleDecimalClick = () => {
     if (isResult) {
-      setDisplayValue('0.');
-      setExpression(['0.']);
-      setIsResult(false);
+      if (usePreviousResult) {
+        setDisplayValue('0.');
+        setExpression([displayValue, '0.']);
+        setIsResult(false);
+        setUsePreviousResult(false);
+      } else {
+        setDisplayValue('0.');
+        setExpression(['0.']);
+        setIsResult(false);
+      }
     } else if (!displayValue.includes('.')) {
-      const newDisplayValue = displayValue + '.';
-      setDisplayValue(newDisplayValue);
-      setExpression([...expression, '.']);
+      if (displayValue.length < MAX_DIGITS) {
+        const newDisplayValue = displayValue + '.';
+        setDisplayValue(newDisplayValue);
+        setExpression([...expression, '.']);
+      }
     }
   };
 
@@ -46,7 +71,9 @@ const Calculator = () => {
 
     if (isResult) {
       setExpression([displayValue, operator]);
+      setDisplayValue(operator);
       setIsResult(false);
+      setUsePreviousResult(true); // Set flag to use previous result
     } else {
       if (['+', '*', '/'].includes(lastItem) && operator !== '-') {
         setExpression([...expression.slice(0, -1), operator]);
@@ -64,18 +91,37 @@ const Calculator = () => {
 
     try {
       const expressionStr = expression.join('');
-      const result = eval(expressionStr);
-      setDisplayValue(String(result));
-      setExpression([String(result)]);
+      let result = eval(expressionStr);
+      result = String(result);
+
+      if (result.length > MAX_DIGITS) {
+        result = Number(result).toPrecision(MAX_DIGITS).toString();
+      }
+
+      setDisplayValue(result);
+      setExpression([]);
       setIsResult(true);
+      setUsePreviousResult(false); // Reset flag after calculation
     } catch (error) {
       setDisplayValue('Error');
     }
   };
 
+  const formatExpression = () => {
+    return expression
+      .map((item) => {
+        if (['+', '-', '*', '/'].includes(item)) {
+          return ` ${item} `;
+        }
+        return item;
+      })
+      .join('');
+  };
+
   return (
-    <div class="calculator-container">
+    <div className="calculator-container">
       <div className="calculator">
+        <div id="operation" className="operation">{formatExpression(expression)}</div>
         <div id="display" className="display">{displayValue}</div>
         <button id="clear" className="btn-clear" onClick={handleClear}>AC</button>
         <button id="divide" className="btn-operator" onClick={handleOperatorClick}>/</button>
