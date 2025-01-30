@@ -39,7 +39,7 @@ building small projects as you go, and then a final project for that module. Fin
 **freecodecamp - JavaScript Algorithms and Data Structures (EN)**
 
 
-Will start on this one once I finish Responsive Web Design Certification.
+Will start on this one once I finish Responsive Web Design.
 
 
 
