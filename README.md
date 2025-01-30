@@ -21,11 +21,7 @@ This course taught me all the way from print('Hello World') to functions, module
 **freecodecamp - Responsive Web Design (EN)**
 
 
-I am still working on this one. It's taught me HTML and CSS basics so far. It has quite a different approach compared to my Python course.
-
-Because this time, it is entirely project based. Every lesson is a project you build along instructions. You do around 5 project lessons,
-
-building small projects as you go, and then a final project for that module. Finish 5 final projects and you get your certification.
+I am still working on this one. It's taught me HTML and CSS basics so far. It has quite a different approach compared to my Python course. Because this time, it is entirely project based. Every lesson is a project you build along instructions. You do around 5 project lessons, building small projects as you go, and then a final project for that module. Finish 5 final projects and you get your certification.
 
 
 # Third Course:
@@ -49,7 +45,6 @@ Will start this one once I finish JavaScript Algorithms and Data Structures.
 
 
 At this point I will probably have enough information to build my own projects.
-
 Either way I'd like to always keep studying. I plan to either do the entire
 
 The Odin Project's Web Developent Course, which turns you in to a Full Stack Developer
