@@ -1,0 +1,9 @@
+Basically taught a bunch about the Chrome Devtools through the official documentation
+
+A few of the points were:
+
+    - View and change CSS through Devtools
+    - View and change HTML through Devtools
+    - Simulate mobile devices with Device mode
+    - Debugging JavaScript
+    - Pausing code with breakpoints
