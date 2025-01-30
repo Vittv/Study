@@ -98,3 +98,5 @@ joshwcomeau's CSS reset:
     #root, #__next {
     isolation: isolate;
     }
+
+I actually might like Josh's reset better lol
