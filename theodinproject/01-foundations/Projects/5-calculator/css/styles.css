@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #111;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+    width: 600px;
+    height: 800px;
+    background-color: #1e1e1e;
+    margin-bottom: 80px;
+    /* padding: 5px;
+    border-radius: 2px; */
+}
+
+/* Display section */
+.display-container {
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+}
+
+.operation {
+    text-align: right;
+    font-size: 25px;
+    color: grey;
+    height: 25px;
+    margin-top: 60px;
+}
+
+.display {
+    text-align: right;
+    font-size: 60px;
+    color: white;
+    height: 60px;
+}
+
+/* Button section */
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+}
+
+button {
+    font-size: 25px;
+    width: 150px;
+    height: 125px;
+    border: 1.5px solid #1e1e1e;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px #222;
+}
+
+.btn-clear {
+    width: 300px;
+    height: 125px;
+}
+
+.btn-zero {
+    width: 300px;
+    height: 125px;
+}
+
+.number,
+.btn-decimal,
+.btn-zero {
+    background-color: #444;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+}
+
+.number:hover,
+.btn-decimal:hover,
+.btn-zero:hover {
+    background-color: #333;
+}
+
+.operator,
+.btn-clear,
+.btn-backspace,
+.btn-equals {
+    background-color: #333;
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.operator:hover,
+.btn-clear:hover,
+.btn-backspace:hover {
+    background-color: #444;
+}
+
+.number:active,
+.btn-decimal:active,
+.btn-zero:active, 
+.operator:active,
+.btn-clear:active,
+.btn-backspace:active {
+    background-color: #222;
+    color: lightgray;
+}
+
+.button-active {
+    background-color: #222;
+    color: lightgray;
+}
+
+.btn-equals {
+    background-color: rgb(184, 184, 184);
+    color: black;
+}
+
+.btn-equals:hover {
+    background-color: rgb(142, 142, 142);
+}
+
+.btn-equals:active {
+    background-color: rgb(104, 104, 104);
+}
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(35, 36, 39);
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.github-icon {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.github-icon:hover {
+    color: rgb(129, 129, 129);
+}
