@@ -75,5 +75,5 @@ async def on_ready():
     print('Bot is ready.')
     check_birthdays.start()
 
-
+# runs the bot
 bot.run()
