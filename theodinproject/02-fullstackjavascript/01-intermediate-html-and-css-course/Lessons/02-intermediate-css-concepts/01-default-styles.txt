@@ -20,3 +20,8 @@ Additional resources:
 
     https://browserdefaultstyles.com/
     https://fabulousgk.github.io/fabulous-styleboard/
+
+
+Available as an npm package, modern-normalize seems to be the best option for a clean css reset.
+
+@import "modern-normalize";
