@@ -45,8 +45,4 @@ Will start this one once I finish JavaScript Algorithms and Data Structures.
 
 
 At this point I will probably have enough information to build my own projects.
-Either way I'd like to always keep studying. I plan to either do the entire
-
-The Odin Project's Web Developent Course, which turns you in to a Full Stack Developer
-
-or I'll do more freecodecamp courses before I do this one.
+Either way I'd like to always keep studying. I plan to either do the entire 'The Odin Project's Web Developent Course', which turns you in to a Full Stack Developer, or I'll do more freecodecamp courses before I do that one.
