@@ -1,3 +1,7 @@
+# Faça um programa que crie palpites de
+# MEGA SENA, baseado no número de jogos que
+# o usuário escolher: 
+
 from random import randint
 from time import sleep
 
