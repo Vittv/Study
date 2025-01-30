@@ -61,7 +61,9 @@ function App() {
             ></textarea>
         </div>
         <div id="preview-wrapper">
-          <div class="toolbar">Preview</div>
+          <div class="toolbar">
+            <h3>Previewer</h3>
+          </div>
             <div
               id="preview"
               dangerouslySetInnerHTML={{
