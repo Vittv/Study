@@ -3,7 +3,7 @@
 Welcome to my study repository! Here, I document my learning journey through various courses, lessons, and projects in the field of programming and web development.
 >All courses below offer certification (aside from TOP)
 
-## Courses Completed
+## Finished Courses
 
 ### 1. [Python3](https://www.cursoemvideo.com/curso/python-3-mundo-1/)
 - **ETC:** 120 hours
