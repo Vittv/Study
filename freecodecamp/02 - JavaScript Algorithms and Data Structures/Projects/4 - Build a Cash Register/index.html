@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Cash Register</title>
+    </head>
+    <body>
+        <main>
+            <h1>CASH REGISTER</h1>
+            <div id="change-due"></div>
+            <div class="input-div">
+                <label for="cash">Enter customer's cash:</label>
+                <input type="number" id="cash" class="user-input">
+                <button class="check-btn-styles" id="purchase-btn">PURCHASE</button>
+            </div>
+            <div class="container">
+              <div class="top-display-screen-container">
+                <p id="price-screen" class="price-screen"></p>
+                <div class="connector"></div>
+              </div>
+              <div class="top-register">
+                <div class="btns-container">
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                    <button class="btn"></button>
+                </div>
+                <div id="cash-drawer-display" class="cash-drawer-display">
+                    <p><strong>Change:</strong></p>
+                    <p>Pennies: $0.89</p>
+                    <p>Nickels: $2.05</p>
+                    <p>Dimes: $2.5</p>
+                    <p>Quarters: $3</p>
+                    <p>Ones: $81</p>
+                    <p>Fives: $45</p>
+                    <p>Tens: $10</p>
+                    <p>Twenties: $60</p>
+                    <p>Hundreds: $0</p>
+                </div>
+              </div>
+              <div class="bottom-register">
+                <div class="circle"></div>
+              </div>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
