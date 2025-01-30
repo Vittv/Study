@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css">
+        <title>Telephone Number Validator</title>
+    </head>
+    <body>
+        <main>
+            <h1>Telephone Number Validator</h1>
+            <div class="phone-container">
+                <div class="phone-background">
+                    <div class="phone-camera"></div>
+                </div>
+                <label for="user-input">Enter a Phone Number:</label>
+                <input maxlength="20" type="text" id="user-input" value>
+                <div id="results-div">
+                    <p class="results-text"></p>
+                </div>
+                <div class="phone-footer">
+                    <button class="btn-styles" id="check-btn">Check</button>
+                    <button class="btn-styles" id="clear-btn">Clear</button>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
