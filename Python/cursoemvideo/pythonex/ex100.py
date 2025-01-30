@@ -1,6 +1,5 @@
 from random import randint
 from time import sleep
-import sys
 
 números = []
 
@@ -12,12 +11,8 @@ def sorteia():
 
         valores = randint(1, 10)
         números.append(valores)
-    
-    for núm in números:
-        
-        print(f'{núm} ', end='', flush=True)
-        sys.stdout.flush()
-        sleep(0.5)
+        print(f'{valores} ', end='', flush=True)
+        sleep(0.3)
     
     print('PRONTO!')
 
@@ -36,3 +31,11 @@ def somaPar():
 
 sorteia()
 somaPar()
+
+# CÓDIGO DO PROFESSOR:
+
+# Foi idêntico tirando que ele especificou:
+# def sorteia(lista) e def somaPar(lista)
+# E ele também colocou números = list()
+# embaixo depois de todas as funções
+# em vez de antes como eu fiz
