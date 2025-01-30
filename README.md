@@ -3,7 +3,7 @@
 Welcome to my study repository! Here, I document my learning journey through various courses, lessons, and projects in the field of programming and web development.
 >All courses below offer certification (aside from TOP)
 
-## Courses Completed
+## Finished Courses
 
 ### 1. [Python3](https://www.cursoemvideo.com/curso/python-3-mundo-1/)
 - **ETC:** 120 hours
@@ -25,7 +25,7 @@ Welcome to my study repository! Here, I document my learning journey through var
 
 ### 4. [Front End Development Libraries](https://www.freecodecamp.org/learn/front-end-development-libraries/)
 - **Language:** English (EN)
-- **Description:** I plan to start upon completion of JavaScript Algorithms and Data Structures course. Although I've heard this course isn't necessarily the best due to being a bit outdated, I think some of its older knowledge would help me.
+- **Description:** Working on it.
 
 ## Future Plans
 
