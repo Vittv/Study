@@ -21,13 +21,11 @@ Welcome to my study repository! Here, I chronicle my learning journey through va
 - **ETC:** 80 hours
 - **Language:** English (EN)
 - **Platform:** freeCodeCamp
-- **Description:** Just started this one.
-
-## Courses Planned
+- **Description:** After learning all the HTML and CSS basics, the curriculum gets you ready to add interaction to your now styled web page. Some of the topics were Object Oriented Programming (OOP), Functional Programming, algorithmic thinking, how to work with local storage, and how to fetch data using an API. This course was definitely not easy compared to the previous ones. I felt stuck a few times and had a hard time with some of the Lessons and Projects. Although it was a bit difficult, it felt even more satisfying than the Web Design course. Because now, with JavaScript, we're able to perform more complex tasks, so the web page starts feeling a little more useful and there are almost no limits to what you can do with such tools.
 
 ### 4. [Front End Development Libraries](https://www.freecodecamp.org/learn/front-end-development-libraries/)
 - **Language:** English (EN)
-- **Description:** Will start upon completion of JavaScript Algorithms and Data Structures course.
+- **Description:** I plan to start upon completion of JavaScript Algorithms and Data Structures course. Although I've heard this course isn't necessarily the best due to being a bit outdated, I think some of its older knowledge would help me.
 
 ## Future Plans
 
