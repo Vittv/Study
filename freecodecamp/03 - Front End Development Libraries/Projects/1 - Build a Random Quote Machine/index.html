@@ -1,110 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Random Quote Machine</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-        <style>
-            body {
-                background: #e6e6e6;
-            }
-            #text,
-            #author {
-                opacity: 1;
-            }
-            #text {
-                font-size: 1.6rem;
-                text-align: center;
-                margin: 0;
-                overflow: hidden;
-            }
-            #author {
-                text-align: right;
-                font-size: 1.0rem;
-            }
-            .container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin-top: 3%;
-            }
-            #quote-box {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 420px;
-                width: 700px;
-                background-color: white;
-                border: 0;
-            }
-            blockquote {
-                max-height: 300px; /* Adjust this value as needed */
-                max-width: 700px;
-                overflow: hidden;
-                padding-bottom: 10px;
-                margin: 0;
-            }
-            #tweet-quote,
-            #tumblr-quote,
-            #new-quote {
-                transition: all 0.3s ease;
-            }
-            #tweet-quote,
-            #tumblr-quote {
-                width: 50px;
-                height: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #1DA1F2;
-                border: none;
-                border-radius: 8px;
-                margin-left: 5px;
-            }
-            #tumblr-quote {
-                background-color: #e6e6e6;
-            }
-            #tweet-quote img {
-                width: 50px;
-                height: 50px;
-                filter: brightness(0) invert(1);
-            }
-            #tweet-quote:hover,
-            #tumblr-quote:hover,
-            #new-quote:hover {
-                transform: scale(1.1);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container d-flex vh-100">
-            <div class="row align-self-center justify-content-center w-100">
-                <div class="col-12 col-md-8 col-lg-6 mx-auto">
-                    <div id="quote-box" class="card text-center p-4">
-                        <blockquote class="blockquote mb-4">
-                            <p id="text" class="mb-0"></p>
-                            <footer id="author" class="blockquote-footer mt-2"></footer>
-                        </blockquote>
-                        <div class="d-flex justify-content-between">
-                            <div class="d-flex">
-                                <a id="tweet-quote" class="d-flex align-items-center" target="_blank">
-                                    <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Tweet">
-                                </a>
-                                <a id="tumblr-quote" class="d-flex align-items-center" target="_blank">
-                                    <img src="https://img.icons8.com/ios-filled/50/000000/tumblr.png" alt="Post on Tumblr">
-                                </a>
-                            </div>
-                            <button id="new-quote" class="btn btn-primary mr-2">New Quote</button>
-                        </div>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Machine</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="quote-box" class="card text-center">
+        <blockquote class="blockquote mb-4">
+            <p id="text" class="mb-0">
+                <i id="start-quote">"</i>
+                <span></span>
+            </p>
+            <footer id="author" class="blockquote-footer mt-2"></footer>
+        </blockquote>
+        <div class="button-group">
+            <div class="d-flex">
+                <a id="tweet-quote" class="d-flex align-items-center" target="_blank">
+                    <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Tweet">
+                </a>
+                <a id="tumblr-quote" class="d-flex align-items-center" target="_blank">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/tumblr.png" alt="Post on Tumblr">
+                </a>
             </div>
+            <button id="new-quote" class="btn btn-primary mr-2">New Quote</button>
         </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>

@@ -9,22 +9,25 @@ $(document).ready(function() {
 
     function displayQuote() {
         getRandomQuote().done(function(data) {
-            $('#text').fadeOut(500, function() {
-                $(this).text(data.content).fadeIn(500);
-            })
-            $('#author').fadeOut(500, function() {
-                $(this).text(`${data.author}`).fadeIn(500);
+            
+            $('#text span, #author, #start-quote').fadeOut(500, function() {
+                
+                $('#text span').text(data.content);
+                $('#author').text(data.author);
+                
+                
+                $('#text span, #author, #start-quote').fadeIn(500);
             });
 
-            console.log(`${data.content}`)
+            console.log(`${data.content}`);
             updateTweetButton(data.content, data.author);
             updateTumblrButton(data.content, data.author);
         }).fail(function() {
-            $('#text').fadeOut(500, function() {
-                $(this).text("An error occurred. Please try again.").fadeIn(500);
-            });
-            $('#author').fadeOut(500, function() {
-                $(this).text("").fadeIn(500);
+            $('#text span, #author, #start-quote').fadeOut(500, function() {
+                $('#text span').text("An error occurred. Please try again.");
+                $('#author').text("");
+                $('#start-quote').text('"');
+                $('#text span, #author, #start-quote').fadeIn(500);
             });
         });
     }
