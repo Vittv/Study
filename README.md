@@ -8,7 +8,7 @@ Predominantly in EN, sometimes PT
 >All of these courses offer certification
 
 
-# 1# Course:
+# #1 Course:
 
 **cursoemvideo - Python3 (PT)**
 
