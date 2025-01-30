@@ -1,3 +1,7 @@
+# Faça um programa que mostre contagens de:
+# 1 a 10 de 1 em 1, 10 a 0 de 2 em 2 e por fim
+# o usuário escolhe inicio, fim e passo na terceira vez:
+
 from time import sleep
 
 def contador(inicio, fim, passo):
