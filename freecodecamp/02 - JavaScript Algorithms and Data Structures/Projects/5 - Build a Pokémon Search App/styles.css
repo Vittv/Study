@@ -70,16 +70,7 @@ img {
     background-color: var(--light-yellow);
 }
 
-#previous-button {
-    padding: 8px 0;
-    width: 30px;
-    border-radius: 20px;
-    text-align: center;
-    background-color: var(--black);
-    color: var(--white);
-    border: none;
-}
-
+#previous-button,
 #next-button {
     padding: 8px 0;
     width: 30px;
@@ -88,12 +79,6 @@ img {
     background-color: var(--black);
     color: var(--white);
     border: none;
-}
-
-#background-img {
-    width: 350px;
-    border: 2px solid var(--black);
-    z-index: 1;
 }
 
 .output {
@@ -123,15 +108,26 @@ img {
 }
 
 .sprite-container {
-    flex-grow: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    width: 350px;
+    height: auto;
+}
+
+#background-img {
+    width: 100%;
+    border: 2px solid var(--black);
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    z-index: 1;
 }
 
 #sprite {
-    width: 180px;
-    position: relative;
+    position: absolute;
+    margin-top: 5%;
+    top: 10%;
+    left: 22%;
+    width: 200px;
     z-index: 2;
 }
 
@@ -146,6 +142,7 @@ img {
     text-transform: uppercase;
     background-color: var(--yellow);
     width: 80px;
+    margin-top: 65%;
 }
 
 span.type {

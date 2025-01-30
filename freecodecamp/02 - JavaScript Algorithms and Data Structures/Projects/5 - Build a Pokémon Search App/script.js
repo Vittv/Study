@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchPokemonData(pokemon) {
         try {
-            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`);
+            const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${String(pokemon.toLowerCase())}`);
             if (!response.ok) {
                 throw new Error('Pokémon not found');
             }
