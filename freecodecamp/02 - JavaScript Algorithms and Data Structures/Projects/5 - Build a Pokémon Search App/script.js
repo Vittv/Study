@@ -64,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchPokemonData(currentPokemonId + 1);
     });
 
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft' && currentPokemonId > 1) {
+            fetchPokemonData(currentPokemonId - 1);
+        } else if (event.key === 'ArrowRight') {
+            fetchPokemonData(currentPokemonId + 1);
+        }
+    });
+    
     // Fetch initial Pokémon data
     fetchPokemonData(currentPokemonId);
 });
