@@ -1,3 +1,6 @@
+# Faça um programa que coloque valores em uma lista
+# depois mostrando uma lista par e uma impar dos mesmos:
+
 lista = []
 pares = []
 impares = []

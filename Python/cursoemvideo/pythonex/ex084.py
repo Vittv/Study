@@ -1,3 +1,6 @@
+# Faça um programa que leia dados e mostre
+# o nome da pessoa mais pesada e o da mais leve:
+
 pessoas = []
 c = 0
 
