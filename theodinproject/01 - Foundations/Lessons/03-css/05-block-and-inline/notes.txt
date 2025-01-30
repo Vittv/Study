@@ -1,0 +1,5 @@
+block -> takes all available space and goes on a new line
+
+inline -> takes only necessary space and stays on same line
+
+inline-block -> same as inline but will take more css rules into account, such as height and width
