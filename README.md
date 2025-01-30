@@ -13,13 +13,13 @@ Welcome to my study repository! Here, I chronicle my learning journey through va
 ### 2. [freecodecamp - Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
 - **ETC:** 50 hours
 - **Language:** English (EN)
-- **Description:** I am still working on this one. It's taught me HTML and CSS basics so far. It has quite a different approach compared to my Python course. Because this time, it is entirely project based. Every lesson is a project you build along instructions. You do around 5 project lessons, building small projects as you go, and then a final project for that module. Finish 5 final projects and you get your certification.
-
-## Courses Planned
+- **Description:** This one taught me HTML and CSS. It had quite a different approach compared to my Python course. Because this time, it was entirely project based. Every lesson was a project you built along instructions. You do a few project lessons, building small projects as you go, and then a final project for that module. It was a total of 15 lessons and 5 final projects. Finish 5 final projects and get your certification. I will say, this course was fun, it made developing feel more real. As in I could see what I was doing and how everything worked. In the end it left me with some nice projects. Nothing to be super proud of, but they look nice, making the experience very satisfying in the end.
 
 ### 3. [freecodecamp - JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/)
 - **Language:** English (EN)
-- **Description:** Will start upon completion of Responsive Web Design course.
+- **Description:** Just started this one.
+
+## Courses Planned
 
 ### 4. [freecodecamp - Front End Development Libraries](https://www.freecodecamp.org/learn/front-end-development-libraries/)
 - **Language:** English (EN)
