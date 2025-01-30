@@ -1,7 +1,7 @@
 # Study Documentation
 
 Welcome to my study repository! Here, I document my learning journey through various courses, lessons, and projects in the field of programming and web development.
->All courses below offer certification (aside from TOP)
+>All courses below offer certification (aside from The Odin Project)
 
 ## Finished Courses
 
