@@ -24,15 +24,15 @@ h2 {
 }
 
 .cymbal-info {
-    display: none; /* Initially hide the cymbal info */
-    position: absolute; /* Position the cymbal info absolutely */
+    display: none;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Make it cover the entire cymbal */
-    height: 100%; /* Make it cover the entire cymbal */
-    background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    box-sizing: border-box; /* Include padding in width/height calculation */
+    box-sizing: border-box;
 }
 
 .cymbal-info ul{
