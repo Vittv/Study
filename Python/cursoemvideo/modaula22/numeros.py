@@ -1,4 +1,4 @@
-from uteis import numeros
+from numeros import fatorial, dobro, triplo
 
 num = int(input('Digite um valor '))
 fat = fatorial(num)
