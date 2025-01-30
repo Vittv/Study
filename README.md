@@ -25,7 +25,7 @@ Welcome to my study repository! Here, I chronicle my learning journey through va
 
 ### 4. [Front End Development Libraries](https://www.freecodecamp.org/learn/front-end-development-libraries/)
 - **Language:** English (EN)
-- **Description:** Will start upon completion of JavaScript Algorithms and Data Structures course.
+- **Description:** I plan to start upon completion of JavaScript Algorithms and Data Structures course.
 
 ## Future Plans
 
