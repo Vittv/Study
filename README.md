@@ -1,6 +1,7 @@
 # Study Journey Documentation
 
 Welcome to my study repository! Here, I chronicle my learning journey through various courses, lessons, and projects in the field of programming and web development.
+>All courses below offer certification (aside from TOP)
 
 ## Courses Completed
 
