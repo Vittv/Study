@@ -1,0 +1,298 @@
+Arrays are variables that can hold more than one value. They are considered objects, but function diferently than objects.
+
+Indexing
+
+    An object will require a name to access a member of its group. While an array will require an index number.
+
+    Array Example:
+
+    const cars = ["Saab", "Volvo", "BMW"];
+    cars[0] // would be Saab
+
+    (In most programming languages, counting starts from 0 when it comes to arrays)
+
+    Object example:
+
+    const person = {firstName:"John", lastName:"Doe", age:46};
+    person.firstName // would be John
+
+Array Elements Can be objects
+
+    JavaScript variables can be objects. Arrays are special kinds of objects.
+
+    Because of this, you can have variables of different types in the same Array.
+
+    You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
+
+    myArray[0] = Date.now;
+    myArray[1] = myFunction;
+    myArray[2] = myCars;
+
+Array Properties and Methods
+
+    The real strength of JavaScript arrays are the built-in array properties and methods:
+
+    cars.length   // Returns the number of elements
+    cars.sort()   // Sorts the array
+
+    The length Property
+
+        The length property of an array returns the length of an array (the number of array elements).
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let length = fruits.length; 
+
+        (The length property is always one more than the highest array index.)
+
+    Accessing the First Array Element
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruits[0];
+
+    Accessing the Last Array Element
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fruit = fruits[fruits.length - 1];
+
+    Looping Array Elements
+
+        One way to loop through an array, is using a for loop:
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits.length;
+
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ul>";  
+
+        You can also use the Array.forEach() function:
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+        let text = "<ul>";
+        fruits.forEach(myFunction);
+        text += "</ul>";
+
+        function myFunction(value) {
+        text += "<li>" + value + "</li>";
+        }
+
+    Adding Array Elements
+
+        The easiest way to add a new element to an array is using the push() method:
+
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits.push("Lemon");  // Adds a new element (Lemon) to fruits
+
+        New element can also be added to an array using the length property:
+
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits[fruits.length] = "Lemon";  // Adds "Lemon" to fruits
+
+        WARNING !
+
+        Adding elements with high indexes can create undefined "holes" in an array:
+
+        const fruits = ["Banana", "Orange", "Apple"];
+        fruits[6] = "Lemon";  // Creates undefined "holes" in fruits
+
+    Associative Arrays
+
+        Many programming languages support arrays with named indexes.
+
+        Arrays with named indexes are called associative arrays (or hashes).
+
+        JavaScript does not support arrays with named indexes.
+
+        In JavaScript, arrays always use numbered indexes.
+
+        const person = [];
+        person[0] = "John";
+        person[1] = "Doe";
+        person[2] = 46;
+        person.length;    // Will return 3
+        person[0];        // Will return "John"
+
+        WARNING !!
+
+        If you use named indexes, JavaScript will redefine the array to an object.
+
+        After that, some array methods and properties will produce incorrect results.
+
+        const person = [];
+        person["firstName"] = "John";
+        person["lastName"] = "Doe";
+        person["age"] = 46;
+        person.length;     // Will return 0
+        person[0];         // Will return undefined
+
+    The Difference Between Arrays and objects
+
+        In JavaScript, arrays use numbered indexes.
+
+        In JavaScript, objects use named indexes.
+
+        Arrays are a special kind of objects, with numbered indexes.
+
+    When to Use Arrays. When to use Objects.
+
+       - JavaScript does not support associative arrays.
+       - You should use objects when you want the element names to be strings (text).
+       - You should use arrays when you want the element names to be numbers.
+
+    JavaScript new Array()
+
+        JavaScript has a built-in array constructor new Array().
+
+        But you can safely use [] instead.
+
+        These two different statements both create a new empty array named points:
+
+            const points = new Array();
+            const points = [];
+
+        These two different statements both create a new array containing 6 numbers:
+
+            const points = new Array(40, 100, 1, 5, 25, 10);
+            const points = [40, 100, 1, 5, 25, 10]; 
+
+        The new keyword can produce some unexpected results:
+
+            // Create an array with three elements:
+            const points = new Array(40, 100, 1);
+            
+            // Create an array with two elements:
+            const points = new Array(40, 100); 
+
+            // Create an array with one element ???
+            const points = new Array(40);
+
+    A Common Error
+
+        const points = [40];
+
+        is not the same as:
+
+        const points = new Array(40);
+
+        // Create an array with one element:
+        const points = [40];
+
+        // Create an array with 40 undefined elements:
+        const points = new Array(40);   
+
+    How to Recognize an Array            
+
+        A common question is: How do I know if a variable is an array?
+
+        The problem is that the JavaScript operator typeof returns "object":
+
+        const fruits = ["Banana", "Orange", "Apple"];
+        let type = typeof fruits;
+
+        The typeof operator returns object because a JavaScript array is an object.
+
+
+        Solution 1:
+
+        To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray():
+
+        Array,isArray(fruits);
+
+
+        Solution 2:
+
+        The instanceof operator returns true if an object is created by a given constructor:
+
+        const fruits = ["Banana", "Orange", "Apple"];
+
+        (fruits instanceof Array);
+
+    Nested Arrays and Objects
+
+        Values in objects can be arrays, and values in arrays can be objects:
+
+        const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+            {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+            {name:"BMW", models:["320", "X3", "X5"]},
+            {name:"Fiat", models:["500", "Panda"]}
+        ]
+        }
+
+        To access arrays inside arrays, use a for-in loop for each array:
+
+        for (let i in myObj.cars) {
+        x += "<h1>" + myObj.cars[i].name + "</h1>";
+        for (let j in myObj.cars[i].models) {
+            x += myObj.cars[i].models[j];
+        }
+        }
+
+JavaScript Array Methods
+
+    Array length        Array shift()       Array flatMap()
+    Array toString()    Array unshift()     Array slice()
+    Array at()          Array delete()      Array splice()
+    Array join()        Array concat()      Array toSpliced()
+    Array pop()         Array copyWithin()  
+    Array push()        Array flat()
+
+    TLDR:
+
+        length = returns the length (size) of an array
+        can also be used to append a new element to an array
+
+        toString() = converts an array to a string of (comma separated) array
+        values
+
+        at() = returns an indexed element from an array, same as []
+
+        join() = joins all array elements into a string, just like toString(), but in addition you can specify the separator (won't be commas necessarily like toString())
+
+        pop() = removes the last element from an array (from the end)
+        returns "popped out"
+
+        push() = adds a new element to an array (at the end)
+        returns the new array length
+
+        shift() = removes the first array element and "shifts" all other elements to a lower index
+        returns "shifted out"
+
+        unshift() = adds a new element to an array(at the beginning), and "unshifts" older elements
+        returns the new array length
+
+        delete() = using delete() leaves undefined holes in the array
+        use pop() or shift() instead
+
+        concat() = creates a new array by merging (concatenating) existing arrays
+        The concat() method does not change the existing arrays. It always returns a new array
+        The concat() method can take any number of array arguments
+
+        copyWithin() = copies array elements to another position in an array
+        The copyWithin() method overwrites the existing values.
+        The copyWithin() method does not add items to the array.
+        The copyWithin() method does not change the length of the array
+
+        flat() = creates a new array with sub-array elements concatenated to a specified depth
+
+        flatMap() = maps all elements of an array and then creates a new array by flattening the array
+
+        splice() = adds new items to an array
+        can be used to add new items to an array
+        The splice() method returns an array with the deleted items
+
+        toSpliced() = added as a safe way to splice an array without altering the original array
+        The difference between the new toSpliced() method and the old splice() method is that the new method creates a new array, keeping the original array unchanged, while the old method altered the original array
+
+        slice() = slices out a piece of an array into a new array
+        The slice() method creates a new array
+        The slice() method does not remove any elements from the source array
+        The slice() method can take two arguments
+
+
+More in depth Array Methods resources: https://www.w3schools.com/js/js_array_methods.asp
