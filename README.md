@@ -13,7 +13,7 @@ Predominantly in EN, sometimes PT
 **cursoemvideo - Python3 (PT)**
 
 
-This course taught me all the way from print('Hello World') to functions, modules, packets. But it did not cover classes or anything more.
+This course taught me all the way from print('Hello World') to functions, modules, packages. But it did not cover classes or anything more.
 
 It was a total of 23 lessons and 115 exercises. You'd watch the lesson and be given around 5-10 exercises to finish before the next lesson.
 
@@ -31,7 +31,7 @@ I am still working on this one. It's taught me HTML and CSS basics so far. It ha
 
 Because this time, it is entirely project based. Every lesson is a project you build along instructions. You do around 5 project lessons,
 
-building small projects as you go, and then a final project for that module. Finish 5 final projets and you get your certification.
+building small projects as you go, and then a final project for that module. Finish 5 final projects and you get your certification.
 
 
 # Third Course:
