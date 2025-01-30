@@ -8,7 +8,7 @@ Welcome to my study repository! Here, I chronicle my learning journey through va
 ### 1. [Python3](https://www.cursoemvideo.com/curso/python-3-mundo-1/)
 - **ETC:** 120 hours
 - **Language:** Portuguese (PT)
-- **Platform: cursoemvideo
+- **Platform:** cursoemvideo
 - **Description:** This course taught me all the way from print('Hello World') to functions, modules, packages. But it did not cover classes or anything more. It was a total of 23 lessons and 115 exercises. You'd watch the lesson and be given around 5-10 exercises to finish before the next lesson. To finish the whole course, you had to not only do every exercise but watch their explanation after each lesson. So you always knew how to build what was asked for in the end, even if you had no idea at first.
 
 ### 2. [Responsive Web Design](https://www.freecodecamp.org/learn/2022/responsive-web-design/)
