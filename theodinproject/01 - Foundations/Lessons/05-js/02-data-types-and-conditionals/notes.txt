@@ -90,3 +90,211 @@ The last three lines may need additional explanation:
     The result of typeof null is "object". That’s an officially recognized error in typeof, coming from very early days of JavaScript and kept for compatibility. Definitely, null is not an object. It is a special value with a separate type of its own. The behavior of typeof is wrong here.
 
     The result of typeof alert is "function", because alert is a function. We’ll study functions in the next chapters where we’ll also see that there’s no special “function” type in JavaScript. Functions belong to the object type. But typeof treats them differently, returning "function". That also comes from the early days of JavaScript. Technically, such behavior isn’t correct, but can be convenient in practice.
+    
+
+String Manipulation
+
+    The length property returns the length of a string
+
+        let text= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text.length; // 26
+
+
+    There are 4 methods for extracting string characters:
+
+        - The at(position) Method
+        - The charAt(position) Method
+        - The charCodeAt(position) Method
+        - Using property access [] like in arrays
+
+
+    The charAt() method returns the character at a specified index (position) in a string:
+
+        let text = "HELLO WORLD";
+        let char = text.charAt(0); // H
+
+    The charCodeAt() method returns the code of the character at a specified index in a string:
+
+    The method returns a UTF-16 code (an ineger between 0 and 65535)
+
+        let text = "HELLO WORLD";
+        let char = text.charCodeAt(0);
+
+
+    String at()
+
+        const name = "yup";
+        let letter = name.at(2);
+
+        const name = "yup";
+        let letter = name[2];
+
+    Both will return the character at a specified index in a string
+
+
+    Property Acesss []
+
+        let text = "HELLO WORLD";
+        let char = text[0];
+
+
+    Property access might be a little unpredictable:
+
+       - It makes strings look like arrays (but they are not)
+       - If no character is found, [ ] returns undefined, while charAt() returns an empty string.
+       - It is read only. str[0] = "A" gives no error (but does not work!)
+
+       let text = "HELLO WORLD";
+       text[0] = "A"; // Gives no error, but does not work
+
+
+    Extracting String Parts
+
+    There are 3 methods for extracting a part of a string:
+
+       - slice(start, end)
+       - substring(start, end)
+       - substr(start, length)
+
+
+    slice()
+
+    slice() extracts a part of a string and returns the extracted part in a new string
+
+    The method takes 2 parameters: start position, and end position (end not included)
+
+    Slice out a portion of a string from position 7 to 13;
+
+        let text = "Apple, Banana, Kiwi";
+        let part = text.slice(7, 13); // Banana
+
+
+    <JavaScript counts positions from zero>
+
+        First position is 0
+        Second position is 1
+
+    
+    If you omit the second parameter, the method will slice out the rest of the string:
+
+        let text = "Apple, Banana, Kiwi";
+        let part = text.slice(7); // Banana, Kiwi
+
+    If a parameter is negative, the position is counted from the end of the string: 
+
+        let text = "Apple, Banana, Kiwi";
+        let part = text.slice(-12); // Banana, Kiwi
+
+    This example slices out a portion of a string from position -12 to position -6:
+
+        let text = "Apple, Banana, Kiwi";
+        let part = text.slice(-12, -6); // Banana
+
+
+    substring()
+
+    substring() is similar to slice()
+
+    The difference is that start and end values less than 0 are treated as 0 in substring().
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substring(7, 13); // Banana
+
+    If you omit the second parameter, substring() will slice out the rest of the string.
+
+
+    substr()
+
+    substr() is similar to slice()
+
+    The difference is that the second parameter specifies the length of the extracted part.
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substr(7, 6); // Banana
+
+    If you omit the second parameter, substr() will slice out the rest of the string.
+
+    If the first parameter is negative, the position counts from the end of the string.
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substr(-4);
+
+
+    Upper and Lower Case
+
+    A string is converted to upper case with toUpperCase():
+
+    A string is converted to lower case with toLowerCase():
+
+        let text1 = "Hello World!";
+        let text2 = text1.toUpperCase();
+
+        let text1 = "Hello World!";       // String
+        let text2 = text1.toLowerCase();  // text2 is text1 converted to lower
+
+    trim()
+
+    Removes whitespace from both sides of a string
+
+
+    trimStart()
+
+    Removes whitespace only from the start of a string
+
+    trimEnd()
+
+    Same but for the end of the string
+    
+
+    repeat()
+
+    The repeat() method returns a string with a number of copies of a string.
+
+    The repeat() method returns a new string.
+
+    The repeat() method does not change the original string.
+
+        string.repeat(count)
+
+
+    replace()
+
+
+    The replace() method replaces a specified value with another value in a string:
+
+        let text = "Please visit Microsoft!";
+        let newText = text.replace("Microsoft", "W3Schools");
+
+
+    It will always replace the first match
+    It is case sensitive unless you use /i
+
+        let text = "Please visit Microsoft!";
+        let newText = text.replace(/MICROSOFT/i, "W3Schools");
+
+
+    replaceAll()
+
+    The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+
+    If the parameter is a regular expression, the global flag (g) must be set, otherwise a TypeError is thrown.
+
+        text = text.replaceAll("Cats","Dogs");
+        text = text.replaceAll("cats","dogs");
+
+        text = text.replaceAll(/Cats/g,"Dogs");
+        text = text.replaceAll(/cats/g,"dogs");
+
+
+    split()
+
+
+    A string can be converted to an array with the split() method
+
+        text.split(",")    // Split on commas
+        text.split(" ")    // Split on spaces
+        text.split("|")    // Split on pipe
+
+    If the separator is omitted, the returned array will contain the whole string in index [0].
+
+    If the separator is "", the returned array will be an array of single characters
