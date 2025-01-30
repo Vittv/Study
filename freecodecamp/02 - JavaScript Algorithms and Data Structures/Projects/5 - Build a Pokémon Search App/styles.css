@@ -46,7 +46,7 @@ img {
     padding: 5px;
     border-radius: 8px 8px 0 0;
     gap: 10px;
-    margin-left: 20px;
+    margin-left: 7px;
 }
 
 #search-input {
@@ -73,12 +73,21 @@ img {
 #previous-button,
 #next-button {
     padding: 8px 0;
-    width: 30px;
+    width: 40px;
     border-radius: 20px;
     text-align: center;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
     border: none;
+    font-size: 1.2em;
+    transition: width 0.3s, padding 0.3s;
+    margin-left: 5px;
+}
+
+#previous-button:hover,
+#next-button:hover {
+    background-color: lightgrey;
+    color: var(--black);
 }
 
 .output {
