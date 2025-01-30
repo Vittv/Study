@@ -5,34 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div if="page-wrapper">
+        <div id="page-wrapper">
             <header>
-                <div class="logo">
-                    <img id="header-img" src="https://meinlcymbals.com/content/cymbals/layout/image-thumb__312__logo/meinl-cymbals-logo.webp" alt="meinl cymbals logo">
-                </div>
                 <nav id="nav-bar">
+                    <div class="logo">
+                        <img id="header-img" src="https://meinlcymbals.com/content/cymbals/layout/image-thumb__312__logo/meinl-cymbals-logo.webp" alt="meinl cymbals logo">
+                    </div>
                     <ul>
                         <li><a class="nav-link" href="#Cymbals">Cymbals</a></li>
                         <li><a class="nav-link" href="#Listen">Listen</a></li>
-                        <li><a class="nav-link" href="#Features">Features</a></li>
                         <li><a class="nav-link" href="#Pricing">Pricing</a></li>
+                        <li><a class="nav-link" href="#Quality">Quality</a></li>
                         <li><a class="nav-link" href="#AboutUs">About Us</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="container">
                 <section id="hero">
-                    <h2>Flawlessly Handcrafted Cymbals</h2>
-                    <form id="form" action="https://www.freecodecamp.com/email-submit">
-                        <input name="email" id="email" type="email" placeholder="Enter your email address" required>
-                        <input id="submit" type="submit" value="Get Started" class="button">
-                    </form>
+                    <h2>MEINL CYMBALS</h2>
                 </section>
             </div>
             <div class="container">
-                <h3>Featured Cymbals</h3>
+                <div class="featuredcymbals">
+                <h3>RIDES</h3>
+                </div>
                 <section id="Cymbals">
                 <div class="cymbal-container">
                     <div class="cymbal">
@@ -43,13 +42,6 @@
                             <p>BYZANCE EXTRA DRY</p>
                             <h3>20" EXTRA DRY THIN RIDE - B20EDTR</h3>
                         </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>B20 bronze alloy</li>
-                                <li>Hand hammered for an unique sound</li>
-                                <li>Natural appearance and extra dry sounds</li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="cymbal">
                         <div class="cymbal-pic">
@@ -58,13 +50,6 @@
                         <div class="cymbal-name">
                             <p>BYZANCE EXTRA DRY</p>
                             <h3>22" EXTRA DRY THIN RIDE - B22EDTR</h3>
-                        </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>B20 bronze alloy</li>
-                                <li>Hand hammered for an unique sound</li>
-                                <li>Natural appearance and extra dry sounds</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="cymbal">
@@ -75,13 +60,6 @@
                             <p>BYZANCE EXTRA DRY</p>
                             <h3>20" EXTRA DRY MEDIUM RIDE - B20EDMR</h3>
                         </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>B20 bronze alloy</li>
-                                <li>Hand hammered for an unique sound</li>
-                                <li>Natural appearance and extra dry sounds</li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="cymbal">
                         <div class="cymbal-pic">
@@ -90,13 +68,6 @@
                         <div class="cymbal-name">
                             <p>BYZANCE EXTRA DRY</p>
                             <h3>22" EXTRA DRY MEDIUM RIDE - B22EDMR</h3>
-                        </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>B20 bronze alloy</li>
-                                <li>Hand hammered for an unique sound</li>
-                                <li>Natural appearance and extra dry sounds</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="cymbal">
@@ -107,13 +78,6 @@
                             <p>BYZANCE EXTRA DRY</p>
                             <h3>21" TRANSITION RIDE - B21TSR</h3>
                         </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>B20 bronze alloy</li>
-                                <li>Hand hammered for an unique sound</li>
-                                <li>Natural appearance and extra dry sounds</li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="cymbal">
                         <div class="cymbal-pic">
@@ -123,14 +87,6 @@
                             <p>BYZANCE DUAL</p>
                             <h3>20" DUAL CRASH RIDE - B20DUCR</h3>
                         </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>Great for riding and crashing</li>
-                                <li>Hand-hammered into shape from B20 Bronze</li>
-                                <li>2-year warranty</li>
-                                <li>Made in Turkey</li>
-                            </ul>
-                        </div>
                     </div>
                     <div class="cymbal">
                         <div class="cymbal-pic">
@@ -139,14 +95,6 @@
                         <div class="cymbal-name">
                             <p>BYZANCE DUAL</p>
                             <h3>22" DUAL CRASH RIDE - B22DUCR</h3>
-                        </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>Great for riding and crashing</li>
-                                <li>Hand-hammered into shape from B20 Bronze</li>
-                                <li>2-year warranty</li>
-                                <li>Made in Turkey</li>
-                            </ul>
                         </div>
                     </div>
                     <div class="cymbal">
@@ -159,20 +107,137 @@
                             <p>PURE ALLOY</p>
                             <h3>20" MEDIUM RIDE - PA20MR</h3>
                         </div>
-                        <div class="cymbal-info">
-                            <ul>
-                                <li>Click to check Meinl's Website!</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>    
                 </section>
                 <section id="Listen">
                     <iframe id="video" width="1280" height="720" src="https://www.youtube.com/embed/4xoYoZqWwso" frameborder="0" allowfullscreen="True"></iframe>
                 </section>
-                <section id="Features">
                 </section>
-                <section id="Pricing"></section>
+                <section id="Pricing">
+                    <div class="product" id="B20EDTR">
+                        <div class="level">B20EDTR</div>
+                        <h2>$479.99</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>B20 bronze alloy</li>
+                                <li>Hand hammered for an unique sound</li>
+                                <li>Natural appearance and extra dry sounds</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="product" id="B22EDTR">
+                        <div class="level">B22EDTR</div>
+                        <h2>$579.99</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>B20 bronze alloy</li>
+                                <li>Hand hammered for an unique sound</li>
+                                <li>Natural appearance and extra dry sounds</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="product" id="B20EDMR">
+                        <div class="level">B20EDMR</div>
+                        <h2>$479.99</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>B20 bronze alloy</li>
+                                <li>Hand hammered for an unique sound</li>
+                                <li>Natural appearance and extra dry sounds</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="product" id="B22EDMR">
+                        <div class="level">B22EDMR</div>
+                        <h2>$579.99</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>B20 bronze alloy</li>
+                                <li>Hand hammered for an unique sound</li>
+                                <li>Natural appearance and extra dry sounds</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="product" id="B21TSR">
+                        <div class="level">B21TSR</div>
+                        <h2>$423.49</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>B20 bronze alloy</li>
+                                <li>Hand hammered for an unique sound</li>
+                                <li>Natural appearance and extra dry sounds</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="product" id="B20DUCR">
+                        <div class="level">B20DUCR</div>
+                        <h2>$479.99</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>Great for riding and crashing</li>
+                                <li>Hand-hammered into shape from B20 Bronze</li>
+                                <li>2-year warranty</li>
+                                <li>Made in Turkey</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="product" id="B22DUCR">
+                        <div class="level">B22DUCR</div>
+                        <h2>$579.99</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>Great for riding and crashing</li>
+                                <li>Hand-hammered into shape from B20 Bronze</li>
+                                <li>2-year warranty</li>
+                                <li>Made in Turkey</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                    <div class="product" id="PA20MR">
+                        <div class="level">PA20MR</div>
+                        <h2>$339.99</h2>
+                        <div class="cymbal-info">
+                            <ul>
+                                <li>Computerized Hammering, made in Germany</li>
+                                <li>Timeless sounds</li>
+                                <li>For all styles</li>
+                            </ul>
+                            <button class="btn">PURCHASE</button>
+                        </div>
+                    </div>
+                </section>
+                <section id="GetStarted">
+                    <form id="form" action="https://www.freecodecamp.com/email-submit">
+                        <input name="email" id="email" type="email" placeholder="Enter your email address" required>
+                        <input id="submit" type="submit" value="GET STARTED" class="button">
+                    </form>
+                </section>
+                <section id="Quality">
+                    <div class="Quality">
+                        <h1>QUALITY</h1>
+                        <img src="https://meinl.de/content/meinl_de/quality/image-thumb__15215__content-cols/DSC00577-Bearbeitet.webp" />
+                        <h3>QUALITY IS WHAT COUNTS AT MEINL!</h3>
+                        <p>Quality Control: Our QC team thoroughly checks every single instrument before shipping to retailers and customers. All guitars and basses receive a proper setup and are pre-tuned so that the customer gets a perfect instrument and outstanding playing experience right out of the box.</p>
+                    </div>
+                    <div class="SparePartService">
+                        <img src="https://meinl.de/content/meinl_de/quality/image-thumb__15213__content-cols/MeinlDistribution_Service_ReinholdStieglitz_Elektronik.webp" />
+                        <h3>SPARE PART SERVICE</h3>
+                        <p>We have a solution for (almost) any problem. If you are experiencing issues with your instrument, don’t hesitate to reach out to us or contact your local music retailer. If you already know what spare part you are missing, we highly recommend to get it directly from</p>
+                        <p><a href="https://meinlshop.de/">meinlshop.de</a></p>
+                    </div>
+                    <div class="InstrumentCare">
+                        <img src="https://meinl.de/content/meinl_de/quality/image-thumb__15214__content-cols/MeinlDistribution_Service_ThomasHanneman_Gitarrenservice.webp" />
+                        <h3>INSTRUMENT CARE</h3>
+                        <p>In order to maintain your instrument’s value, appealing look and functionality, proper care is very important. Helpful products for cleaning your cymbals or stringed instruments can be found on our websites for <a href="https://meinlcymbals.com/en/drumgear/Clean-and-Protect">Meinl Cymbal Care</a> and <a href="https://ortegaguitars.com/en/instruments/care-products">Ortega</a> instrument care.</p>
+                    </div>
                 <section id="AboutUs">
                     <h3>ABOUT MEINL CYMBALS</h3>
                     <p>Meinl company is a family-owned manufacturer and distributor of musical instruments based in Gutenstetten, Germany. The brand portfolio of Meinl comprises Meinl Cymbals, Meinl Percussion, Nino Percussion, Meinl Sonic Energy, Meinl Stick & Brush and Ortega Guitars.</p>
