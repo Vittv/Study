@@ -36,8 +36,8 @@ Welcome to my study repository! Here, I document my learning journey through var
 1. Build a Random Quote Machine (jQuery, Bootstrap) ✅
 2. Build a Markdown Previewer (React) ✅
 3. Build a Drum Machine (React) ✅
-4. Build a JavaScript Calculator (React, Sass) - finishing styling ⌛
-5. Build a 25 + 5 Clock (React) ⌛
+4. Build a JavaScript Calculator (React) ⌛
+5. Build a 25 + 5 Clock (React, Sass) ⌛
 
 ## Future Plans
 
