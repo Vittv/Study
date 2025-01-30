@@ -50,7 +50,7 @@ function App() {
       <div id="app-wrapper">
         <div id="editor-wrapper">
           <div class="toolbar">
-            <h3>Editor</h3>
+            <h3>Edit</h3>
           </div>
             <textarea
             id="editor"
@@ -62,7 +62,7 @@ function App() {
         </div>
         <div id="preview-wrapper">
           <div class="toolbar">
-            <h3>Previewer</h3>
+            <h3>Preview</h3>
           </div>
             <div
               id="preview"
