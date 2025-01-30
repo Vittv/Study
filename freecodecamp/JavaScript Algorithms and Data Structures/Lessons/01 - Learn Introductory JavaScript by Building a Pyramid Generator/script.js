@@ -8,11 +8,10 @@ function padRow(rowNumber, rowCount) {
 }
 
 for (let i = 1; i <= count; i++) {
-  if (inverted) {
+  if (inverted) 
     rows.unshift(padRow(i, count));
-  } else {
+  else 
     rows.push(padRow(i, count));
-  }
 }
 
 let result = ""
