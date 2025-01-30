@@ -4,17 +4,15 @@
 # E por fim mostre se o número 5 está ou não na lista:
 
 lista = []
-c = 0
 
 while True:
     n = int(input('Digite um valor: '))
     lista.append(n)
-    c += 1
     escolha = str(input('Quer continuar? [S/N]: ')).strip().upper()[0]
     if escolha == 'N':
         break
 
-print(f'Você digitou {c} valores.')
+print(f'Você digitou {len(lista)} valores.')
 print(f'Em ordem decrescente: {sorted(lista, reverse=True)}')
 
 if 5 in lista:
