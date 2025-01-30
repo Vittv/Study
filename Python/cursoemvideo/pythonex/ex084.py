@@ -1,38 +1,39 @@
 # Faça um programa que leia dados e mostre
 # o nome da pessoa mais pesada e o da mais leve:
 
-pessoas = []
-c = 0
+temp = []
+princ = []
+mai = men = 0
 
 while True:
-    nome = str(input('Digite seu nome: '))
-    peso = float(input('Digite seu peso: '))
-    pessoas.append([nome, peso])
-    c += 1
-    escolha = str(input('Quer continuar? [S/N] ')).strip().upper()[0]
-    if escolha == 'N':
+    temp.append(str(input('Nome: ')))
+    temp.append(float(input('Peso: ')))
+    
+    if len(princ) == 0:
+        mai = men = temp[1]
+    else:
+        if temp[1] > mai:
+            mai = temp[1]
+        if temp[1] < men:
+            men = temp[1]
+
+    princ.append(temp[:])
+    temp.clear()
+    resp = str(input('Quer continuar? [S/N]')).strip().upper()[0]
+    
+    if resp in 'N':
         break
+print('-='*30)
+print(f'Ao todo você cadastrou {len(princ)} pessoas')
+print(f'O maior peso foi de {mai}kg. Peso de ', end='')
 
-pesado = pessoas[0][1]
-leve = pessoas[0][1]
+for p in princ:
+    if p[1] == mai:
+        print(f'{p[0]}', end='')
+print()
+print(f'O menor peso foi de {men}kg. Peso de ', end='')
 
-for p in pessoas:
-    if p[1] > pesado:
-        pesado = p[1]
-    if p[1] < leve:
-        leve = p[1]
-
-pessoaspesadas = [p[0] for p in pessoas if p[1] == pesado]
-pessoasleves = [p[0] for p in pessoas if p[1] == leve]
-
-print(f'Ao todo {c} pessoas cadastradas.')
-print('Pessoas mais pesadas:', end=' ')
-
-for pessoa in pessoaspesadas:
-    print(pessoa, end=', ')
-print('\b\b')
-print('Pessoas mais leves:', end=' ')
-
-for pessoa in pessoasleves:
-    print(pessoa, end=', ')
-print('\b\b')
+for p in princ:
+    if p[1] == men:
+        print(f'{p[0]}', end='')
+print()

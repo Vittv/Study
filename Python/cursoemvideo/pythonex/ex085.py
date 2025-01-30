@@ -1,18 +1,16 @@
 # Faça um programa que coloque valores em uma lista
 # depois mostrando uma lista par e uma impar dos mesmos:
 
-lista = []
-pares = []
-impares = []
-lista.append(pares)
-lista.append(impares)
+lista = [[], []]
+valor = 0
 
-for i in range(0, 7):
-    n = int(input('Digite um número: '))
-    if n % 2 == 0:
-        lista[0].append(n)
-    if n % 2 == 1:
-        lista[1].append(n)
+for i in range(1, 8):
+    valor = int(input('Digite um valor: '))
+    
+    if valor % 2 == 0:
+        lista[0].append(valor)
+    else:
+        lista[1].append(valor)
 
-print(f'Os valores pares digitados foram: {sorted(lista[0])}')
-print(f'Os valores impares digitados foram: {sorted(lista[1])}')
+print(f'Lista de pares: {sorted(lista[0])}')
+print(f'Lista de ímpares: {sorted(lista[1])}')
