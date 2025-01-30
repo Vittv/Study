@@ -47,19 +47,29 @@ function App() {
 
   return (
     <div className="App">
-      <textarea
-       id="editor"
-        onChange={(event) => {
-          setText(event.target.value)
-        }}
-        value={text}
-      ></textarea>
-      <div
-        id="preview"
-        dangerouslySetInnerHTML={{
-          __html: marked(text),
-        }}
-      ></div>
+      <div id="app-wrapper">
+        <div id="editor-wrapper">
+          <div class="toolbar">
+            <h3>Editor</h3>
+          </div>
+            <textarea
+            id="editor"
+              onChange={(event) => {
+                setText(event.target.value)
+              }}
+              value={text}
+            ></textarea>
+        </div>
+        <div id="preview-wrapper">
+          <div class="toolbar">Preview</div>
+            <div
+              id="preview"
+              dangerouslySetInnerHTML={{
+                __html: marked(text),
+              }}
+            ></div>
+        </div>
+      </div>
     </div>
   );
 }

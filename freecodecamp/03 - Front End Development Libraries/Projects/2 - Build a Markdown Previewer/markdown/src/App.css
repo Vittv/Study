@@ -1,6 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   padding: 5%;
+  background-color: lightcyan;
 }
 
 .App-logo {
@@ -38,6 +43,43 @@
   }
 }
 
+#app-wrapper {
+  border: 2px solid black;
+}
+
+#editor {
+  height: 20vh;
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  background-color: lightblue;
+  padding-left: 0.3rem;
+  font-size: 1rem;
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+#editor-wrapper {
+  border-bottom: 0px;
+}
+
 #preview {
   text-align: left;
+  padding: 2%;
+  background-color: #FFFFED;
+}
+
+#preview-wrapper {
+  border-top: 2px solid black;
+}
+
+#preview-title {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  border-bottom: 2px black solid;
+  width: 100%;
 }
