@@ -52,3 +52,5 @@ Tips:
     overflow: scroll;
 
     Are your best friends, but mostly auto. It will make it so when something overflows out of its container on the document, it will stay inside but give you a scrollbar instead, so you can still access its content. This is a game changer for designing webpages.
+
+    Mostly their difference is scroll will always show scroll bars regardless overflowing or not. While auto will only add scroll bars when overflowing. You'd want scroll when you don't want content to keep changing on the page depending on screen-size and what not, since the scroll bars will always be there and not keep appearing and disappearing as the page changes. Auto still seems like the 90% use case though.
