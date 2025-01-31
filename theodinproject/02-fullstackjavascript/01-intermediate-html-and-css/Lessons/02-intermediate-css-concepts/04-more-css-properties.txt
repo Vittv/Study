@@ -45,3 +45,10 @@ Additional resouces:
         https://css-tricks.com/almanac/properties/o/overflow
 
     https://www.w3schools.com/cssref/  
+
+Tips:
+
+    overflow: auto;
+    overflow: scroll;
+
+    Are your best friends, but mostly auto. It will make it so when something overflows out of its container on the document, it will stay inside but give you a scrollbar instead, so you can still access its content. This is a game changer for designing webpages.
