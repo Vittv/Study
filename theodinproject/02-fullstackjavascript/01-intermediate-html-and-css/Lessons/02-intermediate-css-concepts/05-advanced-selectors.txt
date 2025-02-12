@@ -1,0 +1,325 @@
+Advanced selectors can be especially useful when you can't (or don't want to) change your HTML markup.
+
+Child and sibling combinators
+
+    > - the child combinator
+    + - the adjacent sibling combinator
+    ~ - the general sibling combinator
+
+    <main class="parent">
+        <div class="child group1">
+            <div class="grand-child group1"></div>
+        </div>
+        <div class="child group2">
+            <div class="grand-child group2"></div>
+        </div>
+        <div class="child group3">
+            <div class="grand-child group3"></div>
+        </div>
+    </main>
+
+    If we wanted to select all the child and grand-child divs inside of main, we could write:
+
+    main div {
+        /* Our cool CSS */
+    }
+
+    But what if we wanted to be more specific and select only the child or grand-child divs? That's where the child combinator > comes in handy. Unlike the descendant combinator, it will only select direct children.
+
+    /* The divs with the class "child" will get selected by this */
+    main > div {
+        /* Our cool CSS */
+    }
+
+    /* The divs with the class "grand-child" will get selected by this */
+    main > div > div {
+        /* More cool CSS */
+    }
+
+    Phrased another way, the child selector will select an element that is one level of indentation down. In order to select an element that is adjacent (immediately following) to our target, or on the same level of indentation, we can use the adjacent sibling combinator +.
+
+    /* Only the div with the classes "child group2" will get selected by this */
+    .group1 + div {
+        /* Our cool CSS */
+    }
+
+    /* Only the div with the classes "child group3" will get selected by this */
+    .group1 + div + div {
+        /* More cool CSS */
+    }
+
+    Finally, if we want to select all of the siblings following an element and not just the first one, we can use the general sibling combinator ~.
+
+    /* All of .group1's div siblings - in this case the 2nd and 3rd .child divs, will get selected by this */
+    .group1 ~ div {
+        /* Our cool CSS */
+    }
+
+    Just like the descendant combinator, these selectors don't have any special specificity rules - their specificity score will just be made up of their component parts.
+
+Pseudo-selectors
+
+    Before diving into pseudo-selectors, a quick note on the difference between pseudo-classes and pseudo-elements. Pseudo-class selectors are prefixed with a single colon and are a different way to target elements that already exist in HTML. Pseudo-elements are prefixed with two colons and are used to target elements that don't normally exist in the markup.
+
+    Pseudo-classes
+
+        Pseudo-classes offer us different ways to target elements in our HTML. There are quite a lot of them, and they come in a couple of different flavors. Some are based on their position or structure within the HTML. Others are based on the state of a particular element, or how the user is currently interacting with it. There are too many to cover in detail here but we'll have a look at some of the most useful ones. Pseudo-classes share the same specificity as regular classes (0, 0, 1, 0). Just like regular classes, most can be chained together.
+
+        The (0, 0, 1, 0) above is the notation for calculating specificity. To find out more about how it works, glance over the "Calculating CSS Specificity Value" section from this article https://css-tricks.com/specifics-on-css-specificity/ .
+
+            CSS Specificity
+
+                Basically, there's a priority (1, 0, 0, 0)
+
+                Each value respectively stands for:
+
+                - Style attribute (inline style)
+                - ID
+                - Class, pseudo-class attribute
+                - Elements
+
+                so the further to the left, or top of this list, the more specific it is, further to the right, less specific it is.
+
+                You can also use not() to specify something that SHOULD NOT be modified in the process
+
+                #footer *:not(nav) li
+
+                The :not() sort-of-pseudo-class adds no specificity by itself, only what's inside the parens is added to specificity value.
+
+                More Notes
+
+                    - The universal selector (*) has no specificity value (0,0,0,0)   
+
+                    - Pseudo-elements (e.g. :first-line) get 0,0,0,1 unlike their psuedo-class brethren which get 0,0,1,0 
+
+                    - The pseudo-class :not() adds no specificity by itself, only what’s inside it’s parentheses.
+
+                    - The !important value appended a CSS property value is an automatic win. It overrides even inline styles from the markup. The only way an !important value can be overridden is with another !important rule declared later in the CSS and with equal or great specificity value otherwise. You could think of it as adding 1,0,0,0,0 to the specificity value.
+
+        Dynamic and user action pseudo-classes
+
+            These types of useful pseudo-classes can make your page feel much more dynamic and interactive.
+
+            :focus applies to an element that is currently selected by the user either through selecting it with their cursor or using their keyboard.
+
+            :hover will affect anything under the user's mouse pointer. It can be used to give extra oomph to buttons and links to highlight that they're interactable, or to trigger a drop-down menu.
+
+            :active applies to elements that are currently being clicked, and is especially useful for giving your user feedback that their action had an effect. This is a great one to give your buttons and other interactive elements more 'tactile' feedback.
+
+            Browsers implement styling by default, which is why links are blue and turn purple once clicked. To implement your own custom styling for links, take advantage of the :link and :visited pseudo-classes. A simplified version of the default browser styling might look something like this:
+
+                /* This rule will apply to all links */
+                a {
+                    text-decoration: underline;
+                }
+
+                /* This will apply to unvisited links */
+                a:link {
+                    color: blue;
+                }
+
+                /* And you guessed it, this applies to all links the user has clicked on */
+                a:visited {
+                    color: purple;
+                }
+    
+        Structural pseudo-classes
+
+            Structural pseudo-classes are a powerful way to select elements based on their position within the DOM.
+
+            :root is a special class that represents the very top level of your document - the one element that has no parents. Generally when working with the web, this is equivalent to the html element, but there are a few subtle differences between :root and :html. https://stackoverflow.com/questions/15899615/whats-the-difference-between-css3s-root-pseudo-class-and-html
+
+            :root is generally the place where you will place your 'global' CSS rules that you want available everywhere - such as your custom properties and CSS variables, or rules such as box-sizing: border-box;
+
+            :first-child and :last-child will match elements that are the first or last sibling.
+
+            Similarly, :empty will match elements that have no children at all, and :only-child will match elements that don't have any siblings.
+
+            For a more dynamic approach, we can use :nth-child. This is a flexible pseudo-class with a few different uses.
+
+                .myList:nth-child(5) {/* Selects the 5th element with class myList */}
+
+                .myList:nth-child(3n) { /* Selects every 3rd element with class myList */}
+
+                .myList:nth-child(3n + 3) { /* Selects every 3rd element with class myList, beginning with the 3rd */}
+
+                .myList:nth-child(even) {/* Selects every even element with class myList */}
+
+    Pseudo-elements
+
+        While pseudo-classes gives us an alternative way to interact with our HTML elements based on their state of structure, pseudo-elements are more abstract. They allow us to affect parts of our HTML that aren't elements at all. These special elements share the same specificity as regular elements (0, 0, 0, 1). There are a number of useful pseudo-elements that can be utilized in any number of creative ways.
+
+        ::marker allows you to customize the styling of your <li> elements' bullets or numbers.
+
+        ::first-letter and ::first-line allow you to give special styling to the first letter of line of some text.
+
+        ::selection allows you to change the highlighting when a user selects text on the page.
+
+        ::before and ::after allow us to add extra elements onto the page with CSS, instead of HTML. Using it to decorate text in various ways is one common use case.
+
+        <style>
+        .emojify::before {
+            content: '😎 😄 🤓';
+        }
+
+        .emojify::after {
+            content: '🤓 😄 😎';
+        }
+        </style>
+
+        <body>
+        <div> Let's <span class="emojify">emojify</span>this span!</div>
+        </body>
+
+        Using these pseudo-elements this way would give us this result:
+
+        Let’s 😎 😄 🤓 emojify 🤓 😄 😎 this span!
+
+        There are lots more! Have a quick browse through https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements to see a complete list of what's possible.
+
+    Attribute selectors
+
+        The last tool we're going to add to the box is attribute selectors. Recall that an attribute is anything in the opening tag of an HTML element - such as src='picture.jpg' or href="www.theodinproject.com"
+
+        Since we write our own values for attributes, we need a slightly more flexible system to be able to target specific values.
+
+        Attribute selectors have the same specificity as classes and pseudo-classes (0, 0, 1, 0).
+
+        Let's look at some examples for basic usage.
+
+            [attribute] - This general selector will select anything where the given attribute exists. Its value doesn't matter.
+
+            selector[attribute] - Optionally we can combine our attribute selectors with other types of selectors, such as class or element selectors.
+
+            [attribute="value"] - To get really specific, we can use = to match a specific attribute with a specific value.
+
+                  [src] {
+                    /* This will target any element that has a src attribute. */
+                }
+
+                img[src] {
+                    /* This will only target img elements that have a src attribute. */
+                }
+
+                img[src="puppy.jpg"] {
+                    /* This will target img elements with a src attribute that is exactly "puppy.jpg" */
+                }
+                    
+            Sometimes we need to be more general in how we access these attributes. For example, perharps we're only interested in img elements where the src attribute's value ends in .jpg. For cases like this we have some attribute selectors that allow us to match a part of the attribute's value. If you've ever come across regular expressions (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) before, these attributes use a similar syntax.
+
+                [attribute^="value"] - ^= Will match strings from the start.
+                [attribute$="value"] - $= Will match strings from the end.
+                [attribute*="value"] - *= The wildcard selector will match anywhere inside the string.
+
+                [class^='aus'] {
+                /* Classes are attributes too!
+                    This will target any class that begins with 'aus':
+                    class='austria'
+                    class='australia'
+                */
+                }
+
+                [src$='.jpg'] {
+                /* This will target any src attribute that ends in '.jpg':
+                src='puppy.jpg'
+                src='kitten.jpg'
+                */
+                }
+
+                [for*='ill'] {
+                /* This will target any for attribute that has 'ill' anywhere inside it:
+                for="bill"
+                for="jill"
+                for="silly"
+                for="ill"
+                */
+                }
+
+
+
+Notes
+
+    Pseudo-class selectors
+
+        Start using pseudo-class selectors more often. They can be useful for situations like:
+
+        You have an h1 and a p right after it, you could give that p a class and make it bold, but if you make another p on top of it, you will have to move the class to the upper p.
+
+        Instead, you could be using :first-child, which would always target specifically always that first element right after the h1.
+
+        Other worthy mentions are :last-child, :only-child and :invalid
+
+        :last-child - targets only the last child of the element.
+
+        :only-child - targets only a child with no siblings in the element.
+
+        :invalid - represents any <form>, <fieldset>, <input> or other <form> element whose contents fail to validate.
+
+        User-action pseudo classes
+
+            :hover - applies if the user moves their pointer over an element, typically a link.
+
+            :focus - applies if ther user focuses the element by clicking or using keyboard controls.
+
+    Pseudo-element selectors
+
+        Pseudo-elements behave in a similar way. However, they act as if you had added a whole new HTML element into the markup, rather than applying a class to existing elements.
+
+        Pseudo-elements start with a double colon ::. ::before is an example of a pseudo-element.
+
+        For example, if you wanted to select the first line of a paragraph you could wrap it in a <span> element and use an element selector; however, that would fail if the number of words you had wrapped were longer or shorter than the parent element's width. As we tend not to know how many words will fit on a line - as that will change if the screen width or font-size changes - it is impossible to robustly do this by adding HTML.
+
+        The ::first-line pseudo-element selector will do this for you reliably - if the number of words increases or decreases it will still only select the first line.
+
+        It acts as if a <span> was magically wrapped around that first formatted line, and updated each time the line length changed.
+
+    Combining pseudo-classes and pseudo-elements
+
+        If you wanted to make the first line of the first paragraph bold you could chain the :first-child and ::first-line selectors together.
+
+        article p:first-child::first-line {
+            font-size: 120%;
+            font-weight: bold;
+        }
+
+    Generating content with ::before and ::after
+
+        There are a couple of special pseudo-elements, which are used along with the content property to insert content into your document using CSS.
+
+        ::before and ::after will insert content before and after the pre-existing content in the element.
+
+        <p class="box">Content in a box in my HTML page.</p>
+
+        .box::before {
+            content: "This should show before the other content. ";
+        }
+
+        Inserting strings of text from CSS isn't really something we do very often on the web however, as that text is inaccessible to some screen readers and might be hard for someone to find and edit in the future.
+
+        A more valid use of these pseudo-elements is to insert an icon, for example a little arrow, which is a visual indicator that we wouldn't want read out by a screen reader.
+
+        <p class="box">Content in the box in my HTML page.</p>
+
+        .box::after {
+            content: " ➥";
+        }
+
+        These pseudo-elements are also frequently used to insert an empty string, which can then be styled just like any element on the page.
+
+        The use of ::before and ::after pseudo-elements along with the content property is referred to as "Generated Content" in CSS, and you will often see this technique being used for various tasks. A great example is the website https://cssarrowplease.com/ , which helps you to generate an arrow with CSS. Look at the CSS as you create your arrow and you will see the ::before and ::after pseudo-elements in use. Whenever you see these selectors, look at the content property to see what is being added to the HTML element.
+
+Resources:
+
+    https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators
+    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors
+    https://flukeout.github.io/
+    https://learn.shayhowe.com/advanced-html-css/complex-selectors/
+    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
+    https://www.youtube.com/kepowob/search?query=pseudo
+    https://css-tricks.com/almanac/selectors/
+    https://www.w3schools.com/cssref/css_selectors.asp
+    https://www.freecodecamp.org/news/css-selectors-cheat-sheet/
+    https://www.growingwiththeweb.com/2012/08/pseudo-classes-vs-pseudo-elements.html
+    http://coding.smashingmagazine.com/2009/08/17/taming-advanced-css-selectors/
+    https://css-tricks.com/attribute-selectors/
