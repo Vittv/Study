@@ -1,0 +1,227 @@
+Custom properties (also known as CSS variables) can be a really useful and powerful tool when writing our CSS files. In short, they allow us to reference a CSS value however many times we want throughout a file. By using custom properties, instead of having to update every single instance of a specific value (“This shade of red is too light, let’s change the shade on all seven of these selectors”), we only need to update a single instance: the custom property itself. Not only that, but custom properties can help us keep colors consistent throughout a project, something that will be really helpful as projects get larger.
+
+We can even redefine custom proprties under different contexts, which is incredibly useful for creating themes, such as the dark and light themes you see on many websites these days.
+
+Using custom properties
+
+    The syntax for declaring and accessing a custom property is not too different from how we write normal rule declarations:
+
+        .error-modal {
+            --color-error-text: red;
+            --modal-border: 1px solid black;
+            --modal-font-size: calc(2rem + 5vw);
+
+            color: var(--color-error-text);
+            border: var(--modal-border);
+            font-size: var(--modal-font-size);
+        }
+
+    That's it! First, we declare our custom property with a double hyphen followed by a case-sensitive, hyphen-separated property name (color-error-text wouldn't be the same as Color-Error-Text) which can be whatever name we want. The use of Kebab case (single hyphens to separate words) is very important here because spaces are not valid (--color error text would not work). Then we can store any valid CSS value in our newly declared custom property, whether it be a color value, shorthand values, or even a more complex function, just to give you a few examples.
+
+    When we want to access a custom property, we use the var() function as the value of a CSS property, and then place our custom property inside of the parenthesis (including the double hyphen at the beginning).
+
+Fallback values
+
+    The var() function actually accepts two parameters. The first parameter we've already gone over, which is the custom property we want to assign. The second parameter is an optional fallback value. When a fallback value is provided in addition to a custom property, the fallback value will be used if the custom property is invalid or hasn't been declared yet. We can even pass in *another* custom property as a fallback, which can have its *own* fallback value as well!
+
+        .fallback {
+            --color-text: white;
+
+            background-color: var(--undeclared-property, black);
+            color: var(--undeclared-again, var(--color-text, yellow));
+        }
+
+    In the above example, our background-color property would have a value of black and our color property would have a value of white. If the --color-text custom property was invalid or didn't exist, the fallback to our fallback would take over and the color propert would have a value of yellow.
+
+Scope
+
+    In the first example above, you may have noticed that we declared and then accessed our custom properties within the same declaration block. That's because the scope of a custom property is determined by the selector. This scope includes the selector the custom property was declared for as well as any descendants of that selector. If you're familiar with how scope works in JavaScript, this sort of behavior should feel a little similar.
+
+    In the example below, only the element with cool-paragraph class would get styled with a red background since it's a descendant of the element where our custom property is declared.
+
+    <div class="cool-div">
+        <p class="cool-paragraph">Check out my cool, red background!</p>
+    </div>
+
+    <p class="boring-paragraph">I'm not in scope so I'm not cool.</p>
+
+
+    .cool-div {
+        --main-bg: red;
+    }
+
+    .cool-paragraph {
+        background-color: var(--main-bg);
+    }
+
+    .boring-paragraph {
+        background-color: var(--main-bg);
+    }
+
+    The :root selector
+
+        While there may be times where you will want to limit the scope of a custom property, you may want to be able to use other custom properties on many, unrelated selectors. One workaround would be declaring the same custom property on a bunch of selectors, but that defeats one of the purposes of using custom properties in the first place (the ease of changing multiple instances of a value at once).
+
+        A better solution is declaring those custom properties on the :root selector, which is essentially the same thing as the html selector except it has a higher specificity.
+
+            <p class="cool-paragraph">Lorem ipsum dolor sit amet.</p>
+
+            <p class="exciting-paragraph">Lorem ipsum dolor sit amet.</p>
+
+
+            :root {
+                --main-color: red;
+            }
+
+            .cool-paragraph {
+                color: var(--main-color);
+            }
+
+            .exciting-paragraph {
+                background-color: var(--main-color);
+            }
+
+        By declaring our custom property on the :root selector in the example above, we can access it on *any* other valid selector within our CSS file, since any other selector would be considered a descendant of the :root selector.
+
+Creating themes with custom properties
+
+    Beyond allowing us to access custom properties more globally, the :root selector gives us one way to add themes to our pages:
+
+    HTML
+
+        <div class="container">
+            <p>You're now viewing this example with the <span class='theme-name'>dark</span> theme!</p>
+            <button class="theme-toggle">Toggle Theme</button>
+        </div>
+
+    CSS
+
+        :root.dark {
+            --border-btn: 1px solid rgb(220, 220, 220);
+            --color-base-bg: rgb(18, 18, 18);
+            --color-base-text: rgb(240, 240, 240);
+            --color-btn-bg: rgb(36, 36, 36);
+        }
+        ​
+        :root.light {
+            --border-btn: 1px solid rgb(36, 36, 36);
+            --color-base-bg: rgb(240, 240, 240);
+            --color-base-text: rgb(18, 18, 18);
+            --color-btn-bg: rgb(220, 220, 220);
+        }
+        ​
+        body,
+        .theme-toggle {
+            color: var(--color-base-text);
+        }
+        ​
+        body {
+            background-color: var(--color-base-bg);
+            padding: 10px;
+        }
+        ​
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ​
+        p {
+            font-size: 1.5rem;
+        }
+        ​
+        .theme-toggle {
+            background-color: var(--color-btn-bg);
+            border: var(--border-btn);
+            font-size: 1.125rem;
+            padding: 10px 20px;
+        }
+        ​
+        .theme-toggle:hover {
+            cursor: pointer;
+        }
+        ​
+        .theme-toggle:focus {
+            outline: var(--border-btn);
+        }
+
+    JS
+
+        function setTheme() {
+            const root = document.documentElement;
+            const newTheme = root.className === 'dark' ? 'light' : 'dark';
+            root.className = newTheme;
+        
+            document.querySelector('.theme-name').textContent = newTheme;
+        }
+        ​
+        document.querySelector('.theme-toggle').addEventListener('click', setTheme)
+
+    Media queries
+
+        Giving users the ability to toggle a theme themselves is great, but there’s another option for setting a theme that you may have come across on certain sites or applications: using the user’s theme setting from their operating system or user agent (like a browser). This can be done using the prefers-color-scheme media query, which lets you apply different styles based on the user’s device or settings, like screen size or theme preference (light/dark mode).
+
+        <div class="container">
+            <p>Based on your theme setting in your OS or user agent, you're now viewing this example with the <span class='theme-name'></span> theme!</p>
+        </div>
+
+        :root {
+            --border-btn: 1px solid rgb(36, 36, 36);
+            --color-base-bg: rgb(240, 240, 240);
+            --color-base-text: rgb(18, 18, 18);
+            --color-btn-bg: rgb(220, 220, 220);
+            --theme-name: "light";
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --border-btn: 1px solid rgb(220, 220, 220);
+                --color-base-bg: rgb(18, 18, 18);
+                --color-base-text: rgb(240, 240, 240);
+                --color-btn-bg: rgb(36, 36, 36);
+                --theme-name: "dark";
+            }
+        }
+
+        body {
+            background-color: var(--color-base-bg);
+            color: var(--color-base-text);
+            padding: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .theme-name::after {
+            content: var(--theme-name);
+        }
+
+    We first added custom properties on the :root element outside of the media query. This gives us a default theme in case a user doesn’t have a preference set on their OS or user agent, or if a browser doesn’t support the media query. In this case, we’re using our “light” theme colors as the default. Then we added a prefers-color-scheme media query for when a user has a dark theme set in their preferences.
+
+    Using the prefers-color-scheme media query can be pretty helpful for users since it doesn’t require them to manually change the theme to their preferred one. That said, you need to be aware of a few things when it comes to using this media query:
+
+    1. Only dark and light are valid values for the media query, so you can't use it to implement any themes beyond these two basic ones.
+
+    2. The light value for the media query is actually for when a user has a light theme specified *or* when they have no preference set.
+
+    3. It doesn't allow users to change the theme themselves, which can still be important in cases where a user might want to use the theme opposite of their OS/user agent preferred one for whatever reason.
+
+Resources
+
+    https://www.youtube.com/watch?v=PHO6TBq_auI
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#inheritance_of_custom_properties
+    https://css-tricks.com/a-complete-guide-to-custom-properties/
+
+Additional Resources
+
+    https://www.youtube.com/watch?v=_2LwjfYc1x8
+
+
+
