@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Favorite fruit start</title>
+    <style>
+      input:invalid {
+        border: 2px dashed red;
+      }
+
+      input:invalid:required {
+        background-image: linear-gradient(to right, pink, lightgreen);
+      }
+
+      input:valid {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+
+<body>
+    <form>
+      <label for="choose">Would you prefer a banana or a cherry? (required)</label>
+      <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+      <button>Submit</button>
+    </form>
+</body>
+
+</html>
