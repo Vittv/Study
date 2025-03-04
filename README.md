@@ -18,11 +18,11 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **Description:** This one taught me HTML and CSS. It had quite a different approach compared to my Python course. Because this time, it was entirely project based. Every lesson was a project you built along instructions. You do a few project lessons, building small projects as you go, and then a final project for that module. It was a total of 15 lessons and 5 final projects. Finish 5 final projects and get your certification. I will say, this course was fun, it made developing feel more real. As I could see what I was doing and how everything worked. In the end it left me with some nice projects. Nothing to be super proud of, but they look nice, making the experience very satisfying in the end.
 - **[Course Link](https://www.freecodecamp.org/learn/2022/responsive-web-design/)**
 #### Projects
-**1. [Survey Form](https://github.com/Vittv/survey-form)**
-**2. [Tribute Page](https://github.com/Vittv/ada-tribute)**
-**3. [Documentation Page](https://github.com/Vittv/py-doc)**
-**4. [Landing Page](https://github.com/Vittv/meinl-test)**
-**5. [Portfolio Study](https://github.com/Vittv/portfolio-study)**
+1. **[Survey Form](https://github.com/Vittv/survey-form)**
+2. **[Tribute Page](https://github.com/Vittv/ada-tribute)**
+3. **[Documentation Page](https://github.com/Vittv/py-doc)**
+4. **[Landing Page](https://github.com/Vittv/meinl-test)**
+5. **[Portfolio Study](https://github.com/Vittv/portfolio-study)**
 
 ### 3. [JavaScript Algorithms and Data Structures](https://github.com/Vittv/Study/tree/main/freecodecamp/02%20-%20JavaScript%20Algorithms%20and%20Data%20Structures)
 - **ETC:** 80 hours
