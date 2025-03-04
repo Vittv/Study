@@ -52,14 +52,18 @@ Welcome to my study repository! Here, I document my learning journey through var
 ### 5. [Foundations](https://github.com/Vittv/Study/tree/main/theodinproject/01-foundations)
 - **ETC:** 200 hours
 - **Language:** English (EN)
-- **Platform:** The Odin Project
 - **Description:** I am going on a long journey with The Odin Project, it is a big course. Said to teach you everything you need for a job. There's a lot of reading involved. What I like about it is, it doesn't only teach you the usual, it also teaches you how to learn. It claims that after this course, you'll be able to learn anything by yourself. I will update this more as I progress through it. I might also have to make a separate repository only for this course, given its length. We'll see. This is the first part of the course, where they teach HTML, CSS and JavaScript, but in much more depth. As well as lots of other important information such as how the internet works, how computers work, how to properly make websites for SEO and so on.
 - **Conclusion:** A few months after and I have finished Foundations. This course was crazy on how much in-depth it went on things. Even as a beginner course, I feel much more professional. It gave me a whole workflow and different mindset on how to approach problems. As well as better and more proper ways to express and document my ideas. Overall it was exactly what I needed to spark my interest and give me some momentum on this journey. Definitely recommend it for anyone wanting to get into programming, even if as a total beginner.
-- **Course Link: https://www.theodinproject.com/paths/foundations/courses/foundations**
+- **[Course Link](https://www.theodinproject.com/paths/foundations/courses/foundations)**
+#### Projects
+1. **[Odin Recipes](https://github.com/Vittv/odin-recipes)**
+2. **[Odin Landing Page](https://github.com/Vittv/odin-landing-page)**
+3. **[Rock Paper Scissors](https://github.com/Vittv/rock-paper-scissors)**
+4. **[Etch a Sketch](https://github.com/Vittv/etch-a-sketch)**
+5. **[Vanilla Calculator](https://github.com/Vittv/calculator-vanilla)**
 
 ### 6. [Full Stack JavaScript](https://github.com/Vittv/Study/tree/main/theodinproject/02-fullstackjavascript)
 - **ETC:** 600 ~ 1000 hours
 - **Language:** English (EN)
-- **Platform:** The Odin Project
 - **Description:** When you finish the Foundations course, you get to choose between two paths: Ruby on Rails or JavaScript and Node. I chose the latter since it's what I was originally interested in. This will probably be the longest course I've ever done. But definitely not the last! I plan to forever study on this field. This course is not for beginners and assumes you have a decent knowledge of HTML, CSS and JavaScript, as well as a good understanding of programming concepts. It will get very advanced though, with a current total of 125 Lessons and 30 Projects. Addressing topics such as Intermediate and Advanced HTML and CSS, JavaScript, React, Databases, NodeJs and Getting Hired. Once I finish, I will probably have a lot to say. But that will take a long time.
-- **Course Link: https://www.theodinproject.com/paths/full-stack-javascript**
+- **[Course Link](https://www.theodinproject.com/paths/full-stack-javascript)**
