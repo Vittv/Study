@@ -1,0 +1,266 @@
+Reviewing tracks
+
+    Before we dive straight into positioning, let’s establish some terminology to better understand the different parts of a grid. In the previous lesson you learned that when you define a grid using grid-template, you are defining the tracks the grid will have. You can think of a grid track as any single row or column on a grid.
+
+    To give an example, if we wanted to create a 3x3 grid with 100 pixel rows and 100 pixel columns, we need to define 3 horizontal tracks with a height of 100 pixels and 3 vertical tracks with a width of 100 pixels:
+
+        .container {
+            display: grid;
+            grid-template-rows: 100px 100px 100px;
+            grid-template-columns: 100px 100px 100px;
+        }
+
+        .item {
+            background-color: orange;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .first-row {
+            background-color: pink;
+        }
+
+        .last-column {
+            background-color: lightblue;
+        }
+
+Lines
+
+    Whenever we create grid tracks, grid lines are created implicitly. This is important. Grid lines are only created after our grid tracks have been defined. We can not explicitly create grid lines.
+
+    Every track has a start line and an end line. The lines are numbered from left to right and top to bottom starting at 1. So our 3x3 grid above has vertical lines for columns ranging from 1 to 4 and horizontal lines for rows ranging from 1 to 4.
+
+    Grid lines are what we use to position grid items. We'll get to that in a minute, but first let's take a deeper look at grid lines using our developer tools.
+
+    If you open up developer tools in Chrome, you can navigate to the Layout pane and find the Grid overlay display settings. Make sure that show line numbers is enabled. Select the correct element from the Grid overlays (e.g. this might be our div.container if you are inspecting our CodePen.) You should now see an overlay of the grid lines.
+
+    Notice that the developer tools also show negative lines opposite from the positive lines. You don’t have to worry about the negative lines for now, but know that this gives you another option to use when positioning the grid items.
+
+Cells
+
+    The space in a grid shared by a single row track and a single column track is called a grid cell. You can think of a grid cell like a cell in a spreadsheet: a space defined by a row, column coordinate.
+
+    By default, each child element of a grid container will occupy one cell. In the example above, we have 9 cells in our grid (3 rows x 3 columns), each with one automatically positioned child element inside. The element marked with the letter “A” is occupying a cell that lies in row track 1 (between row grid lines 1 and 2) and column track 1 (between column grid lines 1 and 2). The item marked with the letter “H” is in a cell at row track 3 (between row grid lines 3 and 4) and column track 2 (between column grid lines 2 and 3).
+
+    But what happens if we wanted to change the order of our grid items? Or if we want items to occupy more than one cell?
+
+Positioning
+
+    To get a feel for how items can be positioned we will create a mock floor plan for an apartment. Let’s start with a total area of our apartment (the grid container) divided into a 5x5 grid. To make this example a little clearer, we’ll use a background color to distinguish our container space. Note that we’re also using display: inline-grid here so that our container does not stretch to take up space the way a block-level box would. This will just help us better visualize the space.
+
+        <div class="container">
+        </div>
+
+        .container {
+            display: inline-grid;
+            grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+            background-color: lightblue;
+        }
+
+    As it stands this is a pretty sad unit. To make it less of an empty box and more of a home we are going to add some items to our grid container that will represent different rooms.
+
+        <div class="container">
+            <div class="room" id="living-room">Living Room</div>
+            <div class="room" id="kitchen">Kitchen</div>
+            <div class="room" id="bedroom">Bedroom</div>
+            <div class="room" id="bathroom">Bathroom</div>
+            <div class="room" id="closet">Closet</div>
+        </div>
+
+        .container {
+            display: inline-grid;
+            grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+            background-color: lightblue; 
+        }
+
+        .room {
+            border: 1px solid;
+            font-size: 50%;
+            text-align: center;
+        }
+
+        #living-room {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            /*   grid-row-start: 1;
+            grid-row-end: 3; */
+        }
+
+    Most of our rooms represent a single grid cell. But we have given ourselves a large living room. (Yay!) We positioned this item using grid-column-start and grid-column-end. Their property values represent the column grid lines we wish it to start and end with.
+
+    You will also notice we have commented out property values for this item’s grid row positioning. Uncomment the grid-row-start and grid-row-end properties to see how our living room can get even bigger by taking up the grid track between the first and third-row grid lines.
+
+    These properties allow us to use our existing grid lines to tell items how many rows and columns each item should span across. Take a minute to play around with the property values here. If the line numbers are confusing, inspect the container using your dev tools to show the grid overlay.
+
+    Next, we need to use our space more efficiently. We will make the rest of our rooms span multiple grid cells and fill out the rest of our apartment.
+
+        .container {
+            display: inline-grid;
+            grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+            background-color: lightblue; 
+        }
+
+        .room {
+            border: 1px solid;
+            font-size: 50%;
+            text-align: center;
+        }
+
+        #living-room {
+            grid-column-start: 1;
+            grid-column-end: 6;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #kitchen {
+            grid-column: 4 / 6;
+            grid-row: 3 / 6;
+        }
+
+        #bedroom {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        #bathroom {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 3;
+            grid-row-end: 6;
+        }
+
+        #closet {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+
+    Now we have the blueprints for our full apartment. If you take a look at the #kitchen selector you will see we used shorthand properties here. grid-column is just a combination of grid-column-start and grid-column-end with a slash between the two values. And grid-row is the shorthand version for setting an item’s row positioning.
+
+    One problem with our floor plan is that the bathroom and kitchen are on opposite ends of the apartment. We would save money on the plumbing by placing these two rooms back to back. Take a minute now and see if you can change the starting and ending positions for the bathroom, bedroom and closet so that the bathroom is right next to the kitchen. You can use either the long or shorthand properties here.
+
+        By adding a few changes we are able to have the bathroom beside the kitchen now, pushing the bedroom and closet to the left side
+
+        #bedroom {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        #bathroom {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 6;
+        }
+
+        #closet {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            grid-row-end: 6;
+        }
+
+grid-area
+
+    You now know how to position your grid items using row and column lines. But there are other ways to position items and this is where things can get a little confusing.
+
+    There is an even shorter shorthand for positioning grid items with start and end lines. You can combine grid-row-start / grid-column-start / grid-row-end / grid-column-end into one line using grid-area.
+
+    Our living room above can be written out like this:
+
+        /* styles.css */
+
+        #living-room {
+            grid-area: 1 / 1 / 3 / 6;
+        }
+
+    But grid-area can also refer to a few different things.
+
+    Instead of using grid lines to position all the items in a grid, we can create a visual layout of the grid in words. To do this we give each item on the grid a name using grid-area.
+
+    So our living room can be written just like this:
+
+        /* styles.css */
+
+        #living-room {
+            grid-area: living-room;
+        }
+
+    We could do this to all of our grid items and give each room a grid-area value as a name. Then we can map out the whole structure with the grid container using grid-template-areas.
+
+        .container {
+            display: inline-grid;
+            grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+            background-color: lightblue; 
+            grid-template-areas:
+                "living-room living-room living-room living-room living-room"
+                "living-room living-room living-room living-room living-room"
+                "bedroom bedroom bathroom kitchen kitchen"
+                "bedroom bedroom bathroom kitchen kitchen"
+                "closet closet bathroom kitchen kitchen"    
+        }
+
+        .room {
+            border: 1px solid;
+            font-size: 50%;
+            text-align: center;
+        }
+
+        #living-room {
+            grid-area:  living-room;
+        }
+
+        #kitchen {
+            grid-area: kitchen;
+        }
+
+        #bedroom {
+            grid-area: bedroom;
+        }
+
+        #bathroom {
+            grid-area: bathroom;
+        }
+
+        #closet {
+            grid-area: closet;
+        }
+
+    Wow! You might want to open up the CodePen browser and make it large enough to really read the grid-template-areas layout line by line. But this tool gives us a completely different way to position items.
+
+    We can even use . to indicate empty cells. Say our apartment might be getting a water heater and washer/dryer. We might not be sure of the exact layout but we can visualize some space easily by removing more room in the bathroom and kitchen:
+
+        .container {
+            display: inline-grid;
+            grid-template: 40px 40px 40px 40px 40px / 40px 40px 40px 40px 40px;
+            background-color: lightblue; 
+            grid-template-areas:
+                "living-room living-room living-room living-room living-room"
+                "living-room living-room living-room living-room living-room"
+                "bedroom bedroom bathroom kitchen kitchen"
+                "bedroom bedroom bathroom kitchen kitchen"
+                "closet closet . . ."    
+        }
+
+    So now you know two very different ways of using grid-area on a grid item. You might even see the term “grid area” refer to a group of cells. For example, all the grid cells of the living room together is a grid area. The apartment analogy should help. A grid item can take up multiple cells forming an area of the grid much like a room with four walls in an apartment.
+
+Wrapping up
+
+    As you go through the assignments you will come across more terminology like span and auto when positioning grid items across tracks. There are also properties to justify and align grid items similar to Flexbox. The best way to learn all this terminology and how to position items is with lots of practice!
+
+Resources
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
+    https://github.com/TheOdinProject/css-exercises/tree/main/intermediate-html-css/positioning-grid
+
+Additional Resources
+
+    https://cssgridgarden.com/
+    https://www.smashingmagazine.com/understanding-css-grid-template-areas
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
