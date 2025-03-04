@@ -28,20 +28,25 @@ Welcome to my study repository! Here, I document my learning journey through var
 - **ETC:** 80 hours
 - **Language:** English (EN)
 - **Description:** After learning all the HTML and CSS basics, the curriculum gets you ready to add interaction to your now styled web page. Some of the topics were Object Oriented Programming (OOP), Functional Programming, algorithmic thinking, how to work with local storage, and how to fetch data using an API. This course was definitely not easy compared to the previous ones. I felt stuck a few times and had a hard time with some of the Lessons and Projects. Although it was a bit difficult, it felt even more satisfying than the Web Design course. Because now, with JavaScript, we're able to perform more complex tasks, so the web page starts feeling a little more useful and there are almost no limits to what you can do with such tools.
+- **[Course Link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/)**
 #### Projects
 1. **[Palindrome Checker](https://github.com/Vittv/palindrome-checker)**
 2. **[Roman Numeral Converter](https://github.com/Vittv/romnum-converter)**
 3. **[Telephone Number Validator](https://github.com/Vittv/telnum-validator)**
 4. **[Cash Register](https://github.com/Vittv/cash-register)**
 5. **[Pokemon Search App](https://github.com/Vittv/pokedex)**
-- **[Course Link](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures-v8/)**
 
 ### 4. [Front End Development Libraries](https://github.com/Vittv/Study/tree/main/freecodecamp/03%20-%20Front%20End%20Development%20Libraries)
 - **ETC:** 100 hours
 - **Language:** English (EN)
-- **Platform:** freeCodeCamp
 - **Description:** I had an interesting time with this one. I'd say it got me closer to how software is actually built and organized. The styling and code logic was mostly the same throughout the course. Organizing and changing a few key things would make or break the project. This was an eye opener mostly to how I should have been doing things from the start. Learning how React works was a bit rough sometimes, but I enjoyed the process of working with frameworks and libraries. It required me to look up things a lot more and understand the steps to properly develop and publish each project. 
-- **Course Link: https://www.freecodecamp.org/learn/front-end-development-libraries/**
+- **[Course Link](https://www.freecodecamp.org/learn/front-end-development-libraries/)**
+#### Projects
+1. **[Random Quote Machine](https://github.com/Vittv/random-quote-machine)**
+2. **[Markdown Previewer](https://github.com/Vittv/markdown-previewer)**
+3. **[Drum Machine](https://github.com/Vittv/drum-machine)**
+4. **[React Calculator](https://github.com/Vittv/calculator-react)**
+5. **[Pomodoro Clock](https://github.com/Vittv/pomodoro-clock)**
 
 ## The Odin Project
 ### 5. [Foundations](https://github.com/Vittv/Study/tree/main/theodinproject/01-foundations)
