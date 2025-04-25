@@ -231,6 +231,9 @@ Additional Resources
 	https://v1.scrimba.com/scrim/c2aaKzcV
 	https://medium.com/javascript-scene/3-different-kinds-of-prototypal-inheritance-es6-edition-32d777fa16c9
 	https://www.patterns.dev/
-				
+
+Notes:
+
+	Block scoping is one of the reasons people say use const by default, let when you want to re-assign it and don't use var unless there is a specific use case for it.
 
 								
