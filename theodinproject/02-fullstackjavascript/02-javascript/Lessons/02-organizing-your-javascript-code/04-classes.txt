@@ -4,6 +4,42 @@ Historically, especially when ES6 was released, there was some controversy with 
 
 Plenty of time has passed though and class syntax now exists in many code bases. There aren't many new mechanisms to lean here, mainly just new syntax for mostly familiar concepts.
 
+A bit of class syntax
+
+    class MyClass {
+        // class methods
+        constructor() {}
+        method1() {}
+        method2() {}
+        method3() {}
+            
+    }
+
+    class User {
+
+        constructor(name) {
+            this.name = name;
+        }
+
+        sayHi() {
+            alert(this.name);
+        }
+    
+    }
+
+    // Usage:
+    let user = new User("John");
+    user.sayHi();
+
+    class User {
+        constructor(name) { this.name = name};
+        sayHi() { alert(this.name); }
+
+    }
+    
+    // proof: User is a function
+    alert(typeof User); //function
+
 Resources
 
     https://javascript.info/property-accessors
