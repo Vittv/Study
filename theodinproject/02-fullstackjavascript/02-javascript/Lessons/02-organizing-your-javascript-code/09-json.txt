@@ -1,0 +1,10 @@
+JSON (JavaScript Object Notation) is a standardized format for structuring data. It is heavily based on the syntax for JavaScript objects. You will often encounter JSON formatted data when working with external servers or APIs - it is essentially the universal format for transmitting data on the web.
+
+Fortunately, there isn’t much to learn here. We’re only including a lesson on it because some formatting rules can cause confusion if you aren’t aware of them. Spend 10-15 minutes going through the following resources and you’ll be good to go.
+
+Resources
+
+    https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+    https://www.w3schools.com/js/js_json_parse.asp
+    https://www.w3schools.com/js/js_json_stringify.asp
+    https://jsonformatter.curiousconcept.com/
