@@ -33,6 +33,8 @@ Webpack modes
         "build": "webpack --config webpack.prod.js",
         "dev": "webpack serve --config webpack.dev.js"
 
+    In the assignment, we will introduce a tool called webpack-merge that can make using multiple Webpack configuration files easier to deal with and with minimal duplication. Doing it this way is nice. We set it up once, then we can forget about it since each script will use the appropriate configuration file and mode!
+
 Template repositories
 
     One thing you might have noticed already is that setting up Webpack involves multiple files and directories, and a fair bit of configuration. Each time you set up a new project with Webpack, you may have to look at what you configured before to copy and paste the configuration you want to reuse. You may have also noticed that whenever you create a new repository on Github, there is an option near the top for a Repository template.
