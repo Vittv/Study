@@ -1,0 +1,27 @@
+JavaScript is a very powerful language. It is capable of creating complex web applications that work everywhere. But it is just as often used on a smaller scale. JavaScript is the glue that holds even less flashy websites together- it makes drop-downs drop down and image sliders slide.
+
+Fortunately, at this point, you already have all the tools you need to make these items without resorting to using a bloated framework like Bootstrap. (Nothing against Bootstrap… you just do not need it! Good for you!)
+
+We aren’t presenting any new content in this lesson - just giving you the chance to practice some of the techniques that you’re going to be using on a daily basis as a JavaScript programmer.
+
+Drop-down menus
+
+	A dropdown is something you've most likely encountered on various other websites you've visited or apps you've used. Imagine any time you've clicked a button (usually one that contained an icon of 3 horizontal of vertical dots or lines) and a list of items suddenly appeared (you could even say these items... dropped down from the button).
+
+	Dropdowns are typically comprised of two main parts:
+
+		1. A button that toggles the dropdown content's visibility
+		
+		2. The dropdown content itself
+
+	The dropdown toggle button should typically only trigger the visibility of the dropdown content on click, while the dropdown contents should typically only contain items that will trigger an action upon clicking them. Actions can include things like "Edit", "Copy", or "Delete", or liniking you to another part of the site, such as in a navbar.
+
+Image carousel
+
+	Image carousels are very common across various types of websites, including online stores, news sites, and many more. They're great for advertising, showcasing things, showing several things using limited screen size, and can actually be made using things you've already learned! They are also highly customizable - you can make them auto-scroll, allow users to manually cycle between slides, skip to certain slides, etc.
+
+	Typically, they consist of a div that acts as a "picture frame", where behind that div, there is another much wider div containing the carousel's images. This strip of images can then move behind the picture frame, showing a different image depending on what part of the strip is visible. Any additional controls or features can then be placed on top of the entire thing.
+
+Resources
+
+	https://www.w3schools.com/howto/howto_js_slideshow.asp
