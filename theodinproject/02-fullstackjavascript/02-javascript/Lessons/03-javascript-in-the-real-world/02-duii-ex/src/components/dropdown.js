@@ -1,10 +1,21 @@
-const dropdownMenu = (() => {
-	const dropdownButton = document.querySelector(".dropdown-button");
-	const dropdownContent = document.querySelector(".dropdown-content");
+// Reusable dropdown function
+function createDropdown({ buttonSelector, contentSelector, toggleClass = "visible" }) {
+  	const dropdownButton =
+    typeof buttonSelector === "string"
+      	? document.querySelector(buttonSelector)
+      	: buttonSelector;
+  	const dropdownContent =
+    typeof contentSelector === "string"
+      	? document.querySelector(contentSelector)
+      	: contentSelector;
 
-	if (!dropdownContent || !dropdownContent) return;
+  	if (!dropdownButton || !dropdownContent) return;
 
-	dropdownButton.addEventListener("click", () => {
-		dropdownContent.classList.toggle("visible");
-	});
-})();
+  	dropdownButton.addEventListener("click", () => {
+    dropdownContent.classList.toggle(toggleClass);
+  	});
+}
+
+// Example usage:
+// createDropdown({ buttonSelector: ".dropdown-button", contentSelector: ".dropdown-content" });
+// You can call createDropdown multiple times for different dropdowns.
