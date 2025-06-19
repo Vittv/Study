@@ -16,6 +16,8 @@ function createDropdown({ buttonSelector, contentSelector, toggleClass = "visibl
   	});
 }
 
+createDropdown({ buttonSelector: ".dropdown-button", contentSelector: ".dropdown-content" })
+
 // Example usage:
 // createDropdown({ buttonSelector: ".dropdown-button", contentSelector: ".dropdown-content" });
 // You can call createDropdown multiple times for different dropdowns.

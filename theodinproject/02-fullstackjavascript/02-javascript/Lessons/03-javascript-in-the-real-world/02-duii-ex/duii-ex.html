@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/02-javascript/Lessons/03-javascript-in-the-real-world/02-duii-ex/src/styles/duii-ex.css">
+	<link rel="stylesheet" href="/02-javascript/Lessons/03-javascript-in-the-real-world/02-duii-ex/src/styles/main.css">
+	<link rel="stylesheet" href="/02-javascript/Lessons/03-javascript-in-the-real-world/02-duii-ex/src/styles/dropdown/dropdown.css">
+	<link rel="stylesheet" href="/02-javascript/Lessons/03-javascript-in-the-real-world/02-duii-ex/src/styles/image-carousel/image-carousel.css">
 	<title>Document</title>
 </head>
 <body>
@@ -12,15 +14,24 @@
 			<h1>Dropdown Menu</h1>
 			<button class="dropdown-button">Dropdown button</button>
 			<div class="dropdown-content">
-				<button href="">Edit</button>
-				<button href="">Copy</button>
-				<button href="">Delete</button>
+				<button>Edit</button>
+				<button>Copy</button>
+				<button>Delete</button>
 			</div>
 		</div>
 		<div class="image-carousel">
-			
+			<h1>Image Carousel</h1>
+			<div class="carousel-screen"></div>
+			<div class="carousel-bottom-nav">
+				<div class="left-arrow"></div>
+				<div class="carousel-page"></div>
+				<div class="carousel-page"></div>
+				<div class="carousel-page"></div>
+				<div class="right-arrow"></div>
+			</div>
 		</div>
 	</div>
 	<script type="module" src="/02-javascript/Lessons/03-javascript-in-the-real-world/02-duii-ex/src/components/dropdown.js"></script>
+	<script type ="module" src="/02-javascript/Lessons/03-javascript-in-the-real-world/02-duii-ex/src/components/image-carousel.js"></script>
 </body>
 </html>
