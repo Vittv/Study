@@ -1,0 +1,9 @@
+Forms are a crucial part of most websites. Almost every major site has sign-up forms, contact forms, search forms and more! Luckily HTML5 and JavaScript have some handy built-in methods. You've already learned about validation with HTML and styling validations with CSS in your Form Validations (https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css/lessons/form-validation) lesson in the Intermediate HTML and CSS course.
+
+In this lesson, we'll cover the Constraint Validation API: a way to validate forms on the frontend with JavaScript.
+
+Resources
+
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
+https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+https://www.w3schools.com/js/js_validation_api.asp
