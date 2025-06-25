@@ -4,6 +4,6 @@ In this lesson, we'll cover the Constraint Validation API: a way to validate for
 
 Resources
 
-https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
-https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
-https://www.w3schools.com/js/js_validation_api.asp
+	https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Constraint_validation
+	https://www.w3schools.com/js/js_validation_api.asp
