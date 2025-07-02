@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<img src="#" alt="">
+	<input id="searchInput" type="text" placeholder="Search for GIFs">
+	<button id="fetchBtn">Search GIF</button>
+	<script>
+	const img = document.querySelector("img");
+	const btn = document.getElementById("fetchBtn");
+	const searchInput = document.getElementById("searchInput");
+
+	const defaultImg = "https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif";
+	const errorMsgId = "gifErrorMsg";
+
+	function showError(message) {
+		let errorMsg = document.getElementById(errorMsgId);
+		if (!errorMsg) {
+			errorMsg = document.createElement("div");
+			errorMsg.id = errorMsgId;
+			errorMsg.style.color = "red";
+			errorMsg.style.marginTop = "10px";
+			img.insertAdjacentElement("afterend", errorMsg);
+		}
+		errorMsg.textContent = message;
+	}
+
+	function clearError() {
+		const errorMsg = document.getElementById(errorMsgId);
+		if (errorMsg) errorMsg.textContent = "";
+	}
+
+	function fetchCatGif() {
+		const searchTerm = searchInput.value || "cats";
+		clearError();
+		fetch(`https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=${encodeURIComponent(searchTerm)}`, {mode: "cors"})
+			.then(function(response) {
+				return response.json();
+			})
+			.then(function(response) {
+				if (!response.data || !response.data.images || !response.data.images.original || !response.data.images.original.url) {
+					img.src = defaultImg;
+					showError("No GIF found for this search.");
+				} else {
+					img.src = response.data.images.original.url;
+					clearError();
+				}
+			})
+			.catch(function(error) {
+				img.src = defaultImg;
+				showError("An error occurred while fetching the GIF.");
+			});
+	}
+
+	btn.addEventListener("click", fetchCatGif);
+	</script>
+</body>
+</html>
