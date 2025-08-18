@@ -19,3 +19,12 @@ Resources
   https://www.youtube.com/watch?v=9RHO6jU--GU
   https://www.youtube.com/watch?v=86g8jAQug04
   https://www.youtube.com/watch?v=gm8DUJJhmY4
+
+Additional Resources
+
+  https://www.khanacademy.org/computing/computer-science/algorithms
+  https://www.coursera.org/specializations/algorithms
+  http://bost.ocks.org/mike/algorithms/
+  https://www.udacity.com/course/intro-to-algorithms--cs215
+  https://www.youtube.com/watch?v=idrrIMXXeHM
+  https://stackoverflow.com/questions/3332947/what-are-the-practical-factors-to-consider-when-choosing-between-depth-first-sea
