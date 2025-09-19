@@ -34,7 +34,7 @@ Workflow diagram
   ||
   \/                           Maintainers Merge PR to
                                       Upstream
-  Local Repository:                           ||                  
+  Local Repository:                                      
   your_branch_name                      ||
                                         ||
   ||                                    ||
