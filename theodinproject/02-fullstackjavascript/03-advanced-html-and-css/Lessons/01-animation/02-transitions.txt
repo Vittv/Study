@@ -1,0 +1,100 @@
+Transitions
+
+  CSS transitions let you animate a change from an element’s initial state to an end state. Think of an ordinary button element with a white background. When your mouse is away from the button, it’s just sitting there. Boring. Then when you hover your mouse cursor over the button the background color smoothly transitions from white to grey to black over a period of time. This is a CSS transition. Have a look at the Codepen below to see one in action.
+
+    #transition-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      border: 1px solid black;
+      border-radius: 5px;
+      padding: 2% 5% 2% 5%;
+      background-color: white;
+      color: white;
+      transition: background-color 1s ease-out 0.25s;
+    }
+
+    button:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+
+  When your mouse cursor is away from the button, the button is in the initial state. When you hover over it, you introduce the end state - the hover state - causing the background color to transition smoothly from white to black.
+
+  This was achieved using the transition property, which is actually a shorthand property for transition-property, transition-duration, transition-timing-function and transition-delay.
+
+    button {
+      /* ... other CSS properties ... */
+      transition-property: background-color;
+      transition-duration: 1s;
+      transition-timing-function: ease-out;
+      transition-delay: 0.25s;
+    }
+
+  
+    transition-property - This determines what CSS property will be transitioned. In this case it is the background-color.
+
+    transition-duration - This determines the duration that the transition will occur over. In this case the color change will gradually happen over 1 second.
+
+    transition-timing-function - This lets us change the speed of the transition over the course of its duration. Here it will ease-out, meaning the color change will be faster at the start than at the end of the transition.
+
+    transition-delay - This determines the delay at which the transition will start. In this case, the color change starts a quarter of a second after the cursor rests on the button.
+
+  The shorthand property looks like this:
+  
+    button {
+      /* ... other CSS properties ... */
+      background-color: white;
+      transition: background-color 1s ease-out 0.25s;
+    }
+
+    button:hover {
+      background-color: black;
+    }
+
+  The above transition wil occur when the user hovers their mouse over the button as indicated by the :hover pseudo-class. In addition to :hover, or any of the other pseudo-classes, you can also trigger transitions by adding or removing classes with JavaScript. For example, clicking a button could append the "open" class to a dropdown menu, which would trigger the opening transition.
+
+Performance
+
+  Generally, keeping your CSS transitions performant will not be an issue. However there are a couple of things you need to keep in mind.
+
+  The first is the “stacking context”. The “stacking context” refers to the stacking, or layering, of HTML elements in a parent container along the z axis (the depth dimension). The position of an element within a stacking context is relative only to the other elements within the same stacking context. The z-index property controls how far back or how far forward an element should appear on the web page when elements overlap. In addition to setting an elements’ z-index, several CSS properties can also trigger the creation of new stacking contexts e.g. transform, opacity, filter, etc. A relevant scenario for us would be to transition a transform property like below:
+
+    div {
+      width: 100px;
+      height: 100px;
+      transition: transform 2s 1s;
+    }
+
+    div:hover {
+      transform: rotate(180deg);
+    }
+
+  This has created a stacking context. If we were to make a bunch more stacking contexts through various other means then, when it comes to rendering our initial transform, we would repaint not only our div element but also every element that is stacked on top of it in the stack context. If left unchecked, this can cause your once buttery-smooth transition to become slow and rough.
+
+  The second thing to keep in mind is that you should keep your animations to only affecting opacity and transform if you want absolute best performance for animations on your web page. Yes, our first example above only carried out a background-color change, but even that was an expensive operation in itself.
+
+  What’s important is that you have a solid understanding of these concepts and can apply them when necessary because hey, if you need to turn a button into a rainbow when it’s hovered over, you better be able to transition that rainbow!
+
+Resources
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#defining_transitions
+  https://www.joshwcomeau.com/css/stacking-contexts/
+  https://web.dev/animations-guide/
+  https://web.archive.org/web/20220727225220/https://csstriggers.com/
+  https://www.joshwcomeau.com/animation/css-transitions/
+  https://dzhavat.github.io/2021/02/18/debugging-layout-repaint-issues-triggered-by-css-transition.html
+
+Additional Resources
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+  https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function#cubic_b%C3%A9zier_easing_function
+  https://www.cssportal.com/css-cubic-bezier-generator/
