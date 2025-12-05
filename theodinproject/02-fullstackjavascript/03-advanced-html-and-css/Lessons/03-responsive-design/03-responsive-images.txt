@@ -1,0 +1,54 @@
+Images require special care on responsive websites. This lesson presents a few issues that arise when working with responsive images and the options you have when dealing with them.
+
+The basics
+
+  The most basic problem you are going to face when working with responsive images is the aspect ratio or the relationship between width and height. If you shrink the width of an image on smaller screens and do not manipulate the height, the image will appear distorted!
+
+  The solution to this issue is incredibly easy, and we’ve already mentioned it in an earlier lesson: don’t define both a width and a height. If an image is given a flexible width, and the height is set to auto, then it should retain its aspect ratio correctly.
+
+background-size, background-position and object-fit
+
+  What if you don't want your image to shrink (in both height and width)? background-size and object-fit are two properties that can provide a little more flexibility (pun intended) with how aspect ratios are handled.
+
+  background-position and background-size are properties that work on elements with a background image, and do not work on normal img tags. You’ll see some examples and specifics in the reading assignment later, but you can get quite a lot of control over the display and placement of background images by working with these properties. For example, background-position: center will make sure the image is always centered in its container, even if the container is too small to fit the whole image. background-size: cover will resize the image so that it is always completely filling its container while cropping as little as possible.
+
+  Here’s a little demo you can play with:
+  (https://codepen.io/TheOdinProjectExamples/embed/powxJXV?height=300&theme-id=dark&default-tab=css%2Cresult&slug-hash=powxJXV&editable=true&user=TheOdinProjectExamples&name=cp_embed_1#result-box)
+
+    body {
+      height: 100vh;
+      margin: 0;
+      background-image: url(https://images.unsplash.com/photo-1578241561880-0a1d5db3cb8a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80);
+      background-size: cover;
+      background-position: center;
+    }
+
+  object-fit works similarly, but is meant for img tags. With the object-fit property you can specify a width and height for your images and then tell an image how it is supposed to fit itself to those dimensions. The default value for object-fit is fill, which stretches the image to fit the dimensions, but much like background-size you can also tell it to cover or contain the image.
+  
+  Here's a demo of object-fit on an image. Open this one up on CodePen and resize the browser to see how the image reacts.
+
+    img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+Even more control!
+
+  It is also possible to literally use different images for different screen sizes. This gives you the most control over exactly how your images are displayed at various resolutions. For example, instead of just trusting object-fit to keep the subject of a photograph in a frame, you could present a cropped version of it on smaller screens. There are two ways of achieving this, but the most flexible is using the <picture> tag, which you’ll learn more about in the assignment.
+
+Resources
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/background-size
+  https://developer.mozilla.org/en-US/docs/Web/CSS/background-position
+  https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+  https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/
+
+Additional Resources
+
+  https://cloudfour.com/thinks/responsive-images-101-definitions/
+  https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/
+  https://jakearchibald.com/2015/anatomy-of-responsive-images/
+  https://www.responsivebreakpoints.com/
+  https://www.smashingmagazine.com/2016/09/automating-art-direction-with-the-responsive-image-breakpoints-generator/
+  https://web.dev/learn/images/descriptive
