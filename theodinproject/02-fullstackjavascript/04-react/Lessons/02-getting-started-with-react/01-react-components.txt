@@ -1,0 +1,53 @@
+What are components?
+
+  The beauty of React is that it allows you to break a UI (User Interface) down into independent reusable chunks, which we will refer to as components. The following picture should give you an idea of how to do that when building a very basic app.
+
+  (https://cdn.statically.io/gh/TheOdinProject/curriculum/91485eec76445d86b29d35894e83324e2967f2fb/react/imgs/00.png)
+
+  For example, this website could be broken into the following components:
+
+    - App, which represents your main application and will be the parent of all other components.
+
+    - Navbar, which will be the navigation bar.
+
+    - MainArticle, which will be the component that renders your main content.
+
+    - NewsletterForm, which is a form that lets a user input their email to receive the weekly newsletter.
+
+  Think of these reusable chunks as JavaScript functions which can take some kind of input and return a React element.
+
+How to create components
+
+  To get the feel of working with components, we're going to practice creating functional components. What are functional components? JavaScript functions! Let's have a look.
+
+    function Greeting() {
+      return <h1>&quot;I swear by my pretty floral bonnet, I will end you.&quot;</h1>
+    }
+
+  This might look mostly familiar to you - it's a JavaScript function, which returns JSX. Open up the project you were working on, create a new file named Greeting.jsx, and in that file write your own handmade functional component. Name it whatever you wish, and have it return whatever JSX you wish.
+
+  Are you done? Check the naming of your function! Is it capitalized? Keep this key difference in mind. React components must be capitalized or they will not function as expected, which is why we capitalized Greeting(). More about that later.
+
+    import { StrictMode } from "react";
+    import { createRoot } from "react-dom/client";
+    import App from "./App.jsx";
+    import Greeting from "./Greeting.jsx";
+    import "./index.css";
+
+    createRoot(document.getElementById("root")).render(
+      <StrictMode>
+        <Greeting />
+      </StrictMode>,
+    );
+
+  Remember that <Greeting /> should be capitalized! Try using lower case for the import, function name and component and see what happens! When the JSX is parsed, React uses capitalization to tell the difference between an HTML tag and an instance of a React component. <greeting /> would be interpreted as a normal HTML element with no special meaning, instead of your shiny new React component.
+
+  Otherwise, just like that, you've successfully imported and used your first custom-made component, congratulations!
+
+Resources
+
+  https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export#description
+
+Additional Resources
+
+  https://www.geeksforgeeks.org/reactjs-functional-components/
