@@ -1,0 +1,60 @@
+Read What is State? by Academind (https://academind.com/tutorials/what-is-state) before we get started
+
+What is state in React?
+
+  We write components in React, A LOT of components, and many times we want them to undergo visual changes as a result of user or computer interactions. For this purpose, a component needs to "remember" things about itself. This is where state comes in. State is a component's memory.
+
+  The useState hook
+
+    The useState hook is a built-in hook (we'll talk about hooks later) in React that allows you to define state in a functional component. It takes an initial value as a parameter and returns an array with two elements that we can destructure to get:
+
+      1. The current state value
+
+      2. A function to update the state value
+
+    State definition with useState commonly follows this pattern:
+
+      const [stateValue, setStateValue] = useState(initialValue);
+
+      // adapted for our use case:
+      const [backgroundColor, setBackgroundColor] = useState(initialColor);
+
+    Even without much knowledge of React, you can, to some extent, understand what's going on. The backgroundColor state is defined with the hook. Then on every button, we set up a click event handler that calls the setBackgroundColor function with the corresponding value. Then magically the new color is applied to the background.
+
+    Adding more state variables should be as easy as adding more useState calls.
+
+    Great, now you can use state! But, what's going on under the hood?
+
+How does state work in React?
+
+  In React, when a component's state or props change, React runs your component function again from the beginning to figure out what should be displayed based on the freshly-set state and props. All the calculated changes are then applied to the DOM (committed). That is, the entire component is recreated, in a sense, but this time the latest state value will be returned from useState. This process is called rerendering. Rerendering is a key feature of React that enables it to efficiently update the user interface in response to changes in the underlying data.
+
+    # React reconciliation algorithm
+
+      The process of rerendering generates a new virtual DOM ( Document Object Model) tree. The virtual DOM is a lightweight representation of the actual DOM that React uses to keep track of the current state of the UI. React then compares the new virtual DOM tree to the previous one and calculates the minimal set of changes needed to update the actual DOM. This is the reconciliation algorithm.
+
+  Explaining rerendering with the example above
+
+    Whenever setBackgroundColor is called, our App component is rerendered. Essentially, the component is recreated which means the onButtonClick function andour div and buttons are recreated as well. You might wonder, shouldn't the backgroundColor state be recreated as well? Well, React takes the responsibility of keeping track of the latest state and providing it to the component. The initial state value is only used for the component's first render and is ignored on subsequent renders.
+
+      (https://cdn.statically.io/gh/TheOdinProject/curriculum/abf5962ab36c951bab907a9952d09400651eab10/react/states_and_effects/introduction_to_state/imgs/00.png)
+
+    What we covered in this section is just a brief overview of a portion of React internals. You maybe curious to learn more, but be advised, this is a deep rabbit hole. What we covered above is enough to get you through the React course.
+
+Hooks
+
+  Hooks are functions that let you use React features. All hooks are recognizable by the use prefix. For example, useState is a hook. We'll use more of these as we get further into the course. For now, remember that hooks have rules that we need to abide by:
+
+    1. Hooks can only be called from the top level of a functional component.
+
+    2. Hooks can't be called from inside loops or conditions.
+
+Resources
+
+  https://react.dev/learn/state-a-components-memory
+  https://react.dev/learn/render-and-commit
+  https://medium.com/javarevisited/react-reconciliation-algorithm-86e3e22c1b40
+
+Additional Resources
+
+  https://www.geeksforgeeks.org/reactjs-reconciliation/
