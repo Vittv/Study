@@ -5,4 +5,4 @@ tags: [#ysap #ysapindex]
 ## Full Length Guide to learning the Bash Shell
 ### Index
 Video referenced:
-https://youtu.be/Sx9zG7wa4FA?t=11139
+[youtube](https://youtu.be/Sx9zG7wa4FA?t=12909)
