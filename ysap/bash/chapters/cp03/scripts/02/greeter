@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# this is how we write functions in bash
+# make sure to use local before a variable
+# otherwise it will be a global one
+greet() {
+  local name=$1
+  echo "hello $name"
+
+  # returning 0 means success
+  return 0
+}
+
+for name in "$@"; do
+  greet "$name"
+done

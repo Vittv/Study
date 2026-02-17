@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+# using {a..f} will make it iterate from a to f
+# a b c d e f
+# for thing in {a..f} do
+#   echo "thing is $thing"
+# done
+
+# this won't work as intended
+# returning thing is {1..$max}
+$max=5
+for thing in {1..$max} do
+  echo "thing is $thing"
+done
+
+# the following typical C loop syntax can also work
+# this is useful for when the usual bash syntax isn't working
+# but it needs to be in (()) to do mathematical expressions
+# this puts us on math mode, making the $ not needed for var
+max=5
+for ((i = 0; i < max; i++)); do
+  echo "thing is $i"
+done
+
+# tldr - C styled for loops work and are very reliable in bash

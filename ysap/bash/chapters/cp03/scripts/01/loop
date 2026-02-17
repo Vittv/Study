@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# the @ sign will expand, as long as it's quoted
+# to be an array of all of the arguments
+for thing in "$@"; do
+  echo "thing is $thing"
+done
+
+# with this you could run
+# ./loop one two three
+# and get
+# thing is one
+# thing is two
+# thing is three
