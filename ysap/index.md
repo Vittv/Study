@@ -7,4 +7,4 @@ tags: [#ysap #ysapindex]
 We can write a table of contents once we're done.
 
 Video referenced:
-[youtube](https://youtu.be/Sx9zG7wa4FA?t=17058)
+[youtube](https://youtu.be/Sx9zG7wa4FA?t=18065)
