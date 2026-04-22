@@ -1,6 +1,3 @@
-2026-02-06 - 14:18:52
-tags: [#ysap]
-
 # Searching in Files
 ## Commands
 ### cat

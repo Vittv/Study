@@ -1,6 +1,3 @@
-2026-02-06 - 14:19:18
-tags: [#ysap]
-
 # Man Pages
 ## Commands
 ### man

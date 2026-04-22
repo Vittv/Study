@@ -1,6 +1,3 @@
-2026-02-10 - 15:10:10
-tags: [#ysap]
-
 # Command Substitution
 Command substitution is a mechanism that allows you to execute a command and use its standard output in place of the command itself, either as arguments to another command or by assigning it to a variable
 

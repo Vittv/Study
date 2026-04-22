@@ -1,9 +1,6 @@
-2026-02-08 - 17:02:08
-tags: [#ysap]
-
 # Case Statements
 A case statement is often more elegant than an if statement. Especially in bash, it is easier to write and read. They can be written as easily as such:
-```
+```bash
 s=$1
 
 case "$s" in
@@ -20,7 +17,7 @@ To match more possible matching patterns after the first one, we have to use a d
 
 ## Always fallthrough `;&`
 If you want some that matches the first pattern and then any subsequent patterns, you'll want to use `;&`. In the following script, only `f`, `foo`, and `*` will match, because they come after `f*`, and the pattern we're looking for is `far`.
-```
+```bash
 s="far"
 
 case "$s" in

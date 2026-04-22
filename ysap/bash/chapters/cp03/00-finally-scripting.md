@@ -1,6 +1,3 @@
-2026-02-06 - 15:09:04
-tags: [#ysap]
-
 # Finally Scripting
 ## Commands
 ### cp

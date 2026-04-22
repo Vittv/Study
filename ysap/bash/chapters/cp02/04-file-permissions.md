@@ -1,6 +1,3 @@
-2026-02-06 - 14:21:40
-tags: [#ysap]
-
 # File Permissions
 ## Commands
 ### ls -l

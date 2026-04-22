@@ -1,6 +1,3 @@
-2026-02-06 - 14:18:23
-tags: [#ysap]
-
 # Basic File Manipulation
 ## Commands
 ### mv

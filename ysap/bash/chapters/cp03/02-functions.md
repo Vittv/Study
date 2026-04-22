@@ -1,6 +1,3 @@
-2026-02-06 - 15:51:13
-tags: [#ysap]
-
 # Functions
 Here is an example of how we can write a function
 ```bash

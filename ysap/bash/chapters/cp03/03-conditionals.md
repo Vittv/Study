@@ -1,6 +1,3 @@
-2026-02-06 - 16:04:34
-tags: [#ysap]
-
 # Conditionals
 ## Commands
 ### test

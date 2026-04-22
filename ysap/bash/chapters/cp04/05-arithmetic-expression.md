@@ -1,6 +1,3 @@
-2026-02-10 - 15:28:32
-tags: [#ysap]
-
 # Arithmetic Expression
 We can declare arithmetic expressions in bash by simply wrapping them around another set of parenthesis as such `thing=$(( 2 + 2 ))`. Also, while inside this math mode, you don't need to refer to variables with a `$`, it will understand that you are using a variable already.
 

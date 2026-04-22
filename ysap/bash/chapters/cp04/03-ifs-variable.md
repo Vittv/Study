@@ -1,6 +1,3 @@
-2026-02-10 - 14:32:19
-tags: [#ysap]
-
 # IFS Variable
 A builtin to bash variable. Responsible for telling bash what character to have when we do `space` or `tab` and others.
 ```bash

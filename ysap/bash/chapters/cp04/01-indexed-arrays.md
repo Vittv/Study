@@ -1,6 +1,3 @@
-2026-02-08 - 17:38:15
-tags: [#ysap]
-
 # Indexed Arrays
 In bash, you can make an array with `array=(foo bar baz)`. If you expand it like a variable and try `echo $array`, you will only get the first element of the array, instead of the entire array.
 

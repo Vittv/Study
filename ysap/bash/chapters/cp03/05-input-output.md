@@ -1,6 +1,3 @@
-2026-02-06 - 16:53:17
-tags: [#ysap]
-
 # Input/Output
 ## Commands
 ### read

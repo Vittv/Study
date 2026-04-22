@@ -1,6 +1,3 @@
-2026-02-10 - 15:51:47
-tags: [#ysap]
-
 # Process Substitution
 The syntax for this is similar as before, but changing the `$` for a `<`. Declared as such: `<(...)`.
 ```bash

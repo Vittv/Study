@@ -1,6 +1,3 @@
-2026-02-06 - 14:19:30
-tags: [#ysap]
-
 # Programs and Commands
 ## Commands
 ### file

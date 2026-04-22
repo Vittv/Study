@@ -1,6 +1,3 @@
-2026-02-06 - 15:09:19
-tags: [#ysap]
-
 # User Input
 ## Commands
 ### read

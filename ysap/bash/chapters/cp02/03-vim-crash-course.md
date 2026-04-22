@@ -1,6 +1,3 @@
-2026-02-06 - 14:19:57
-tags: [#ysap]
-
 # vim Crash Course
 ## Modes
 ### NORMAL

@@ -1,6 +1,3 @@
-2026-02-06 - 14:19:45
-tags: [#ysap]
-
 # Basic Variables
 ## Commands
 ### pwd

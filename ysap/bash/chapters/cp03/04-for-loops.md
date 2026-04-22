@@ -1,6 +1,3 @@
-2026-02-06 - 16:34:00
-tags: [#ysap]
-
 # For Loops
 ## Commands
 ### {a..f}

@@ -1,6 +1,3 @@
-2026-02-06 - 14:18:03
-tags: [#ysap]
-
 # Terminal and Finder
 Bash can be use anywhere, you don't need to necessarily be on Linux to make use of it. Even though for example macOS uses zsh as their shell, all scripting will always still be done in bash.
 

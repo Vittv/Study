@@ -1,6 +1,3 @@
-2026-02-06 - 14:19:03
-tags: [#ysap]
-
 # Paging Files
 ## Commands
 ### less

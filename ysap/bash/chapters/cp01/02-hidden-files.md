@@ -1,6 +1,3 @@
-2026-02-06 - 14:18:36
-tags: [#ysap]
-
 # Hidden files
 When we write a file with "." as its prefix, we make it a hidden file. So any file that looks like this `.file.txt` will be hidden.
 

@@ -1,6 +1,3 @@
-2026-02-10 - 14:32:01
-tags: [#ysap]
-
 # Associative Arrays
 These in bash are basically objects in JavaScript. They consist of arrays with more arrays and properties inside them. Anything with key -> value. To declare it we need to use `declare -A arr`.
 
